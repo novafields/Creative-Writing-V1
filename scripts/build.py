@@ -572,6 +572,18 @@ def build():
         "- None of the 22 has Dale simply let them off and go home.\n\n"
     )
     brief_quote = "\n".join("> " + line if line else ">" for line in prompt["brief"].split("\n"))
+    trait_names = [t["name"] for t in traits]
+    trait_rows = [[e["rank"], f"[{e['model']}]({STORY_DIR}/{e['txt']})"]
+                  + [int(x) for x in e["trait_medians"]] + [f"**{e['median']}**"] for e in entries]
+    trait_table = md_table(["Rank", "Model"] + trait_names + ["Median total"], trait_rows,
+                           ["--:", "---"] + ["--:"] * (N_TRAITS + 1))
+    trait_section = (
+        "## Scores by trait\n\n"
+        f"The median of the {n_word} judges' scores for each trait, out of 20. Higher is better on every trait, "
+        "including the nine flaw traits from Meandering to Unearned Transformations, where a high score means the flaw is absent. "
+        f"The median total is out of {MAX_TOTAL}. The per-judge scores are in the judgment files.\n\n"
+        + trait_table + "\n"
+    )
     readme = f"""# One brief, 22 models: a blind short-fiction comparison
 
 I gave 22 AI models the same literary short-story brief and then had {n_word} AI judges score the stories blind, with model names removed. Each model got one shot and no edits. The brief is a Hamilton, Ontario bus driver on the last three hours of a February night shift, with a few fixed details every story had to include: a ticking heater, a repossessed car that he hasn't told anyone about, a dispatcher's routine schedule changes, a mother and son who board at the hospital, and a choice at the garage that puts his ride home at risk.
@@ -601,6 +613,8 @@ Click a model to read its story, or a score to see that judge's trait scores and
 {leaderboard}
 
 {top_line} The full breakdown, including how each judge ranked the models and where the judges disagreed, is in [median-scores.md]({JUDGE_URL}/{AVERAGES_FILE}).
+
+{trait_section}
 
 ## Limitations
 

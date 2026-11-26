@@ -96,6 +96,36 @@ Click a model to read its story, or a score to see that judge's trait scores and
 
 Astra 6.2 came first with all five judges. The full breakdown, including how each judge ranked the models and where the judges disagreed, is in [median-scores.md](LLM%20Judgement/median-scores.md).
 
+## Scores by trait
+
+The median of the five judges' scores for each trait, out of 20. Higher is better on every trait, including the nine flaw traits from Meandering to Unearned Transformations, where a high score means the flaw is absent. The median total is out of 440. The per-judge scores are in the judgment files.
+
+| Rank | Model | Adherence to Instructions | Believable Character Actions | Nuanced Characters | Consistent Voice/Tone of Writing | Imagery and Descriptive Quality | Elegant Prose | Emotionally Engaging | Emotionally Complex | Coherent | Meandering | Weak Dialogue | Tell-Don't-Show | Unsurprising or Uncreative | Amateurish | Purple Prose | Overwrought | Incongruent Ending Positivity | Unearned Transformations | Well-earned Lightness or Darkness | Sentences Flow Naturally | Overall Reader Engagement | Overall Impression | Median total |
+|--:|---|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|
+| 1 | [Astra 6.2](Stories/01-astra-6-2.txt) | 19 | 19 | 19 | 19 | 19 | 19 | 18 | 19 | 19 | 19 | 19 | 19 | 18 | 19 | 19 | 19 | 19 | 19 | 19 | 19 | 18 | 19 | **412** |
+| 2 | [6.2 Sol](Stories/02-6-2-sol.txt) | 19 | 19 | 18 | 19 | 18 | 19 | 18 | 18 | 18 | 18 | 19 | 19 | 18 | 19 | 20 | 19 | 18 | 19 | 19 | 19 | 18 | 19 | **411** |
+| 3 | [Sonnet 5.5](Stories/03-sonnet-5-5.txt) | 18 | 18 | 18 | 18 | 17 | 18 | 18 | 18 | 18 | 18 | 18 | 18 | 17 | 18 | 18 | 18 | 18 | 18 | 18 | 18 | 18 | 18 | **398** |
+| 4 | [Opus 5.5](Stories/04-opus-5-5.txt) | 17 | 18 | 18 | 18 | 18 | 17 | 17 | 17 | 18 | 18 | 18 | 17 | 17 | 18 | 19 | 18 | 18 | 18 | 18 | 18 | 18 | 18 | **393** |
+| 5 | [Fable 5.1](Stories/05-fable-5-1.txt) | 17 | 18 | 18 | 18 | 17 | 18 | 18 | 17 | 18 | 18 | 18 | 17 | 17 | 18 | 19 | 18 | 17 | 18 | 17 | 18 | 17 | 17 | **390** |
+| 6 | [GPT 6.1 Sol](Stories/06-gpt-6-1-sol.txt) | 19 | 18 | 17 | 18 | 17 | 17 | 16 | 17 | 18 | 18 | 18 | 18 | 16 | 18 | 19 | 19 | 18 | 18 | 17 | 18 | 16 | 17 | **388** |
+| 6 | [GPT-6 Astra](Stories/06-gpt-6-astra.txt) | 19 | 18 | 17 | 18 | 18 | 17 | 17 | 16 | 18 | 17 | 18 | 18 | 16 | 18 | 19 | 19 | 18 | 18 | 17 | 17 | 16 | 17 | **388** |
+| 8 | [GLM 5.3](Stories/08-glm-5-3.txt) | 18 | 18 | 18 | 18 | 18 | 17 | 18 | 18 | 18 | 17 | 18 | 17 | 17 | 18 | 19 | 18 | 18 | 18 | 18 | 18 | 18 | 17 | **387** |
+| 9 | [Kimi K3.1 Pro](Stories/09-kimi-k3-1-pro.txt) | 19 | 18 | 17 | 18 | 17 | 17 | 18 | 17 | 18 | 17 | 17 | 17 | 16 | 18 | 18 | 18 | 17 | 17 | 18 | 18 | 17 | 17 | **384** |
+| 10 | [DeepSeek 4.1 Flash](Stories/10-deepseek-4-1-flash.txt) | 17 | 17 | 17 | 18 | 17 | 17 | 17 | 17 | 17 | 18 | 17 | 17 | 17 | 18 | 18 | 18 | 18 | 18 | 18 | 18 | 17 | 17 | **383** |
+| 11 | [Meta Wonder](Stories/11-meta-wonder.txt) | 10 | 18 | 18 | 18 | 18 | 17 | 18 | 18 | 16 | 14 | 18 | 17 | 16 | 18 | 18 | 17 | 18 | 18 | 18 | 17 | 17 | 17 | **374** |
+| 12 | [GPT 5.6 Sol](Stories/12-gpt-5-6-sol.txt) | 18 | 17 | 16 | 17 | 16 | 16 | 16 | 16 | 17 | 16 | 17 | 16 | 15 | 17 | 18 | 18 | 17 | 17 | 17 | 17 | 16 | 16 | **369** |
+| 13 | [Opus 4.6 Max](Stories/13-opus-4-6-max.txt) | 17 | 17 | 16 | 17 | 16 | 16 | 15 | 15 | 17 | 16 | 17 | 17 | 14 | 17 | 19 | 18 | 17 | 18 | 16 | 17 | 15 | 16 | **361** |
+| 14 | [Gemini Argon](Stories/14-gemini-argon.txt) | 9 | 17 | 17 | 17 | 18 | 17 | 17 | 17 | 16 | 13 | 17 | 15 | 16 | 17 | 17 | 16 | 18 | 18 | 17 | 17 | 17 | 16 | **360** |
+| 15 | [GPT 6 Sol](Stories/15-gpt-6-sol.txt) | 18 | 17 | 16 | 17 | 16 | 16 | 15 | 15 | 17 | 16 | 16 | 16 | 14 | 17 | 19 | 18 | 17 | 18 | 16 | 16 | 15 | 16 | **357** |
+| 16 | [Gemini Neon](Stories/16-gemini-neon.txt) | 9 | 17 | 17 | 17 | 17 | 16 | 17 | 16 | 17 | 13 | 17 | 15 | 15 | 16 | 18 | 17 | 18 | 18 | 17 | 17 | 15 | 16 | **351** |
+| 17 | [GPT 5.5](Stories/17-gpt-5-5.txt) | 9 | 15 | 16 | 16 | 17 | 16 | 17 | 16 | 16 | 13 | 17 | 15 | 14 | 14 | 17 | 15 | 17 | 18 | 16 | 17 | 16 | 14 | **330** |
+| 18 | [Luna 6](Stories/18-luna-6.txt) | 10 | 16 | 15 | 16 | 16 | 15 | 15 | 15 | 16 | 12 | 15 | 15 | 13 | 15 | 18 | 17 | 17 | 17 | 15 | 15 | 14 | 14 | **327** |
+| 19 | [Meta Ember](Stories/19-meta-ember.txt) | 15 | 15 | 15 | 15 | 15 | 14 | 14 | 15 | 14 | 15 | 15 | 13 | 14 | 13 | 16 | 17 | 17 | 17 | 15 | 14 | 14 | 14 | **326** |
+| 20 | [Mistral Large 4](Stories/20-mistral-large-4.txt) | 13 | 12 | 12 | 13 | 13 | 12 | 13 | 12 | 11 | 14 | 12 | 10 | 11 | 11 | 14 | 13 | 16 | 14 | 13 | 13 | 12 | 12 | **276** |
+| 21 | [Sonnet 4.5](Stories/21-sonnet-4-5.txt) | 12 | 13 | 12 | 14 | 13 | 12 | 13 | 12 | 11 | 13 | 13 | 11 | 12 | 12 | 14 | 13 | 15 | 16 | 13 | 14 | 13 | 12 | **273** |
+| 22 | [Mistral Small 4](Stories/22-mistral-small-4.txt) | 6 | 8 | 8 | 10 | 10 | 8 | 9 | 8 | 8 | 11 | 10 | 8 | 9 | 7 | 12 | 10 | 13 | 12 | 9 | 10 | 8 | 8 | **196** |
+
+
 ## Limitations
 
 - **The judges are AI.** They followed the rubric, but they can't tell you whether a story moved a person. Their scores are one reference point.
