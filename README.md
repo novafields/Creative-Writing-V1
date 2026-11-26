@@ -30,6 +30,73 @@ This is the prompt every model received, word for word. It is also in [brief.md]
 - **Four blind judges.** Each judge scored all 22 stories on 22 traits (dialogue, subtext, pacing, POV, brief adherence, cliché avoidance and so on). Each trait is out of 20, so a total is out of 440. Model names were removed. The traits are adapted from the rubric used in [EQ-Bench Creative Writing v3](https://eqbench.com/creative_writing.html). The full prompt and rubric are in [judge_prompt.md](judge_prompt.md) and [rubric.md](rubric.md).
 - **Checked.** Every judge's arithmetic was checked against its own trait scores, and every quote the judges used was checked against its story. Errors were sent back for correction. `scripts/build.py` repeats these checks on every build.
 
+## Dale's choice at the garage
+
+The whole brief builds to this scene. These three excerpts come from stories near the top, middle and lower middle of the leaderboard, copied word for word. Which model wrote which is hidden below, so you can rank them first.
+
+**Excerpt X**
+
+> There was a gap, then Carla said, “Visitors have to be signed in and sat with. I can't come down. I'm trying to get this relief in a cab at the moment.”
+>
+> He could direct them to the gate. There was time to get them on the westbound with him; she'd have another forty minutes to sit and look at her phone. He pictured himself standing to pull the cord at his own corner, putting his gloves on while she watched.
+>
+> “I'll sit,” he said, and unclipped his belt.
+>
+> He took the duffel so she could carry the boy. At the steps Theo opened his eyes and said, quite distinctly, “Not here.”
+>
+> “Just for a minute,” she said.
+
+**Excerpt Y**
+
+> The woman on the line asked questions he relayed to Ana. Adult and child, yes. Immediate medical attention, no. Safe to send a cab, Ana hesitated, then said yes. Name optional. Pickup could be the public road outside the garage, but the wait would be twenty to thirty minutes.
+>
+> The employee bus left in fourteen.
+>
+> Dale looked through the windshield at the garage doors. He could put Ana and Theo in the heated security vestibule, except passengers were not allowed past the fence. He could send them to the coffee shop by the loop, a twelve-minute walk over frozen sidewalks. He could call a regular cab, but he did not know where to send it.
+>
+> Carla came back. “Four-seventeen, I need you moving.”
+>
+> “I’ve got transport coming for them.”
+>
+> “How long?”
+>
+> “Twenty minutes.”
+
+**Excerpt Z**
+
+> The garage wasn't a place to stay. The drivers weren't supposed to bring passengers inside. Security would see them, and there would be questions. He could open the doors, point toward the pavement and get on with his shift.
+>
+> He could also leave them standing beside the fence, with the boy half asleep and the woman holding a duffel bag she hadn't put down all night.
+>
+> His radio crackled.
+>
+> "Thirty-eight, you're sitting at the gate. Everything okay?"
+>
+> Dale took the microphone.
+>
+> "I've got two passengers still aboard."
+>
+> A pause.
+>
+> "Two passengers?"
+>
+> "Mother and child. I'm trying to sort it out."
+>
+> "You're clear to bring it in. Security's waiting."
+>
+> "I need a few minutes."
+>
+> "Dale, we need that bay."
+
+<details>
+<summary>Which models wrote these?</summary>
+
+- Excerpt X: [Astra 6.2](Stories/01-astra-6-2.txt), ranked 1 of 22 (average 412.8)
+- Excerpt Y: [GPT 5.6 Sol](Stories/12-gpt-5-6-sol.txt), ranked 12 of 22 (average 366.5)
+- Excerpt Z: [Luna 6](Stories/18-luna-6.txt), ranked 18 of 22 (average 324.2)
+
+</details>
+
 ## Leaderboard
 
 Click a model to read its story, or a score to see that judge's trait scores and commentary. Ties share a rank. The average is the mean of the four judges' totals.
@@ -61,12 +128,15 @@ Click a model to read its story, or a score to see that judge's trait scores and
 
 Astra 6.2 came first with all four judges. The full breakdown, including how each judge ranked the models and where the judges disagreed, is in [average-scores.md](LLM%20Judgement/average-scores.md).
 
-## Caveats
+## Limitations
 
-- **One story per model, one run each.** This is a snapshot, not a benchmark. A second run could reorder the table.
+- **The judges are AI.** They followed the rubric, but they can't tell you whether a story moved a person. Their scores are one reference point.
+- **The judges disagreed, sometimes widely.** Meta Wonder got 412 from one judge and 326 from another; Sonnet 4.5 ranged from 251 to 355. No single score settles anything.
 - **GLM 5.3 was both a judge and a contestant.** Judging blind, it gave its own story [403](LLM%20Judgement/04-glm-5-3/glm-5-3.md), about 11 points above that story's four-judge average of 391.8. Fable 5.2 judged and Fable 5.1 competed, but those are different models.
-- **The judges sometimes disagreed widely.** Meta Wonder got 412 from one judge and 326 from another. Sonnet 4.5 ranged from 251 to 355.
-- **Ranks 3 to 5 are within about a point** (Opus 5.5 to Fable 5.1: 1.2 points apart). Read them as tied.
+- **One story per model, one run each.** A second run could reorder the table. Ranks 3 to 5 are within about a point (Opus 5.5 to Fable 5.1: 1.2 points apart), so read them as tied.
+- **One brief.** Literary realism with fixed details. Other genres or looser prompts might come out differently.
+
+Human readers are the missing piece. If you read some of the stories, I'd like to know which you'd rank highest, where you disagree with the judges, and what would make a comparison like this more useful. Open an issue on this repo to share.
 
 ## What the models wrote
 

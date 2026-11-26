@@ -91,6 +91,30 @@ ENDINGS = [
 ]
 
 
+# Garage-scene excerpts for the README: (model, phrase in first paragraph,
+# phrase in last paragraph). The text is cut from the story file itself, so it
+# is always word for word.
+GARAGE = [
+    ("Astra 6.2", "There was a gap, then Carla said", "Just for a minute"),
+    ("GPT 5.6 Sol", "The woman on the line asked questions", "Twenty minutes."),
+    ("Luna 6", "Security would see them, and there would be questions", "we need that bay"),
+]
+
+
+def excerpt(full, start, end):
+    """Whole paragraphs from the one containing `start` to the one containing `end`."""
+    if start not in full or end not in full:
+        raise DataError(f"excerpt phrase not found: {start!r} / {end!r}")
+    i = full.rfind("\n\n", 0, full.index(start))
+    i = 0 if i < 0 else i + 2
+    j = full.index(end, i) + len(end)
+    k = full.find("\n\n", j)
+    return full[i:] if k < 0 else full[i:k]
+
+
+def blockquote(text):
+    return "\n".join("> " + line if line else ">" for line in text.split("\n"))
+
 class DataError(Exception):
     pass
 
@@ -470,6 +494,21 @@ def build():
     under = sorted((e for e in entries if e["story"]["words"] < 1700), key=lambda e: e["story"]["words"])
     length_list = lambda es: ", ".join(f"{e['model']} ({e['story']['words']:,})" for e in es)
 
+    letters_xyz = "XYZ"
+    garage_parts, reveal = [], []
+    for tag, (model, start, end) in zip(letters_xyz, GARAGE):
+        e = by_model[model]
+        garage_parts.append(f"**Excerpt {tag}**\n\n" + blockquote(excerpt(e["story"]["full"], start, end)))
+        reveal.append(f"- Excerpt {tag}: [{model}]({STORY_DIR}/{e['txt']}), ranked {e['rank']} of 22 (average {e['average']})")
+    garage_section = (
+        "## Dale's choice at the garage\n\n"
+        "The whole brief builds to this scene. These three excerpts come from stories near the top, middle "
+        "and lower middle of the leaderboard, copied word for word. Which model wrote which is hidden "
+        "below, so you can rank them first.\n\n"
+        + "\n\n".join(garage_parts)
+        + "\n\n<details>\n<summary>Which models wrote these?</summary>\n\n"
+        + "\n".join(reveal) + "\n\n</details>\n\n"
+    )
     brief_quote = "\n".join("> " + line if line else ">" for line in prompt["brief"].split("\n"))
     readme = f"""# One brief, 22 models: a blind short-fiction comparison
 
@@ -493,7 +532,7 @@ This is the prompt every model received, word for word. It is also in [brief.md]
 - **Four blind judges.** Each judge scored all 22 stories on 22 traits (dialogue, subtext, pacing, POV, brief adherence, cliché avoidance and so on). Each trait is out of 20, so a total is out of 440. Model names were removed. The traits are adapted from the rubric used in [EQ-Bench Creative Writing v3](https://eqbench.com/creative_writing.html). The full prompt and rubric are in [judge_prompt.md](judge_prompt.md) and [rubric.md](rubric.md).
 - **Checked.** Every judge's arithmetic was checked against its own trait scores, and every quote the judges used was checked against its story. Errors were sent back for correction. `scripts/build.py` repeats these checks on every build.
 
-## Leaderboard
+{garage_section}## Leaderboard
 
 Click a model to read its story, or a score to see that judge's trait scores and commentary. Ties share a rank. The average is the mean of the four judges' totals.
 
@@ -501,12 +540,15 @@ Click a model to read its story, or a score to see that judge's trait scores and
 
 Astra 6.2 came first with all four judges. The full breakdown, including how each judge ranked the models and where the judges disagreed, is in [average-scores.md]({JUDGE_URL}/{AVERAGES_FILE}).
 
-## Caveats
+## Limitations
 
-- **One story per model, one run each.** This is a snapshot, not a benchmark. A second run could reorder the table.
+- **The judges are AI.** They followed the rubric, but they can't tell you whether a story moved a person. Their scores are one reference point.
+- **The judges disagreed, sometimes widely.** Meta Wonder got 412 from one judge and 326 from another; Sonnet 4.5 ranged from 251 to 355. No single score settles anything.
 - **{sj['name']} was both a judge and a contestant.** Judging blind, it gave its own story [{se['totals'][sj['header']]}]({JUDGE_URL}/{se['stem']}/{sj['slug']}.md), about 11 points above that story's four-judge average of {se['average']}. Fable 5.2 judged and Fable 5.1 competed, but those are different models.
-- **The judges sometimes disagreed widely.** Meta Wonder got 412 from one judge and 326 from another. Sonnet 4.5 ranged from 251 to 355.
-- **Ranks 3 to 5 are within about a point** ({within[0]['model']} to {within[-1]['model']}: {spread} points apart). Read them as tied.
+- **One story per model, one run each.** A second run could reorder the table. Ranks 3 to 5 are within about a point ({within[0]['model']} to {within[-1]['model']}: {spread} points apart), so read them as tied.
+- **One brief.** Literary realism with fixed details. Other genres or looser prompts might come out differently.
+
+Human readers are the missing piece. If you read some of the stories, I'd like to know which you'd rank highest, where you disagree with the judges, and what would make a comparison like this more useful. Open an issue on this repo to share.
 
 ## What the models wrote
 
