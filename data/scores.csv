@@ -43,50 +43,6 @@ Gemini Hydrogen,6.2 Sol,H,19,Well-earned Lightness or Darkness,19
 Gemini Hydrogen,6.2 Sol,H,20,Sentences Flow Naturally,19
 Gemini Hydrogen,6.2 Sol,H,21,Overall Reader Engagement,18
 Gemini Hydrogen,6.2 Sol,H,22,Overall Impression,19
-Gemini Hydrogen,Opus 5.5,D,1,Adherence to Instructions,15
-Gemini Hydrogen,Opus 5.5,D,2,Believable Character Actions,18
-Gemini Hydrogen,Opus 5.5,D,3,Nuanced Characters,18
-Gemini Hydrogen,Opus 5.5,D,4,Consistent Voice/Tone of Writing,18
-Gemini Hydrogen,Opus 5.5,D,5,Imagery and Descriptive Quality,17
-Gemini Hydrogen,Opus 5.5,D,6,Elegant Prose,17
-Gemini Hydrogen,Opus 5.5,D,7,Emotionally Engaging,17
-Gemini Hydrogen,Opus 5.5,D,8,Emotionally Complex,17
-Gemini Hydrogen,Opus 5.5,D,9,Coherent,18
-Gemini Hydrogen,Opus 5.5,D,10,Meandering,18
-Gemini Hydrogen,Opus 5.5,D,11,Weak Dialogue,18
-Gemini Hydrogen,Opus 5.5,D,12,Tell-Don't-Show,17
-Gemini Hydrogen,Opus 5.5,D,13,Unsurprising or Uncreative,17
-Gemini Hydrogen,Opus 5.5,D,14,Amateurish,18
-Gemini Hydrogen,Opus 5.5,D,15,Purple Prose,19
-Gemini Hydrogen,Opus 5.5,D,16,Overwrought,18
-Gemini Hydrogen,Opus 5.5,D,17,Incongruent Ending Positivity,18
-Gemini Hydrogen,Opus 5.5,D,18,Unearned Transformations,18
-Gemini Hydrogen,Opus 5.5,D,19,Well-earned Lightness or Darkness,17
-Gemini Hydrogen,Opus 5.5,D,20,Sentences Flow Naturally,18
-Gemini Hydrogen,Opus 5.5,D,21,Overall Reader Engagement,17
-Gemini Hydrogen,Opus 5.5,D,22,Overall Impression,17
-Gemini Hydrogen,GLM 5.3,C,1,Adherence to Instructions,17
-Gemini Hydrogen,GLM 5.3,C,2,Believable Character Actions,18
-Gemini Hydrogen,GLM 5.3,C,3,Nuanced Characters,18
-Gemini Hydrogen,GLM 5.3,C,4,Consistent Voice/Tone of Writing,19
-Gemini Hydrogen,GLM 5.3,C,5,Imagery and Descriptive Quality,18
-Gemini Hydrogen,GLM 5.3,C,6,Elegant Prose,18
-Gemini Hydrogen,GLM 5.3,C,7,Emotionally Engaging,18
-Gemini Hydrogen,GLM 5.3,C,8,Emotionally Complex,18
-Gemini Hydrogen,GLM 5.3,C,9,Coherent,18
-Gemini Hydrogen,GLM 5.3,C,10,Meandering,19
-Gemini Hydrogen,GLM 5.3,C,11,Weak Dialogue,18
-Gemini Hydrogen,GLM 5.3,C,12,Tell-Don't-Show,18
-Gemini Hydrogen,GLM 5.3,C,13,Unsurprising or Uncreative,17
-Gemini Hydrogen,GLM 5.3,C,14,Amateurish,19
-Gemini Hydrogen,GLM 5.3,C,15,Purple Prose,19
-Gemini Hydrogen,GLM 5.3,C,16,Overwrought,19
-Gemini Hydrogen,GLM 5.3,C,17,Incongruent Ending Positivity,18
-Gemini Hydrogen,GLM 5.3,C,18,Unearned Transformations,18
-Gemini Hydrogen,GLM 5.3,C,19,Well-earned Lightness or Darkness,18
-Gemini Hydrogen,GLM 5.3,C,20,Sentences Flow Naturally,18
-Gemini Hydrogen,GLM 5.3,C,21,Overall Reader Engagement,18
-Gemini Hydrogen,GLM 5.3,C,22,Overall Impression,18
 Gemini Hydrogen,Sonnet 5.5,S,1,Adherence to Instructions,16
 Gemini Hydrogen,Sonnet 5.5,S,2,Believable Character Actions,18
 Gemini Hydrogen,Sonnet 5.5,S,3,Nuanced Characters,18
@@ -109,6 +65,28 @@ Gemini Hydrogen,Sonnet 5.5,S,19,Well-earned Lightness or Darkness,18
 Gemini Hydrogen,Sonnet 5.5,S,20,Sentences Flow Naturally,18
 Gemini Hydrogen,Sonnet 5.5,S,21,Overall Reader Engagement,17
 Gemini Hydrogen,Sonnet 5.5,S,22,Overall Impression,18
+Gemini Hydrogen,Opus 5.5,D,1,Adherence to Instructions,15
+Gemini Hydrogen,Opus 5.5,D,2,Believable Character Actions,18
+Gemini Hydrogen,Opus 5.5,D,3,Nuanced Characters,18
+Gemini Hydrogen,Opus 5.5,D,4,Consistent Voice/Tone of Writing,18
+Gemini Hydrogen,Opus 5.5,D,5,Imagery and Descriptive Quality,17
+Gemini Hydrogen,Opus 5.5,D,6,Elegant Prose,17
+Gemini Hydrogen,Opus 5.5,D,7,Emotionally Engaging,17
+Gemini Hydrogen,Opus 5.5,D,8,Emotionally Complex,17
+Gemini Hydrogen,Opus 5.5,D,9,Coherent,18
+Gemini Hydrogen,Opus 5.5,D,10,Meandering,18
+Gemini Hydrogen,Opus 5.5,D,11,Weak Dialogue,18
+Gemini Hydrogen,Opus 5.5,D,12,Tell-Don't-Show,17
+Gemini Hydrogen,Opus 5.5,D,13,Unsurprising or Uncreative,17
+Gemini Hydrogen,Opus 5.5,D,14,Amateurish,18
+Gemini Hydrogen,Opus 5.5,D,15,Purple Prose,19
+Gemini Hydrogen,Opus 5.5,D,16,Overwrought,18
+Gemini Hydrogen,Opus 5.5,D,17,Incongruent Ending Positivity,18
+Gemini Hydrogen,Opus 5.5,D,18,Unearned Transformations,18
+Gemini Hydrogen,Opus 5.5,D,19,Well-earned Lightness or Darkness,17
+Gemini Hydrogen,Opus 5.5,D,20,Sentences Flow Naturally,18
+Gemini Hydrogen,Opus 5.5,D,21,Overall Reader Engagement,17
+Gemini Hydrogen,Opus 5.5,D,22,Overall Impression,17
 Gemini Hydrogen,Fable 5.1,J,1,Adherence to Instructions,16
 Gemini Hydrogen,Fable 5.1,J,2,Believable Character Actions,18
 Gemini Hydrogen,Fable 5.1,J,3,Nuanced Characters,18
@@ -175,6 +153,28 @@ Gemini Hydrogen,GPT-6 Astra,N,19,Well-earned Lightness or Darkness,17
 Gemini Hydrogen,GPT-6 Astra,N,20,Sentences Flow Naturally,17
 Gemini Hydrogen,GPT-6 Astra,N,21,Overall Reader Engagement,16
 Gemini Hydrogen,GPT-6 Astra,N,22,Overall Impression,17
+Gemini Hydrogen,GLM 5.3,C,1,Adherence to Instructions,17
+Gemini Hydrogen,GLM 5.3,C,2,Believable Character Actions,18
+Gemini Hydrogen,GLM 5.3,C,3,Nuanced Characters,18
+Gemini Hydrogen,GLM 5.3,C,4,Consistent Voice/Tone of Writing,19
+Gemini Hydrogen,GLM 5.3,C,5,Imagery and Descriptive Quality,18
+Gemini Hydrogen,GLM 5.3,C,6,Elegant Prose,18
+Gemini Hydrogen,GLM 5.3,C,7,Emotionally Engaging,18
+Gemini Hydrogen,GLM 5.3,C,8,Emotionally Complex,18
+Gemini Hydrogen,GLM 5.3,C,9,Coherent,18
+Gemini Hydrogen,GLM 5.3,C,10,Meandering,19
+Gemini Hydrogen,GLM 5.3,C,11,Weak Dialogue,18
+Gemini Hydrogen,GLM 5.3,C,12,Tell-Don't-Show,18
+Gemini Hydrogen,GLM 5.3,C,13,Unsurprising or Uncreative,17
+Gemini Hydrogen,GLM 5.3,C,14,Amateurish,19
+Gemini Hydrogen,GLM 5.3,C,15,Purple Prose,19
+Gemini Hydrogen,GLM 5.3,C,16,Overwrought,19
+Gemini Hydrogen,GLM 5.3,C,17,Incongruent Ending Positivity,18
+Gemini Hydrogen,GLM 5.3,C,18,Unearned Transformations,18
+Gemini Hydrogen,GLM 5.3,C,19,Well-earned Lightness or Darkness,18
+Gemini Hydrogen,GLM 5.3,C,20,Sentences Flow Naturally,18
+Gemini Hydrogen,GLM 5.3,C,21,Overall Reader Engagement,18
+Gemini Hydrogen,GLM 5.3,C,22,Overall Impression,18
 Gemini Hydrogen,Kimi K3.1 Pro,I,1,Adherence to Instructions,18
 Gemini Hydrogen,Kimi K3.1 Pro,I,2,Believable Character Actions,18
 Gemini Hydrogen,Kimi K3.1 Pro,I,3,Nuanced Characters,17
@@ -263,28 +263,6 @@ Gemini Hydrogen,GPT 5.6 Sol,Q,19,Well-earned Lightness or Darkness,17
 Gemini Hydrogen,GPT 5.6 Sol,Q,20,Sentences Flow Naturally,17
 Gemini Hydrogen,GPT 5.6 Sol,Q,21,Overall Reader Engagement,16
 Gemini Hydrogen,GPT 5.6 Sol,Q,22,Overall Impression,16
-Gemini Hydrogen,Gemini Argon,F,1,Adherence to Instructions,9
-Gemini Hydrogen,Gemini Argon,F,2,Believable Character Actions,17
-Gemini Hydrogen,Gemini Argon,F,3,Nuanced Characters,17
-Gemini Hydrogen,Gemini Argon,F,4,Consistent Voice/Tone of Writing,17
-Gemini Hydrogen,Gemini Argon,F,5,Imagery and Descriptive Quality,18
-Gemini Hydrogen,Gemini Argon,F,6,Elegant Prose,16
-Gemini Hydrogen,Gemini Argon,F,7,Emotionally Engaging,17
-Gemini Hydrogen,Gemini Argon,F,8,Emotionally Complex,16
-Gemini Hydrogen,Gemini Argon,F,9,Coherent,16
-Gemini Hydrogen,Gemini Argon,F,10,Meandering,16
-Gemini Hydrogen,Gemini Argon,F,11,Weak Dialogue,16
-Gemini Hydrogen,Gemini Argon,F,12,Tell-Don't-Show,15
-Gemini Hydrogen,Gemini Argon,F,13,Unsurprising or Uncreative,16
-Gemini Hydrogen,Gemini Argon,F,14,Amateurish,17
-Gemini Hydrogen,Gemini Argon,F,15,Purple Prose,17
-Gemini Hydrogen,Gemini Argon,F,16,Overwrought,17
-Gemini Hydrogen,Gemini Argon,F,17,Incongruent Ending Positivity,17
-Gemini Hydrogen,Gemini Argon,F,18,Unearned Transformations,17
-Gemini Hydrogen,Gemini Argon,F,19,Well-earned Lightness or Darkness,17
-Gemini Hydrogen,Gemini Argon,F,20,Sentences Flow Naturally,17
-Gemini Hydrogen,Gemini Argon,F,21,Overall Reader Engagement,17
-Gemini Hydrogen,Gemini Argon,F,22,Overall Impression,17
 Gemini Hydrogen,Opus 4.6 Max,M,1,Adherence to Instructions,12
 Gemini Hydrogen,Opus 4.6 Max,M,2,Believable Character Actions,17
 Gemini Hydrogen,Opus 4.6 Max,M,3,Nuanced Characters,16
@@ -307,6 +285,28 @@ Gemini Hydrogen,Opus 4.6 Max,M,19,Well-earned Lightness or Darkness,16
 Gemini Hydrogen,Opus 4.6 Max,M,20,Sentences Flow Naturally,17
 Gemini Hydrogen,Opus 4.6 Max,M,21,Overall Reader Engagement,15
 Gemini Hydrogen,Opus 4.6 Max,M,22,Overall Impression,16
+Gemini Hydrogen,Gemini Argon,F,1,Adherence to Instructions,9
+Gemini Hydrogen,Gemini Argon,F,2,Believable Character Actions,17
+Gemini Hydrogen,Gemini Argon,F,3,Nuanced Characters,17
+Gemini Hydrogen,Gemini Argon,F,4,Consistent Voice/Tone of Writing,17
+Gemini Hydrogen,Gemini Argon,F,5,Imagery and Descriptive Quality,18
+Gemini Hydrogen,Gemini Argon,F,6,Elegant Prose,16
+Gemini Hydrogen,Gemini Argon,F,7,Emotionally Engaging,17
+Gemini Hydrogen,Gemini Argon,F,8,Emotionally Complex,16
+Gemini Hydrogen,Gemini Argon,F,9,Coherent,16
+Gemini Hydrogen,Gemini Argon,F,10,Meandering,16
+Gemini Hydrogen,Gemini Argon,F,11,Weak Dialogue,16
+Gemini Hydrogen,Gemini Argon,F,12,Tell-Don't-Show,15
+Gemini Hydrogen,Gemini Argon,F,13,Unsurprising or Uncreative,16
+Gemini Hydrogen,Gemini Argon,F,14,Amateurish,17
+Gemini Hydrogen,Gemini Argon,F,15,Purple Prose,17
+Gemini Hydrogen,Gemini Argon,F,16,Overwrought,17
+Gemini Hydrogen,Gemini Argon,F,17,Incongruent Ending Positivity,17
+Gemini Hydrogen,Gemini Argon,F,18,Unearned Transformations,17
+Gemini Hydrogen,Gemini Argon,F,19,Well-earned Lightness or Darkness,17
+Gemini Hydrogen,Gemini Argon,F,20,Sentences Flow Naturally,17
+Gemini Hydrogen,Gemini Argon,F,21,Overall Reader Engagement,17
+Gemini Hydrogen,Gemini Argon,F,22,Overall Impression,17
 Gemini Hydrogen,GPT 6 Sol,R,1,Adherence to Instructions,17
 Gemini Hydrogen,GPT 6 Sol,R,2,Believable Character Actions,17
 Gemini Hydrogen,GPT 6 Sol,R,3,Nuanced Characters,16
@@ -417,28 +417,6 @@ Gemini Hydrogen,Meta Ember,U,19,Well-earned Lightness or Darkness,16
 Gemini Hydrogen,Meta Ember,U,20,Sentences Flow Naturally,16
 Gemini Hydrogen,Meta Ember,U,21,Overall Reader Engagement,15
 Gemini Hydrogen,Meta Ember,U,22,Overall Impression,15
-Gemini Hydrogen,Sonnet 4.5,B,1,Adherence to Instructions,11
-Gemini Hydrogen,Sonnet 4.5,B,2,Believable Character Actions,13
-Gemini Hydrogen,Sonnet 4.5,B,3,Nuanced Characters,11
-Gemini Hydrogen,Sonnet 4.5,B,4,Consistent Voice/Tone of Writing,13
-Gemini Hydrogen,Sonnet 4.5,B,5,Imagery and Descriptive Quality,12
-Gemini Hydrogen,Sonnet 4.5,B,6,Elegant Prose,11
-Gemini Hydrogen,Sonnet 4.5,B,7,Emotionally Engaging,11
-Gemini Hydrogen,Sonnet 4.5,B,8,Emotionally Complex,10
-Gemini Hydrogen,Sonnet 4.5,B,9,Coherent,10
-Gemini Hydrogen,Sonnet 4.5,B,10,Meandering,13
-Gemini Hydrogen,Sonnet 4.5,B,11,Weak Dialogue,11
-Gemini Hydrogen,Sonnet 4.5,B,12,Tell-Don't-Show,8
-Gemini Hydrogen,Sonnet 4.5,B,13,Unsurprising or Uncreative,9
-Gemini Hydrogen,Sonnet 4.5,B,14,Amateurish,10
-Gemini Hydrogen,Sonnet 4.5,B,15,Purple Prose,13
-Gemini Hydrogen,Sonnet 4.5,B,16,Overwrought,12
-Gemini Hydrogen,Sonnet 4.5,B,17,Incongruent Ending Positivity,14
-Gemini Hydrogen,Sonnet 4.5,B,18,Unearned Transformations,13
-Gemini Hydrogen,Sonnet 4.5,B,19,Well-earned Lightness or Darkness,11
-Gemini Hydrogen,Sonnet 4.5,B,20,Sentences Flow Naturally,13
-Gemini Hydrogen,Sonnet 4.5,B,21,Overall Reader Engagement,11
-Gemini Hydrogen,Sonnet 4.5,B,22,Overall Impression,11
 Gemini Hydrogen,Mistral Large 4,V,1,Adherence to Instructions,14
 Gemini Hydrogen,Mistral Large 4,V,2,Believable Character Actions,12
 Gemini Hydrogen,Mistral Large 4,V,3,Nuanced Characters,13
@@ -461,6 +439,28 @@ Gemini Hydrogen,Mistral Large 4,V,19,Well-earned Lightness or Darkness,14
 Gemini Hydrogen,Mistral Large 4,V,20,Sentences Flow Naturally,15
 Gemini Hydrogen,Mistral Large 4,V,21,Overall Reader Engagement,13
 Gemini Hydrogen,Mistral Large 4,V,22,Overall Impression,13
+Gemini Hydrogen,Sonnet 4.5,B,1,Adherence to Instructions,11
+Gemini Hydrogen,Sonnet 4.5,B,2,Believable Character Actions,13
+Gemini Hydrogen,Sonnet 4.5,B,3,Nuanced Characters,11
+Gemini Hydrogen,Sonnet 4.5,B,4,Consistent Voice/Tone of Writing,13
+Gemini Hydrogen,Sonnet 4.5,B,5,Imagery and Descriptive Quality,12
+Gemini Hydrogen,Sonnet 4.5,B,6,Elegant Prose,11
+Gemini Hydrogen,Sonnet 4.5,B,7,Emotionally Engaging,11
+Gemini Hydrogen,Sonnet 4.5,B,8,Emotionally Complex,10
+Gemini Hydrogen,Sonnet 4.5,B,9,Coherent,10
+Gemini Hydrogen,Sonnet 4.5,B,10,Meandering,13
+Gemini Hydrogen,Sonnet 4.5,B,11,Weak Dialogue,11
+Gemini Hydrogen,Sonnet 4.5,B,12,Tell-Don't-Show,8
+Gemini Hydrogen,Sonnet 4.5,B,13,Unsurprising or Uncreative,9
+Gemini Hydrogen,Sonnet 4.5,B,14,Amateurish,10
+Gemini Hydrogen,Sonnet 4.5,B,15,Purple Prose,13
+Gemini Hydrogen,Sonnet 4.5,B,16,Overwrought,12
+Gemini Hydrogen,Sonnet 4.5,B,17,Incongruent Ending Positivity,14
+Gemini Hydrogen,Sonnet 4.5,B,18,Unearned Transformations,13
+Gemini Hydrogen,Sonnet 4.5,B,19,Well-earned Lightness or Darkness,11
+Gemini Hydrogen,Sonnet 4.5,B,20,Sentences Flow Naturally,13
+Gemini Hydrogen,Sonnet 4.5,B,21,Overall Reader Engagement,11
+Gemini Hydrogen,Sonnet 4.5,B,22,Overall Impression,11
 Gemini Hydrogen,Mistral Small 4,E,1,Adherence to Instructions,5
 Gemini Hydrogen,Mistral Small 4,E,2,Believable Character Actions,4
 Gemini Hydrogen,Mistral Small 4,E,3,Nuanced Characters,6
@@ -527,50 +527,6 @@ GLM 5.3,6.2 Sol,H,19,Well-earned Lightness or Darkness,18
 GLM 5.3,6.2 Sol,H,20,Sentences Flow Naturally,18
 GLM 5.3,6.2 Sol,H,21,Overall Reader Engagement,18
 GLM 5.3,6.2 Sol,H,22,Overall Impression,18
-GLM 5.3,Opus 5.5,D,1,Adherence to Instructions,20
-GLM 5.3,Opus 5.5,D,2,Believable Character Actions,19
-GLM 5.3,Opus 5.5,D,3,Nuanced Characters,18
-GLM 5.3,Opus 5.5,D,4,Consistent Voice/Tone of Writing,18
-GLM 5.3,Opus 5.5,D,5,Imagery and Descriptive Quality,18
-GLM 5.3,Opus 5.5,D,6,Elegant Prose,17
-GLM 5.3,Opus 5.5,D,7,Emotionally Engaging,17
-GLM 5.3,Opus 5.5,D,8,Emotionally Complex,17
-GLM 5.3,Opus 5.5,D,9,Coherent,19
-GLM 5.3,Opus 5.5,D,10,Meandering,18
-GLM 5.3,Opus 5.5,D,11,Weak Dialogue,17
-GLM 5.3,Opus 5.5,D,12,Tell-Don't-Show,18
-GLM 5.3,Opus 5.5,D,13,Unsurprising or Uncreative,16
-GLM 5.3,Opus 5.5,D,14,Amateurish,18
-GLM 5.3,Opus 5.5,D,15,Purple Prose,19
-GLM 5.3,Opus 5.5,D,16,Overwrought,18
-GLM 5.3,Opus 5.5,D,17,Incongruent Ending Positivity,18
-GLM 5.3,Opus 5.5,D,18,Unearned Transformations,19
-GLM 5.3,Opus 5.5,D,19,Well-earned Lightness or Darkness,18
-GLM 5.3,Opus 5.5,D,20,Sentences Flow Naturally,18
-GLM 5.3,Opus 5.5,D,21,Overall Reader Engagement,18
-GLM 5.3,Opus 5.5,D,22,Overall Impression,18
-GLM 5.3,GLM 5.3,C,1,Adherence to Instructions,20
-GLM 5.3,GLM 5.3,C,2,Believable Character Actions,19
-GLM 5.3,GLM 5.3,C,3,Nuanced Characters,18
-GLM 5.3,GLM 5.3,C,4,Consistent Voice/Tone of Writing,19
-GLM 5.3,GLM 5.3,C,5,Imagery and Descriptive Quality,18
-GLM 5.3,GLM 5.3,C,6,Elegant Prose,18
-GLM 5.3,GLM 5.3,C,7,Emotionally Engaging,18
-GLM 5.3,GLM 5.3,C,8,Emotionally Complex,18
-GLM 5.3,GLM 5.3,C,9,Coherent,19
-GLM 5.3,GLM 5.3,C,10,Meandering,18
-GLM 5.3,GLM 5.3,C,11,Weak Dialogue,17
-GLM 5.3,GLM 5.3,C,12,Tell-Don't-Show,18
-GLM 5.3,GLM 5.3,C,13,Unsurprising or Uncreative,17
-GLM 5.3,GLM 5.3,C,14,Amateurish,18
-GLM 5.3,GLM 5.3,C,15,Purple Prose,19
-GLM 5.3,GLM 5.3,C,16,Overwrought,18
-GLM 5.3,GLM 5.3,C,17,Incongruent Ending Positivity,18
-GLM 5.3,GLM 5.3,C,18,Unearned Transformations,19
-GLM 5.3,GLM 5.3,C,19,Well-earned Lightness or Darkness,19
-GLM 5.3,GLM 5.3,C,20,Sentences Flow Naturally,18
-GLM 5.3,GLM 5.3,C,21,Overall Reader Engagement,19
-GLM 5.3,GLM 5.3,C,22,Overall Impression,18
 GLM 5.3,Sonnet 5.5,S,1,Adherence to Instructions,20
 GLM 5.3,Sonnet 5.5,S,2,Believable Character Actions,19
 GLM 5.3,Sonnet 5.5,S,3,Nuanced Characters,18
@@ -593,6 +549,28 @@ GLM 5.3,Sonnet 5.5,S,19,Well-earned Lightness or Darkness,18
 GLM 5.3,Sonnet 5.5,S,20,Sentences Flow Naturally,18
 GLM 5.3,Sonnet 5.5,S,21,Overall Reader Engagement,18
 GLM 5.3,Sonnet 5.5,S,22,Overall Impression,18
+GLM 5.3,Opus 5.5,D,1,Adherence to Instructions,20
+GLM 5.3,Opus 5.5,D,2,Believable Character Actions,19
+GLM 5.3,Opus 5.5,D,3,Nuanced Characters,18
+GLM 5.3,Opus 5.5,D,4,Consistent Voice/Tone of Writing,18
+GLM 5.3,Opus 5.5,D,5,Imagery and Descriptive Quality,18
+GLM 5.3,Opus 5.5,D,6,Elegant Prose,17
+GLM 5.3,Opus 5.5,D,7,Emotionally Engaging,17
+GLM 5.3,Opus 5.5,D,8,Emotionally Complex,17
+GLM 5.3,Opus 5.5,D,9,Coherent,19
+GLM 5.3,Opus 5.5,D,10,Meandering,18
+GLM 5.3,Opus 5.5,D,11,Weak Dialogue,17
+GLM 5.3,Opus 5.5,D,12,Tell-Don't-Show,18
+GLM 5.3,Opus 5.5,D,13,Unsurprising or Uncreative,16
+GLM 5.3,Opus 5.5,D,14,Amateurish,18
+GLM 5.3,Opus 5.5,D,15,Purple Prose,19
+GLM 5.3,Opus 5.5,D,16,Overwrought,18
+GLM 5.3,Opus 5.5,D,17,Incongruent Ending Positivity,18
+GLM 5.3,Opus 5.5,D,18,Unearned Transformations,19
+GLM 5.3,Opus 5.5,D,19,Well-earned Lightness or Darkness,18
+GLM 5.3,Opus 5.5,D,20,Sentences Flow Naturally,18
+GLM 5.3,Opus 5.5,D,21,Overall Reader Engagement,18
+GLM 5.3,Opus 5.5,D,22,Overall Impression,18
 GLM 5.3,Fable 5.1,J,1,Adherence to Instructions,20
 GLM 5.3,Fable 5.1,J,2,Believable Character Actions,19
 GLM 5.3,Fable 5.1,J,3,Nuanced Characters,18
@@ -659,6 +637,28 @@ GLM 5.3,GPT-6 Astra,N,19,Well-earned Lightness or Darkness,18
 GLM 5.3,GPT-6 Astra,N,20,Sentences Flow Naturally,19
 GLM 5.3,GPT-6 Astra,N,21,Overall Reader Engagement,17
 GLM 5.3,GPT-6 Astra,N,22,Overall Impression,18
+GLM 5.3,GLM 5.3,C,1,Adherence to Instructions,20
+GLM 5.3,GLM 5.3,C,2,Believable Character Actions,19
+GLM 5.3,GLM 5.3,C,3,Nuanced Characters,18
+GLM 5.3,GLM 5.3,C,4,Consistent Voice/Tone of Writing,19
+GLM 5.3,GLM 5.3,C,5,Imagery and Descriptive Quality,18
+GLM 5.3,GLM 5.3,C,6,Elegant Prose,18
+GLM 5.3,GLM 5.3,C,7,Emotionally Engaging,18
+GLM 5.3,GLM 5.3,C,8,Emotionally Complex,18
+GLM 5.3,GLM 5.3,C,9,Coherent,19
+GLM 5.3,GLM 5.3,C,10,Meandering,18
+GLM 5.3,GLM 5.3,C,11,Weak Dialogue,17
+GLM 5.3,GLM 5.3,C,12,Tell-Don't-Show,18
+GLM 5.3,GLM 5.3,C,13,Unsurprising or Uncreative,17
+GLM 5.3,GLM 5.3,C,14,Amateurish,18
+GLM 5.3,GLM 5.3,C,15,Purple Prose,19
+GLM 5.3,GLM 5.3,C,16,Overwrought,18
+GLM 5.3,GLM 5.3,C,17,Incongruent Ending Positivity,18
+GLM 5.3,GLM 5.3,C,18,Unearned Transformations,19
+GLM 5.3,GLM 5.3,C,19,Well-earned Lightness or Darkness,19
+GLM 5.3,GLM 5.3,C,20,Sentences Flow Naturally,18
+GLM 5.3,GLM 5.3,C,21,Overall Reader Engagement,19
+GLM 5.3,GLM 5.3,C,22,Overall Impression,18
 GLM 5.3,Kimi K3.1 Pro,I,1,Adherence to Instructions,20
 GLM 5.3,Kimi K3.1 Pro,I,2,Believable Character Actions,18
 GLM 5.3,Kimi K3.1 Pro,I,3,Nuanced Characters,18
@@ -747,28 +747,6 @@ GLM 5.3,GPT 5.6 Sol,Q,19,Well-earned Lightness or Darkness,16
 GLM 5.3,GPT 5.6 Sol,Q,20,Sentences Flow Naturally,16
 GLM 5.3,GPT 5.6 Sol,Q,21,Overall Reader Engagement,15
 GLM 5.3,GPT 5.6 Sol,Q,22,Overall Impression,16
-GLM 5.3,Gemini Argon,F,1,Adherence to Instructions,12
-GLM 5.3,Gemini Argon,F,2,Believable Character Actions,18
-GLM 5.3,Gemini Argon,F,3,Nuanced Characters,18
-GLM 5.3,Gemini Argon,F,4,Consistent Voice/Tone of Writing,18
-GLM 5.3,Gemini Argon,F,5,Imagery and Descriptive Quality,19
-GLM 5.3,Gemini Argon,F,6,Elegant Prose,18
-GLM 5.3,Gemini Argon,F,7,Emotionally Engaging,17
-GLM 5.3,Gemini Argon,F,8,Emotionally Complex,18
-GLM 5.3,Gemini Argon,F,9,Coherent,18
-GLM 5.3,Gemini Argon,F,10,Meandering,15
-GLM 5.3,Gemini Argon,F,11,Weak Dialogue,17
-GLM 5.3,Gemini Argon,F,12,Tell-Don't-Show,18
-GLM 5.3,Gemini Argon,F,13,Unsurprising or Uncreative,16
-GLM 5.3,Gemini Argon,F,14,Amateurish,18
-GLM 5.3,Gemini Argon,F,15,Purple Prose,18
-GLM 5.3,Gemini Argon,F,16,Overwrought,17
-GLM 5.3,Gemini Argon,F,17,Incongruent Ending Positivity,18
-GLM 5.3,Gemini Argon,F,18,Unearned Transformations,18
-GLM 5.3,Gemini Argon,F,19,Well-earned Lightness or Darkness,17
-GLM 5.3,Gemini Argon,F,20,Sentences Flow Naturally,17
-GLM 5.3,Gemini Argon,F,21,Overall Reader Engagement,18
-GLM 5.3,Gemini Argon,F,22,Overall Impression,17
 GLM 5.3,Opus 4.6 Max,M,1,Adherence to Instructions,20
 GLM 5.3,Opus 4.6 Max,M,2,Believable Character Actions,18
 GLM 5.3,Opus 4.6 Max,M,3,Nuanced Characters,16
@@ -791,6 +769,28 @@ GLM 5.3,Opus 4.6 Max,M,19,Well-earned Lightness or Darkness,16
 GLM 5.3,Opus 4.6 Max,M,20,Sentences Flow Naturally,17
 GLM 5.3,Opus 4.6 Max,M,21,Overall Reader Engagement,15
 GLM 5.3,Opus 4.6 Max,M,22,Overall Impression,16
+GLM 5.3,Gemini Argon,F,1,Adherence to Instructions,12
+GLM 5.3,Gemini Argon,F,2,Believable Character Actions,18
+GLM 5.3,Gemini Argon,F,3,Nuanced Characters,18
+GLM 5.3,Gemini Argon,F,4,Consistent Voice/Tone of Writing,18
+GLM 5.3,Gemini Argon,F,5,Imagery and Descriptive Quality,19
+GLM 5.3,Gemini Argon,F,6,Elegant Prose,18
+GLM 5.3,Gemini Argon,F,7,Emotionally Engaging,17
+GLM 5.3,Gemini Argon,F,8,Emotionally Complex,18
+GLM 5.3,Gemini Argon,F,9,Coherent,18
+GLM 5.3,Gemini Argon,F,10,Meandering,15
+GLM 5.3,Gemini Argon,F,11,Weak Dialogue,17
+GLM 5.3,Gemini Argon,F,12,Tell-Don't-Show,18
+GLM 5.3,Gemini Argon,F,13,Unsurprising or Uncreative,16
+GLM 5.3,Gemini Argon,F,14,Amateurish,18
+GLM 5.3,Gemini Argon,F,15,Purple Prose,18
+GLM 5.3,Gemini Argon,F,16,Overwrought,17
+GLM 5.3,Gemini Argon,F,17,Incongruent Ending Positivity,18
+GLM 5.3,Gemini Argon,F,18,Unearned Transformations,18
+GLM 5.3,Gemini Argon,F,19,Well-earned Lightness or Darkness,17
+GLM 5.3,Gemini Argon,F,20,Sentences Flow Naturally,17
+GLM 5.3,Gemini Argon,F,21,Overall Reader Engagement,18
+GLM 5.3,Gemini Argon,F,22,Overall Impression,17
 GLM 5.3,GPT 6 Sol,R,1,Adherence to Instructions,19
 GLM 5.3,GPT 6 Sol,R,2,Believable Character Actions,18
 GLM 5.3,GPT 6 Sol,R,3,Nuanced Characters,16
@@ -901,28 +901,6 @@ GLM 5.3,Meta Ember,U,19,Well-earned Lightness or Darkness,16
 GLM 5.3,Meta Ember,U,20,Sentences Flow Naturally,14
 GLM 5.3,Meta Ember,U,21,Overall Reader Engagement,15
 GLM 5.3,Meta Ember,U,22,Overall Impression,15
-GLM 5.3,Sonnet 4.5,B,1,Adherence to Instructions,18
-GLM 5.3,Sonnet 4.5,B,2,Believable Character Actions,17
-GLM 5.3,Sonnet 4.5,B,3,Nuanced Characters,16
-GLM 5.3,Sonnet 4.5,B,4,Consistent Voice/Tone of Writing,17
-GLM 5.3,Sonnet 4.5,B,5,Imagery and Descriptive Quality,16
-GLM 5.3,Sonnet 4.5,B,6,Elegant Prose,16
-GLM 5.3,Sonnet 4.5,B,7,Emotionally Engaging,16
-GLM 5.3,Sonnet 4.5,B,8,Emotionally Complex,15
-GLM 5.3,Sonnet 4.5,B,9,Coherent,18
-GLM 5.3,Sonnet 4.5,B,10,Meandering,16
-GLM 5.3,Sonnet 4.5,B,11,Weak Dialogue,16
-GLM 5.3,Sonnet 4.5,B,12,Tell-Don't-Show,15
-GLM 5.3,Sonnet 4.5,B,13,Unsurprising or Uncreative,15
-GLM 5.3,Sonnet 4.5,B,14,Amateurish,16
-GLM 5.3,Sonnet 4.5,B,15,Purple Prose,17
-GLM 5.3,Sonnet 4.5,B,16,Overwrought,16
-GLM 5.3,Sonnet 4.5,B,17,Incongruent Ending Positivity,16
-GLM 5.3,Sonnet 4.5,B,18,Unearned Transformations,17
-GLM 5.3,Sonnet 4.5,B,19,Well-earned Lightness or Darkness,15
-GLM 5.3,Sonnet 4.5,B,20,Sentences Flow Naturally,16
-GLM 5.3,Sonnet 4.5,B,21,Overall Reader Engagement,15
-GLM 5.3,Sonnet 4.5,B,22,Overall Impression,16
 GLM 5.3,Mistral Large 4,V,1,Adherence to Instructions,15
 GLM 5.3,Mistral Large 4,V,2,Believable Character Actions,14
 GLM 5.3,Mistral Large 4,V,3,Nuanced Characters,13
@@ -945,6 +923,28 @@ GLM 5.3,Mistral Large 4,V,19,Well-earned Lightness or Darkness,13
 GLM 5.3,Mistral Large 4,V,20,Sentences Flow Naturally,13
 GLM 5.3,Mistral Large 4,V,21,Overall Reader Engagement,13
 GLM 5.3,Mistral Large 4,V,22,Overall Impression,12
+GLM 5.3,Sonnet 4.5,B,1,Adherence to Instructions,18
+GLM 5.3,Sonnet 4.5,B,2,Believable Character Actions,17
+GLM 5.3,Sonnet 4.5,B,3,Nuanced Characters,16
+GLM 5.3,Sonnet 4.5,B,4,Consistent Voice/Tone of Writing,17
+GLM 5.3,Sonnet 4.5,B,5,Imagery and Descriptive Quality,16
+GLM 5.3,Sonnet 4.5,B,6,Elegant Prose,16
+GLM 5.3,Sonnet 4.5,B,7,Emotionally Engaging,16
+GLM 5.3,Sonnet 4.5,B,8,Emotionally Complex,15
+GLM 5.3,Sonnet 4.5,B,9,Coherent,18
+GLM 5.3,Sonnet 4.5,B,10,Meandering,16
+GLM 5.3,Sonnet 4.5,B,11,Weak Dialogue,16
+GLM 5.3,Sonnet 4.5,B,12,Tell-Don't-Show,15
+GLM 5.3,Sonnet 4.5,B,13,Unsurprising or Uncreative,15
+GLM 5.3,Sonnet 4.5,B,14,Amateurish,16
+GLM 5.3,Sonnet 4.5,B,15,Purple Prose,17
+GLM 5.3,Sonnet 4.5,B,16,Overwrought,16
+GLM 5.3,Sonnet 4.5,B,17,Incongruent Ending Positivity,16
+GLM 5.3,Sonnet 4.5,B,18,Unearned Transformations,17
+GLM 5.3,Sonnet 4.5,B,19,Well-earned Lightness or Darkness,15
+GLM 5.3,Sonnet 4.5,B,20,Sentences Flow Naturally,16
+GLM 5.3,Sonnet 4.5,B,21,Overall Reader Engagement,15
+GLM 5.3,Sonnet 4.5,B,22,Overall Impression,16
 GLM 5.3,Mistral Small 4,E,1,Adherence to Instructions,10
 GLM 5.3,Mistral Small 4,E,2,Believable Character Actions,12
 GLM 5.3,Mistral Small 4,E,3,Nuanced Characters,12
@@ -1011,50 +1011,6 @@ Meta Muse Spark 1.3,6.2 Sol,H,19,Well-earned Lightness or Darkness,17
 Meta Muse Spark 1.3,6.2 Sol,H,20,Sentences Flow Naturally,18
 Meta Muse Spark 1.3,6.2 Sol,H,21,Overall Reader Engagement,17
 Meta Muse Spark 1.3,6.2 Sol,H,22,Overall Impression,19
-Meta Muse Spark 1.3,Opus 5.5,D,1,Adherence to Instructions,19
-Meta Muse Spark 1.3,Opus 5.5,D,2,Believable Character Actions,18
-Meta Muse Spark 1.3,Opus 5.5,D,3,Nuanced Characters,18
-Meta Muse Spark 1.3,Opus 5.5,D,4,Consistent Voice/Tone of Writing,18
-Meta Muse Spark 1.3,Opus 5.5,D,5,Imagery and Descriptive Quality,18
-Meta Muse Spark 1.3,Opus 5.5,D,6,Elegant Prose,18
-Meta Muse Spark 1.3,Opus 5.5,D,7,Emotionally Engaging,16
-Meta Muse Spark 1.3,Opus 5.5,D,8,Emotionally Complex,16
-Meta Muse Spark 1.3,Opus 5.5,D,9,Coherent,18
-Meta Muse Spark 1.3,Opus 5.5,D,10,Meandering,17
-Meta Muse Spark 1.3,Opus 5.5,D,11,Weak Dialogue,19
-Meta Muse Spark 1.3,Opus 5.5,D,12,Tell-Don't-Show,16
-Meta Muse Spark 1.3,Opus 5.5,D,13,Unsurprising or Uncreative,15
-Meta Muse Spark 1.3,Opus 5.5,D,14,Amateurish,18
-Meta Muse Spark 1.3,Opus 5.5,D,15,Purple Prose,19
-Meta Muse Spark 1.3,Opus 5.5,D,16,Overwrought,18
-Meta Muse Spark 1.3,Opus 5.5,D,17,Incongruent Ending Positivity,18
-Meta Muse Spark 1.3,Opus 5.5,D,18,Unearned Transformations,16
-Meta Muse Spark 1.3,Opus 5.5,D,19,Well-earned Lightness or Darkness,18
-Meta Muse Spark 1.3,Opus 5.5,D,20,Sentences Flow Naturally,18
-Meta Muse Spark 1.3,Opus 5.5,D,21,Overall Reader Engagement,16
-Meta Muse Spark 1.3,Opus 5.5,D,22,Overall Impression,18
-Meta Muse Spark 1.3,GLM 5.3,C,1,Adherence to Instructions,18
-Meta Muse Spark 1.3,GLM 5.3,C,2,Believable Character Actions,18
-Meta Muse Spark 1.3,GLM 5.3,C,3,Nuanced Characters,18
-Meta Muse Spark 1.3,GLM 5.3,C,4,Consistent Voice/Tone of Writing,18
-Meta Muse Spark 1.3,GLM 5.3,C,5,Imagery and Descriptive Quality,18
-Meta Muse Spark 1.3,GLM 5.3,C,6,Elegant Prose,16
-Meta Muse Spark 1.3,GLM 5.3,C,7,Emotionally Engaging,16
-Meta Muse Spark 1.3,GLM 5.3,C,8,Emotionally Complex,15
-Meta Muse Spark 1.3,GLM 5.3,C,9,Coherent,18
-Meta Muse Spark 1.3,GLM 5.3,C,10,Meandering,17
-Meta Muse Spark 1.3,GLM 5.3,C,11,Weak Dialogue,18
-Meta Muse Spark 1.3,GLM 5.3,C,12,Tell-Don't-Show,16
-Meta Muse Spark 1.3,GLM 5.3,C,13,Unsurprising or Uncreative,15
-Meta Muse Spark 1.3,GLM 5.3,C,14,Amateurish,18
-Meta Muse Spark 1.3,GLM 5.3,C,15,Purple Prose,19
-Meta Muse Spark 1.3,GLM 5.3,C,16,Overwrought,16
-Meta Muse Spark 1.3,GLM 5.3,C,17,Incongruent Ending Positivity,18
-Meta Muse Spark 1.3,GLM 5.3,C,18,Unearned Transformations,18
-Meta Muse Spark 1.3,GLM 5.3,C,19,Well-earned Lightness or Darkness,18
-Meta Muse Spark 1.3,GLM 5.3,C,20,Sentences Flow Naturally,18
-Meta Muse Spark 1.3,GLM 5.3,C,21,Overall Reader Engagement,17
-Meta Muse Spark 1.3,GLM 5.3,C,22,Overall Impression,15
 Meta Muse Spark 1.3,Sonnet 5.5,S,1,Adherence to Instructions,16
 Meta Muse Spark 1.3,Sonnet 5.5,S,2,Believable Character Actions,17
 Meta Muse Spark 1.3,Sonnet 5.5,S,3,Nuanced Characters,17
@@ -1077,6 +1033,28 @@ Meta Muse Spark 1.3,Sonnet 5.5,S,19,Well-earned Lightness or Darkness,17
 Meta Muse Spark 1.3,Sonnet 5.5,S,20,Sentences Flow Naturally,17
 Meta Muse Spark 1.3,Sonnet 5.5,S,21,Overall Reader Engagement,17
 Meta Muse Spark 1.3,Sonnet 5.5,S,22,Overall Impression,14
+Meta Muse Spark 1.3,Opus 5.5,D,1,Adherence to Instructions,19
+Meta Muse Spark 1.3,Opus 5.5,D,2,Believable Character Actions,18
+Meta Muse Spark 1.3,Opus 5.5,D,3,Nuanced Characters,18
+Meta Muse Spark 1.3,Opus 5.5,D,4,Consistent Voice/Tone of Writing,18
+Meta Muse Spark 1.3,Opus 5.5,D,5,Imagery and Descriptive Quality,18
+Meta Muse Spark 1.3,Opus 5.5,D,6,Elegant Prose,18
+Meta Muse Spark 1.3,Opus 5.5,D,7,Emotionally Engaging,16
+Meta Muse Spark 1.3,Opus 5.5,D,8,Emotionally Complex,16
+Meta Muse Spark 1.3,Opus 5.5,D,9,Coherent,18
+Meta Muse Spark 1.3,Opus 5.5,D,10,Meandering,17
+Meta Muse Spark 1.3,Opus 5.5,D,11,Weak Dialogue,19
+Meta Muse Spark 1.3,Opus 5.5,D,12,Tell-Don't-Show,16
+Meta Muse Spark 1.3,Opus 5.5,D,13,Unsurprising or Uncreative,15
+Meta Muse Spark 1.3,Opus 5.5,D,14,Amateurish,18
+Meta Muse Spark 1.3,Opus 5.5,D,15,Purple Prose,19
+Meta Muse Spark 1.3,Opus 5.5,D,16,Overwrought,18
+Meta Muse Spark 1.3,Opus 5.5,D,17,Incongruent Ending Positivity,18
+Meta Muse Spark 1.3,Opus 5.5,D,18,Unearned Transformations,16
+Meta Muse Spark 1.3,Opus 5.5,D,19,Well-earned Lightness or Darkness,18
+Meta Muse Spark 1.3,Opus 5.5,D,20,Sentences Flow Naturally,18
+Meta Muse Spark 1.3,Opus 5.5,D,21,Overall Reader Engagement,16
+Meta Muse Spark 1.3,Opus 5.5,D,22,Overall Impression,18
 Meta Muse Spark 1.3,Fable 5.1,J,1,Adherence to Instructions,17
 Meta Muse Spark 1.3,Fable 5.1,J,2,Believable Character Actions,18
 Meta Muse Spark 1.3,Fable 5.1,J,3,Nuanced Characters,17
@@ -1143,6 +1121,28 @@ Meta Muse Spark 1.3,GPT-6 Astra,N,19,Well-earned Lightness or Darkness,17
 Meta Muse Spark 1.3,GPT-6 Astra,N,20,Sentences Flow Naturally,17
 Meta Muse Spark 1.3,GPT-6 Astra,N,21,Overall Reader Engagement,16
 Meta Muse Spark 1.3,GPT-6 Astra,N,22,Overall Impression,15
+Meta Muse Spark 1.3,GLM 5.3,C,1,Adherence to Instructions,18
+Meta Muse Spark 1.3,GLM 5.3,C,2,Believable Character Actions,18
+Meta Muse Spark 1.3,GLM 5.3,C,3,Nuanced Characters,18
+Meta Muse Spark 1.3,GLM 5.3,C,4,Consistent Voice/Tone of Writing,18
+Meta Muse Spark 1.3,GLM 5.3,C,5,Imagery and Descriptive Quality,18
+Meta Muse Spark 1.3,GLM 5.3,C,6,Elegant Prose,16
+Meta Muse Spark 1.3,GLM 5.3,C,7,Emotionally Engaging,16
+Meta Muse Spark 1.3,GLM 5.3,C,8,Emotionally Complex,15
+Meta Muse Spark 1.3,GLM 5.3,C,9,Coherent,18
+Meta Muse Spark 1.3,GLM 5.3,C,10,Meandering,17
+Meta Muse Spark 1.3,GLM 5.3,C,11,Weak Dialogue,18
+Meta Muse Spark 1.3,GLM 5.3,C,12,Tell-Don't-Show,16
+Meta Muse Spark 1.3,GLM 5.3,C,13,Unsurprising or Uncreative,15
+Meta Muse Spark 1.3,GLM 5.3,C,14,Amateurish,18
+Meta Muse Spark 1.3,GLM 5.3,C,15,Purple Prose,19
+Meta Muse Spark 1.3,GLM 5.3,C,16,Overwrought,16
+Meta Muse Spark 1.3,GLM 5.3,C,17,Incongruent Ending Positivity,18
+Meta Muse Spark 1.3,GLM 5.3,C,18,Unearned Transformations,18
+Meta Muse Spark 1.3,GLM 5.3,C,19,Well-earned Lightness or Darkness,18
+Meta Muse Spark 1.3,GLM 5.3,C,20,Sentences Flow Naturally,18
+Meta Muse Spark 1.3,GLM 5.3,C,21,Overall Reader Engagement,17
+Meta Muse Spark 1.3,GLM 5.3,C,22,Overall Impression,15
 Meta Muse Spark 1.3,Kimi K3.1 Pro,I,1,Adherence to Instructions,19
 Meta Muse Spark 1.3,Kimi K3.1 Pro,I,2,Believable Character Actions,17
 Meta Muse Spark 1.3,Kimi K3.1 Pro,I,3,Nuanced Characters,16
@@ -1231,28 +1231,6 @@ Meta Muse Spark 1.3,GPT 5.6 Sol,Q,19,Well-earned Lightness or Darkness,17
 Meta Muse Spark 1.3,GPT 5.6 Sol,Q,20,Sentences Flow Naturally,17
 Meta Muse Spark 1.3,GPT 5.6 Sol,Q,21,Overall Reader Engagement,17
 Meta Muse Spark 1.3,GPT 5.6 Sol,Q,22,Overall Impression,15
-Meta Muse Spark 1.3,Gemini Argon,F,1,Adherence to Instructions,9
-Meta Muse Spark 1.3,Gemini Argon,F,2,Believable Character Actions,18
-Meta Muse Spark 1.3,Gemini Argon,F,3,Nuanced Characters,18
-Meta Muse Spark 1.3,Gemini Argon,F,4,Consistent Voice/Tone of Writing,17
-Meta Muse Spark 1.3,Gemini Argon,F,5,Imagery and Descriptive Quality,19
-Meta Muse Spark 1.3,Gemini Argon,F,6,Elegant Prose,18
-Meta Muse Spark 1.3,Gemini Argon,F,7,Emotionally Engaging,18
-Meta Muse Spark 1.3,Gemini Argon,F,8,Emotionally Complex,18
-Meta Muse Spark 1.3,Gemini Argon,F,9,Coherent,16
-Meta Muse Spark 1.3,Gemini Argon,F,10,Meandering,10
-Meta Muse Spark 1.3,Gemini Argon,F,11,Weak Dialogue,18
-Meta Muse Spark 1.3,Gemini Argon,F,12,Tell-Don't-Show,15
-Meta Muse Spark 1.3,Gemini Argon,F,13,Unsurprising or Uncreative,15
-Meta Muse Spark 1.3,Gemini Argon,F,14,Amateurish,17
-Meta Muse Spark 1.3,Gemini Argon,F,15,Purple Prose,18
-Meta Muse Spark 1.3,Gemini Argon,F,16,Overwrought,15
-Meta Muse Spark 1.3,Gemini Argon,F,17,Incongruent Ending Positivity,18
-Meta Muse Spark 1.3,Gemini Argon,F,18,Unearned Transformations,17
-Meta Muse Spark 1.3,Gemini Argon,F,19,Well-earned Lightness or Darkness,18
-Meta Muse Spark 1.3,Gemini Argon,F,20,Sentences Flow Naturally,16
-Meta Muse Spark 1.3,Gemini Argon,F,21,Overall Reader Engagement,17
-Meta Muse Spark 1.3,Gemini Argon,F,22,Overall Impression,15
 Meta Muse Spark 1.3,Opus 4.6 Max,M,1,Adherence to Instructions,17
 Meta Muse Spark 1.3,Opus 4.6 Max,M,2,Believable Character Actions,16
 Meta Muse Spark 1.3,Opus 4.6 Max,M,3,Nuanced Characters,16
@@ -1275,6 +1253,28 @@ Meta Muse Spark 1.3,Opus 4.6 Max,M,19,Well-earned Lightness or Darkness,16
 Meta Muse Spark 1.3,Opus 4.6 Max,M,20,Sentences Flow Naturally,15
 Meta Muse Spark 1.3,Opus 4.6 Max,M,21,Overall Reader Engagement,14
 Meta Muse Spark 1.3,Opus 4.6 Max,M,22,Overall Impression,14
+Meta Muse Spark 1.3,Gemini Argon,F,1,Adherence to Instructions,9
+Meta Muse Spark 1.3,Gemini Argon,F,2,Believable Character Actions,18
+Meta Muse Spark 1.3,Gemini Argon,F,3,Nuanced Characters,18
+Meta Muse Spark 1.3,Gemini Argon,F,4,Consistent Voice/Tone of Writing,17
+Meta Muse Spark 1.3,Gemini Argon,F,5,Imagery and Descriptive Quality,19
+Meta Muse Spark 1.3,Gemini Argon,F,6,Elegant Prose,18
+Meta Muse Spark 1.3,Gemini Argon,F,7,Emotionally Engaging,18
+Meta Muse Spark 1.3,Gemini Argon,F,8,Emotionally Complex,18
+Meta Muse Spark 1.3,Gemini Argon,F,9,Coherent,16
+Meta Muse Spark 1.3,Gemini Argon,F,10,Meandering,10
+Meta Muse Spark 1.3,Gemini Argon,F,11,Weak Dialogue,18
+Meta Muse Spark 1.3,Gemini Argon,F,12,Tell-Don't-Show,15
+Meta Muse Spark 1.3,Gemini Argon,F,13,Unsurprising or Uncreative,15
+Meta Muse Spark 1.3,Gemini Argon,F,14,Amateurish,17
+Meta Muse Spark 1.3,Gemini Argon,F,15,Purple Prose,18
+Meta Muse Spark 1.3,Gemini Argon,F,16,Overwrought,15
+Meta Muse Spark 1.3,Gemini Argon,F,17,Incongruent Ending Positivity,18
+Meta Muse Spark 1.3,Gemini Argon,F,18,Unearned Transformations,17
+Meta Muse Spark 1.3,Gemini Argon,F,19,Well-earned Lightness or Darkness,18
+Meta Muse Spark 1.3,Gemini Argon,F,20,Sentences Flow Naturally,16
+Meta Muse Spark 1.3,Gemini Argon,F,21,Overall Reader Engagement,17
+Meta Muse Spark 1.3,Gemini Argon,F,22,Overall Impression,15
 Meta Muse Spark 1.3,GPT 6 Sol,R,1,Adherence to Instructions,18
 Meta Muse Spark 1.3,GPT 6 Sol,R,2,Believable Character Actions,16
 Meta Muse Spark 1.3,GPT 6 Sol,R,3,Nuanced Characters,16
@@ -1385,28 +1385,6 @@ Meta Muse Spark 1.3,Meta Ember,U,19,Well-earned Lightness or Darkness,13
 Meta Muse Spark 1.3,Meta Ember,U,20,Sentences Flow Naturally,14
 Meta Muse Spark 1.3,Meta Ember,U,21,Overall Reader Engagement,13
 Meta Muse Spark 1.3,Meta Ember,U,22,Overall Impression,13
-Meta Muse Spark 1.3,Sonnet 4.5,B,1,Adherence to Instructions,12
-Meta Muse Spark 1.3,Sonnet 4.5,B,2,Believable Character Actions,13
-Meta Muse Spark 1.3,Sonnet 4.5,B,3,Nuanced Characters,12
-Meta Muse Spark 1.3,Sonnet 4.5,B,4,Consistent Voice/Tone of Writing,13
-Meta Muse Spark 1.3,Sonnet 4.5,B,5,Imagery and Descriptive Quality,13
-Meta Muse Spark 1.3,Sonnet 4.5,B,6,Elegant Prose,12
-Meta Muse Spark 1.3,Sonnet 4.5,B,7,Emotionally Engaging,13
-Meta Muse Spark 1.3,Sonnet 4.5,B,8,Emotionally Complex,12
-Meta Muse Spark 1.3,Sonnet 4.5,B,9,Coherent,11
-Meta Muse Spark 1.3,Sonnet 4.5,B,10,Meandering,12
-Meta Muse Spark 1.3,Sonnet 4.5,B,11,Weak Dialogue,13
-Meta Muse Spark 1.3,Sonnet 4.5,B,12,Tell-Don't-Show,11
-Meta Muse Spark 1.3,Sonnet 4.5,B,13,Unsurprising or Uncreative,12
-Meta Muse Spark 1.3,Sonnet 4.5,B,14,Amateurish,12
-Meta Muse Spark 1.3,Sonnet 4.5,B,15,Purple Prose,14
-Meta Muse Spark 1.3,Sonnet 4.5,B,16,Overwrought,12
-Meta Muse Spark 1.3,Sonnet 4.5,B,17,Incongruent Ending Positivity,13
-Meta Muse Spark 1.3,Sonnet 4.5,B,18,Unearned Transformations,12
-Meta Muse Spark 1.3,Sonnet 4.5,B,19,Well-earned Lightness or Darkness,13
-Meta Muse Spark 1.3,Sonnet 4.5,B,20,Sentences Flow Naturally,13
-Meta Muse Spark 1.3,Sonnet 4.5,B,21,Overall Reader Engagement,13
-Meta Muse Spark 1.3,Sonnet 4.5,B,22,Overall Impression,12
 Meta Muse Spark 1.3,Mistral Large 4,V,1,Adherence to Instructions,13
 Meta Muse Spark 1.3,Mistral Large 4,V,2,Believable Character Actions,12
 Meta Muse Spark 1.3,Mistral Large 4,V,3,Nuanced Characters,11
@@ -1429,6 +1407,28 @@ Meta Muse Spark 1.3,Mistral Large 4,V,19,Well-earned Lightness or Darkness,11
 Meta Muse Spark 1.3,Mistral Large 4,V,20,Sentences Flow Naturally,12
 Meta Muse Spark 1.3,Mistral Large 4,V,21,Overall Reader Engagement,12
 Meta Muse Spark 1.3,Mistral Large 4,V,22,Overall Impression,11
+Meta Muse Spark 1.3,Sonnet 4.5,B,1,Adherence to Instructions,12
+Meta Muse Spark 1.3,Sonnet 4.5,B,2,Believable Character Actions,13
+Meta Muse Spark 1.3,Sonnet 4.5,B,3,Nuanced Characters,12
+Meta Muse Spark 1.3,Sonnet 4.5,B,4,Consistent Voice/Tone of Writing,13
+Meta Muse Spark 1.3,Sonnet 4.5,B,5,Imagery and Descriptive Quality,13
+Meta Muse Spark 1.3,Sonnet 4.5,B,6,Elegant Prose,12
+Meta Muse Spark 1.3,Sonnet 4.5,B,7,Emotionally Engaging,13
+Meta Muse Spark 1.3,Sonnet 4.5,B,8,Emotionally Complex,12
+Meta Muse Spark 1.3,Sonnet 4.5,B,9,Coherent,11
+Meta Muse Spark 1.3,Sonnet 4.5,B,10,Meandering,12
+Meta Muse Spark 1.3,Sonnet 4.5,B,11,Weak Dialogue,13
+Meta Muse Spark 1.3,Sonnet 4.5,B,12,Tell-Don't-Show,11
+Meta Muse Spark 1.3,Sonnet 4.5,B,13,Unsurprising or Uncreative,12
+Meta Muse Spark 1.3,Sonnet 4.5,B,14,Amateurish,12
+Meta Muse Spark 1.3,Sonnet 4.5,B,15,Purple Prose,14
+Meta Muse Spark 1.3,Sonnet 4.5,B,16,Overwrought,12
+Meta Muse Spark 1.3,Sonnet 4.5,B,17,Incongruent Ending Positivity,13
+Meta Muse Spark 1.3,Sonnet 4.5,B,18,Unearned Transformations,12
+Meta Muse Spark 1.3,Sonnet 4.5,B,19,Well-earned Lightness or Darkness,13
+Meta Muse Spark 1.3,Sonnet 4.5,B,20,Sentences Flow Naturally,13
+Meta Muse Spark 1.3,Sonnet 4.5,B,21,Overall Reader Engagement,13
+Meta Muse Spark 1.3,Sonnet 4.5,B,22,Overall Impression,12
 Meta Muse Spark 1.3,Mistral Small 4,E,1,Adherence to Instructions,6
 Meta Muse Spark 1.3,Mistral Small 4,E,2,Believable Character Actions,9
 Meta Muse Spark 1.3,Mistral Small 4,E,3,Nuanced Characters,8
@@ -1495,50 +1495,6 @@ Fable 5.2,6.2 Sol,H,19,Well-earned Lightness or Darkness,19
 Fable 5.2,6.2 Sol,H,20,Sentences Flow Naturally,19
 Fable 5.2,6.2 Sol,H,21,Overall Reader Engagement,18
 Fable 5.2,6.2 Sol,H,22,Overall Impression,19
-Fable 5.2,Opus 5.5,D,1,Adherence to Instructions,17
-Fable 5.2,Opus 5.5,D,2,Believable Character Actions,18
-Fable 5.2,Opus 5.5,D,3,Nuanced Characters,18
-Fable 5.2,Opus 5.5,D,4,Consistent Voice/Tone of Writing,18
-Fable 5.2,Opus 5.5,D,5,Imagery and Descriptive Quality,18
-Fable 5.2,Opus 5.5,D,6,Elegant Prose,17
-Fable 5.2,Opus 5.5,D,7,Emotionally Engaging,19
-Fable 5.2,Opus 5.5,D,8,Emotionally Complex,18
-Fable 5.2,Opus 5.5,D,9,Coherent,19
-Fable 5.2,Opus 5.5,D,10,Meandering,19
-Fable 5.2,Opus 5.5,D,11,Weak Dialogue,19
-Fable 5.2,Opus 5.5,D,12,Tell-Don't-Show,17
-Fable 5.2,Opus 5.5,D,13,Unsurprising or Uncreative,17
-Fable 5.2,Opus 5.5,D,14,Amateurish,18
-Fable 5.2,Opus 5.5,D,15,Purple Prose,19
-Fable 5.2,Opus 5.5,D,16,Overwrought,19
-Fable 5.2,Opus 5.5,D,17,Incongruent Ending Positivity,19
-Fable 5.2,Opus 5.5,D,18,Unearned Transformations,20
-Fable 5.2,Opus 5.5,D,19,Well-earned Lightness or Darkness,18
-Fable 5.2,Opus 5.5,D,20,Sentences Flow Naturally,18
-Fable 5.2,Opus 5.5,D,21,Overall Reader Engagement,19
-Fable 5.2,Opus 5.5,D,22,Overall Impression,18
-Fable 5.2,GLM 5.3,C,1,Adherence to Instructions,17
-Fable 5.2,GLM 5.3,C,2,Believable Character Actions,17
-Fable 5.2,GLM 5.3,C,3,Nuanced Characters,18
-Fable 5.2,GLM 5.3,C,4,Consistent Voice/Tone of Writing,18
-Fable 5.2,GLM 5.3,C,5,Imagery and Descriptive Quality,18
-Fable 5.2,GLM 5.3,C,6,Elegant Prose,17
-Fable 5.2,GLM 5.3,C,7,Emotionally Engaging,18
-Fable 5.2,GLM 5.3,C,8,Emotionally Complex,18
-Fable 5.2,GLM 5.3,C,9,Coherent,16
-Fable 5.2,GLM 5.3,C,10,Meandering,17
-Fable 5.2,GLM 5.3,C,11,Weak Dialogue,18
-Fable 5.2,GLM 5.3,C,12,Tell-Don't-Show,17
-Fable 5.2,GLM 5.3,C,13,Unsurprising or Uncreative,17
-Fable 5.2,GLM 5.3,C,14,Amateurish,17
-Fable 5.2,GLM 5.3,C,15,Purple Prose,17
-Fable 5.2,GLM 5.3,C,16,Overwrought,18
-Fable 5.2,GLM 5.3,C,17,Incongruent Ending Positivity,19
-Fable 5.2,GLM 5.3,C,18,Unearned Transformations,20
-Fable 5.2,GLM 5.3,C,19,Well-earned Lightness or Darkness,18
-Fable 5.2,GLM 5.3,C,20,Sentences Flow Naturally,17
-Fable 5.2,GLM 5.3,C,21,Overall Reader Engagement,18
-Fable 5.2,GLM 5.3,C,22,Overall Impression,17
 Fable 5.2,Sonnet 5.5,S,1,Adherence to Instructions,18
 Fable 5.2,Sonnet 5.5,S,2,Believable Character Actions,18
 Fable 5.2,Sonnet 5.5,S,3,Nuanced Characters,18
@@ -1561,6 +1517,28 @@ Fable 5.2,Sonnet 5.5,S,19,Well-earned Lightness or Darkness,19
 Fable 5.2,Sonnet 5.5,S,20,Sentences Flow Naturally,18
 Fable 5.2,Sonnet 5.5,S,21,Overall Reader Engagement,19
 Fable 5.2,Sonnet 5.5,S,22,Overall Impression,18
+Fable 5.2,Opus 5.5,D,1,Adherence to Instructions,17
+Fable 5.2,Opus 5.5,D,2,Believable Character Actions,18
+Fable 5.2,Opus 5.5,D,3,Nuanced Characters,18
+Fable 5.2,Opus 5.5,D,4,Consistent Voice/Tone of Writing,18
+Fable 5.2,Opus 5.5,D,5,Imagery and Descriptive Quality,18
+Fable 5.2,Opus 5.5,D,6,Elegant Prose,17
+Fable 5.2,Opus 5.5,D,7,Emotionally Engaging,19
+Fable 5.2,Opus 5.5,D,8,Emotionally Complex,18
+Fable 5.2,Opus 5.5,D,9,Coherent,19
+Fable 5.2,Opus 5.5,D,10,Meandering,19
+Fable 5.2,Opus 5.5,D,11,Weak Dialogue,19
+Fable 5.2,Opus 5.5,D,12,Tell-Don't-Show,17
+Fable 5.2,Opus 5.5,D,13,Unsurprising or Uncreative,17
+Fable 5.2,Opus 5.5,D,14,Amateurish,18
+Fable 5.2,Opus 5.5,D,15,Purple Prose,19
+Fable 5.2,Opus 5.5,D,16,Overwrought,19
+Fable 5.2,Opus 5.5,D,17,Incongruent Ending Positivity,19
+Fable 5.2,Opus 5.5,D,18,Unearned Transformations,20
+Fable 5.2,Opus 5.5,D,19,Well-earned Lightness or Darkness,18
+Fable 5.2,Opus 5.5,D,20,Sentences Flow Naturally,18
+Fable 5.2,Opus 5.5,D,21,Overall Reader Engagement,19
+Fable 5.2,Opus 5.5,D,22,Overall Impression,18
 Fable 5.2,Fable 5.1,J,1,Adherence to Instructions,17
 Fable 5.2,Fable 5.1,J,2,Believable Character Actions,18
 Fable 5.2,Fable 5.1,J,3,Nuanced Characters,18
@@ -1627,6 +1605,28 @@ Fable 5.2,GPT-6 Astra,N,19,Well-earned Lightness or Darkness,17
 Fable 5.2,GPT-6 Astra,N,20,Sentences Flow Naturally,17
 Fable 5.2,GPT-6 Astra,N,21,Overall Reader Engagement,16
 Fable 5.2,GPT-6 Astra,N,22,Overall Impression,17
+Fable 5.2,GLM 5.3,C,1,Adherence to Instructions,17
+Fable 5.2,GLM 5.3,C,2,Believable Character Actions,17
+Fable 5.2,GLM 5.3,C,3,Nuanced Characters,18
+Fable 5.2,GLM 5.3,C,4,Consistent Voice/Tone of Writing,18
+Fable 5.2,GLM 5.3,C,5,Imagery and Descriptive Quality,18
+Fable 5.2,GLM 5.3,C,6,Elegant Prose,17
+Fable 5.2,GLM 5.3,C,7,Emotionally Engaging,18
+Fable 5.2,GLM 5.3,C,8,Emotionally Complex,18
+Fable 5.2,GLM 5.3,C,9,Coherent,16
+Fable 5.2,GLM 5.3,C,10,Meandering,17
+Fable 5.2,GLM 5.3,C,11,Weak Dialogue,18
+Fable 5.2,GLM 5.3,C,12,Tell-Don't-Show,17
+Fable 5.2,GLM 5.3,C,13,Unsurprising or Uncreative,17
+Fable 5.2,GLM 5.3,C,14,Amateurish,17
+Fable 5.2,GLM 5.3,C,15,Purple Prose,17
+Fable 5.2,GLM 5.3,C,16,Overwrought,18
+Fable 5.2,GLM 5.3,C,17,Incongruent Ending Positivity,19
+Fable 5.2,GLM 5.3,C,18,Unearned Transformations,20
+Fable 5.2,GLM 5.3,C,19,Well-earned Lightness or Darkness,18
+Fable 5.2,GLM 5.3,C,20,Sentences Flow Naturally,17
+Fable 5.2,GLM 5.3,C,21,Overall Reader Engagement,18
+Fable 5.2,GLM 5.3,C,22,Overall Impression,17
 Fable 5.2,Kimi K3.1 Pro,I,1,Adherence to Instructions,19
 Fable 5.2,Kimi K3.1 Pro,I,2,Believable Character Actions,16
 Fable 5.2,Kimi K3.1 Pro,I,3,Nuanced Characters,17
@@ -1715,28 +1715,6 @@ Fable 5.2,GPT 5.6 Sol,Q,19,Well-earned Lightness or Darkness,16
 Fable 5.2,GPT 5.6 Sol,Q,20,Sentences Flow Naturally,17
 Fable 5.2,GPT 5.6 Sol,Q,21,Overall Reader Engagement,16
 Fable 5.2,GPT 5.6 Sol,Q,22,Overall Impression,16
-Fable 5.2,Gemini Argon,F,1,Adherence to Instructions,8
-Fable 5.2,Gemini Argon,F,2,Believable Character Actions,14
-Fable 5.2,Gemini Argon,F,3,Nuanced Characters,15
-Fable 5.2,Gemini Argon,F,4,Consistent Voice/Tone of Writing,16
-Fable 5.2,Gemini Argon,F,5,Imagery and Descriptive Quality,16
-Fable 5.2,Gemini Argon,F,6,Elegant Prose,14
-Fable 5.2,Gemini Argon,F,7,Emotionally Engaging,15
-Fable 5.2,Gemini Argon,F,8,Emotionally Complex,14
-Fable 5.2,Gemini Argon,F,9,Coherent,16
-Fable 5.2,Gemini Argon,F,10,Meandering,9
-Fable 5.2,Gemini Argon,F,11,Weak Dialogue,15
-Fable 5.2,Gemini Argon,F,12,Tell-Don't-Show,13
-Fable 5.2,Gemini Argon,F,13,Unsurprising or Uncreative,13
-Fable 5.2,Gemini Argon,F,14,Amateurish,14
-Fable 5.2,Gemini Argon,F,15,Purple Prose,13
-Fable 5.2,Gemini Argon,F,16,Overwrought,15
-Fable 5.2,Gemini Argon,F,17,Incongruent Ending Positivity,17
-Fable 5.2,Gemini Argon,F,18,Unearned Transformations,19
-Fable 5.2,Gemini Argon,F,19,Well-earned Lightness or Darkness,15
-Fable 5.2,Gemini Argon,F,20,Sentences Flow Naturally,14
-Fable 5.2,Gemini Argon,F,21,Overall Reader Engagement,13
-Fable 5.2,Gemini Argon,F,22,Overall Impression,13
 Fable 5.2,Opus 4.6 Max,M,1,Adherence to Instructions,14
 Fable 5.2,Opus 4.6 Max,M,2,Believable Character Actions,16
 Fable 5.2,Opus 4.6 Max,M,3,Nuanced Characters,13
@@ -1759,6 +1737,28 @@ Fable 5.2,Opus 4.6 Max,M,19,Well-earned Lightness or Darkness,14
 Fable 5.2,Opus 4.6 Max,M,20,Sentences Flow Naturally,16
 Fable 5.2,Opus 4.6 Max,M,21,Overall Reader Engagement,13
 Fable 5.2,Opus 4.6 Max,M,22,Overall Impression,13
+Fable 5.2,Gemini Argon,F,1,Adherence to Instructions,8
+Fable 5.2,Gemini Argon,F,2,Believable Character Actions,14
+Fable 5.2,Gemini Argon,F,3,Nuanced Characters,15
+Fable 5.2,Gemini Argon,F,4,Consistent Voice/Tone of Writing,16
+Fable 5.2,Gemini Argon,F,5,Imagery and Descriptive Quality,16
+Fable 5.2,Gemini Argon,F,6,Elegant Prose,14
+Fable 5.2,Gemini Argon,F,7,Emotionally Engaging,15
+Fable 5.2,Gemini Argon,F,8,Emotionally Complex,14
+Fable 5.2,Gemini Argon,F,9,Coherent,16
+Fable 5.2,Gemini Argon,F,10,Meandering,9
+Fable 5.2,Gemini Argon,F,11,Weak Dialogue,15
+Fable 5.2,Gemini Argon,F,12,Tell-Don't-Show,13
+Fable 5.2,Gemini Argon,F,13,Unsurprising or Uncreative,13
+Fable 5.2,Gemini Argon,F,14,Amateurish,14
+Fable 5.2,Gemini Argon,F,15,Purple Prose,13
+Fable 5.2,Gemini Argon,F,16,Overwrought,15
+Fable 5.2,Gemini Argon,F,17,Incongruent Ending Positivity,17
+Fable 5.2,Gemini Argon,F,18,Unearned Transformations,19
+Fable 5.2,Gemini Argon,F,19,Well-earned Lightness or Darkness,15
+Fable 5.2,Gemini Argon,F,20,Sentences Flow Naturally,14
+Fable 5.2,Gemini Argon,F,21,Overall Reader Engagement,13
+Fable 5.2,Gemini Argon,F,22,Overall Impression,13
 Fable 5.2,GPT 6 Sol,R,1,Adherence to Instructions,17
 Fable 5.2,GPT 6 Sol,R,2,Believable Character Actions,17
 Fable 5.2,GPT 6 Sol,R,3,Nuanced Characters,12
@@ -1869,28 +1869,6 @@ Fable 5.2,Meta Ember,U,19,Well-earned Lightness or Darkness,11
 Fable 5.2,Meta Ember,U,20,Sentences Flow Naturally,12
 Fable 5.2,Meta Ember,U,21,Overall Reader Engagement,10
 Fable 5.2,Meta Ember,U,22,Overall Impression,10
-Fable 5.2,Sonnet 4.5,B,1,Adherence to Instructions,12
-Fable 5.2,Sonnet 4.5,B,2,Believable Character Actions,12
-Fable 5.2,Sonnet 4.5,B,3,Nuanced Characters,11
-Fable 5.2,Sonnet 4.5,B,4,Consistent Voice/Tone of Writing,14
-Fable 5.2,Sonnet 4.5,B,5,Imagery and Descriptive Quality,11
-Fable 5.2,Sonnet 4.5,B,6,Elegant Prose,11
-Fable 5.2,Sonnet 4.5,B,7,Emotionally Engaging,11
-Fable 5.2,Sonnet 4.5,B,8,Emotionally Complex,10
-Fable 5.2,Sonnet 4.5,B,9,Coherent,9
-Fable 5.2,Sonnet 4.5,B,10,Meandering,13
-Fable 5.2,Sonnet 4.5,B,11,Weak Dialogue,11
-Fable 5.2,Sonnet 4.5,B,12,Tell-Don't-Show,8
-Fable 5.2,Sonnet 4.5,B,13,Unsurprising or Uncreative,8
-Fable 5.2,Sonnet 4.5,B,14,Amateurish,10
-Fable 5.2,Sonnet 4.5,B,15,Purple Prose,14
-Fable 5.2,Sonnet 4.5,B,16,Overwrought,13
-Fable 5.2,Sonnet 4.5,B,17,Incongruent Ending Positivity,17
-Fable 5.2,Sonnet 4.5,B,18,Unearned Transformations,18
-Fable 5.2,Sonnet 4.5,B,19,Well-earned Lightness or Darkness,11
-Fable 5.2,Sonnet 4.5,B,20,Sentences Flow Naturally,14
-Fable 5.2,Sonnet 4.5,B,21,Overall Reader Engagement,10
-Fable 5.2,Sonnet 4.5,B,22,Overall Impression,10
 Fable 5.2,Mistral Large 4,V,1,Adherence to Instructions,11
 Fable 5.2,Mistral Large 4,V,2,Believable Character Actions,8
 Fable 5.2,Mistral Large 4,V,3,Nuanced Characters,8
@@ -1913,6 +1891,28 @@ Fable 5.2,Mistral Large 4,V,19,Well-earned Lightness or Darkness,8
 Fable 5.2,Mistral Large 4,V,20,Sentences Flow Naturally,10
 Fable 5.2,Mistral Large 4,V,21,Overall Reader Engagement,7
 Fable 5.2,Mistral Large 4,V,22,Overall Impression,7
+Fable 5.2,Sonnet 4.5,B,1,Adherence to Instructions,12
+Fable 5.2,Sonnet 4.5,B,2,Believable Character Actions,12
+Fable 5.2,Sonnet 4.5,B,3,Nuanced Characters,11
+Fable 5.2,Sonnet 4.5,B,4,Consistent Voice/Tone of Writing,14
+Fable 5.2,Sonnet 4.5,B,5,Imagery and Descriptive Quality,11
+Fable 5.2,Sonnet 4.5,B,6,Elegant Prose,11
+Fable 5.2,Sonnet 4.5,B,7,Emotionally Engaging,11
+Fable 5.2,Sonnet 4.5,B,8,Emotionally Complex,10
+Fable 5.2,Sonnet 4.5,B,9,Coherent,9
+Fable 5.2,Sonnet 4.5,B,10,Meandering,13
+Fable 5.2,Sonnet 4.5,B,11,Weak Dialogue,11
+Fable 5.2,Sonnet 4.5,B,12,Tell-Don't-Show,8
+Fable 5.2,Sonnet 4.5,B,13,Unsurprising or Uncreative,8
+Fable 5.2,Sonnet 4.5,B,14,Amateurish,10
+Fable 5.2,Sonnet 4.5,B,15,Purple Prose,14
+Fable 5.2,Sonnet 4.5,B,16,Overwrought,13
+Fable 5.2,Sonnet 4.5,B,17,Incongruent Ending Positivity,17
+Fable 5.2,Sonnet 4.5,B,18,Unearned Transformations,18
+Fable 5.2,Sonnet 4.5,B,19,Well-earned Lightness or Darkness,11
+Fable 5.2,Sonnet 4.5,B,20,Sentences Flow Naturally,14
+Fable 5.2,Sonnet 4.5,B,21,Overall Reader Engagement,10
+Fable 5.2,Sonnet 4.5,B,22,Overall Impression,10
 Fable 5.2,Mistral Small 4,E,1,Adherence to Instructions,3
 Fable 5.2,Mistral Small 4,E,2,Believable Character Actions,4
 Fable 5.2,Mistral Small 4,E,3,Nuanced Characters,5
@@ -1979,50 +1979,6 @@ Qwen 4 Max,6.2 Sol,H,19,Well-earned Lightness or Darkness,19
 Qwen 4 Max,6.2 Sol,H,20,Sentences Flow Naturally,19
 Qwen 4 Max,6.2 Sol,H,21,Overall Reader Engagement,18
 Qwen 4 Max,6.2 Sol,H,22,Overall Impression,19
-Qwen 4 Max,Opus 5.5,D,1,Adherence to Instructions,17
-Qwen 4 Max,Opus 5.5,D,2,Believable Character Actions,18
-Qwen 4 Max,Opus 5.5,D,3,Nuanced Characters,18
-Qwen 4 Max,Opus 5.5,D,4,Consistent Voice/Tone of Writing,18
-Qwen 4 Max,Opus 5.5,D,5,Imagery and Descriptive Quality,18
-Qwen 4 Max,Opus 5.5,D,6,Elegant Prose,18
-Qwen 4 Max,Opus 5.5,D,7,Emotionally Engaging,18
-Qwen 4 Max,Opus 5.5,D,8,Emotionally Complex,17
-Qwen 4 Max,Opus 5.5,D,9,Coherent,18
-Qwen 4 Max,Opus 5.5,D,10,Meandering,18
-Qwen 4 Max,Opus 5.5,D,11,Weak Dialogue,18
-Qwen 4 Max,Opus 5.5,D,12,Tell-Don't-Show,18
-Qwen 4 Max,Opus 5.5,D,13,Unsurprising or Uncreative,17
-Qwen 4 Max,Opus 5.5,D,14,Amateurish,18
-Qwen 4 Max,Opus 5.5,D,15,Purple Prose,18
-Qwen 4 Max,Opus 5.5,D,16,Overwrought,18
-Qwen 4 Max,Opus 5.5,D,17,Incongruent Ending Positivity,18
-Qwen 4 Max,Opus 5.5,D,18,Unearned Transformations,18
-Qwen 4 Max,Opus 5.5,D,19,Well-earned Lightness or Darkness,18
-Qwen 4 Max,Opus 5.5,D,20,Sentences Flow Naturally,18
-Qwen 4 Max,Opus 5.5,D,21,Overall Reader Engagement,18
-Qwen 4 Max,Opus 5.5,D,22,Overall Impression,18
-Qwen 4 Max,GLM 5.3,C,1,Adherence to Instructions,18
-Qwen 4 Max,GLM 5.3,C,2,Believable Character Actions,18
-Qwen 4 Max,GLM 5.3,C,3,Nuanced Characters,17
-Qwen 4 Max,GLM 5.3,C,4,Consistent Voice/Tone of Writing,18
-Qwen 4 Max,GLM 5.3,C,5,Imagery and Descriptive Quality,18
-Qwen 4 Max,GLM 5.3,C,6,Elegant Prose,17
-Qwen 4 Max,GLM 5.3,C,7,Emotionally Engaging,17
-Qwen 4 Max,GLM 5.3,C,8,Emotionally Complex,17
-Qwen 4 Max,GLM 5.3,C,9,Coherent,18
-Qwen 4 Max,GLM 5.3,C,10,Meandering,17
-Qwen 4 Max,GLM 5.3,C,11,Weak Dialogue,18
-Qwen 4 Max,GLM 5.3,C,12,Tell-Don't-Show,17
-Qwen 4 Max,GLM 5.3,C,13,Unsurprising or Uncreative,17
-Qwen 4 Max,GLM 5.3,C,14,Amateurish,18
-Qwen 4 Max,GLM 5.3,C,15,Purple Prose,17
-Qwen 4 Max,GLM 5.3,C,16,Overwrought,18
-Qwen 4 Max,GLM 5.3,C,17,Incongruent Ending Positivity,18
-Qwen 4 Max,GLM 5.3,C,18,Unearned Transformations,18
-Qwen 4 Max,GLM 5.3,C,19,Well-earned Lightness or Darkness,18
-Qwen 4 Max,GLM 5.3,C,20,Sentences Flow Naturally,17
-Qwen 4 Max,GLM 5.3,C,21,Overall Reader Engagement,17
-Qwen 4 Max,GLM 5.3,C,22,Overall Impression,17
 Qwen 4 Max,Sonnet 5.5,S,1,Adherence to Instructions,19
 Qwen 4 Max,Sonnet 5.5,S,2,Believable Character Actions,18
 Qwen 4 Max,Sonnet 5.5,S,3,Nuanced Characters,18
@@ -2045,6 +2001,28 @@ Qwen 4 Max,Sonnet 5.5,S,19,Well-earned Lightness or Darkness,19
 Qwen 4 Max,Sonnet 5.5,S,20,Sentences Flow Naturally,18
 Qwen 4 Max,Sonnet 5.5,S,21,Overall Reader Engagement,18
 Qwen 4 Max,Sonnet 5.5,S,22,Overall Impression,18
+Qwen 4 Max,Opus 5.5,D,1,Adherence to Instructions,17
+Qwen 4 Max,Opus 5.5,D,2,Believable Character Actions,18
+Qwen 4 Max,Opus 5.5,D,3,Nuanced Characters,18
+Qwen 4 Max,Opus 5.5,D,4,Consistent Voice/Tone of Writing,18
+Qwen 4 Max,Opus 5.5,D,5,Imagery and Descriptive Quality,18
+Qwen 4 Max,Opus 5.5,D,6,Elegant Prose,18
+Qwen 4 Max,Opus 5.5,D,7,Emotionally Engaging,18
+Qwen 4 Max,Opus 5.5,D,8,Emotionally Complex,17
+Qwen 4 Max,Opus 5.5,D,9,Coherent,18
+Qwen 4 Max,Opus 5.5,D,10,Meandering,18
+Qwen 4 Max,Opus 5.5,D,11,Weak Dialogue,18
+Qwen 4 Max,Opus 5.5,D,12,Tell-Don't-Show,18
+Qwen 4 Max,Opus 5.5,D,13,Unsurprising or Uncreative,17
+Qwen 4 Max,Opus 5.5,D,14,Amateurish,18
+Qwen 4 Max,Opus 5.5,D,15,Purple Prose,18
+Qwen 4 Max,Opus 5.5,D,16,Overwrought,18
+Qwen 4 Max,Opus 5.5,D,17,Incongruent Ending Positivity,18
+Qwen 4 Max,Opus 5.5,D,18,Unearned Transformations,18
+Qwen 4 Max,Opus 5.5,D,19,Well-earned Lightness or Darkness,18
+Qwen 4 Max,Opus 5.5,D,20,Sentences Flow Naturally,18
+Qwen 4 Max,Opus 5.5,D,21,Overall Reader Engagement,18
+Qwen 4 Max,Opus 5.5,D,22,Overall Impression,18
 Qwen 4 Max,Fable 5.1,J,1,Adherence to Instructions,17
 Qwen 4 Max,Fable 5.1,J,2,Believable Character Actions,18
 Qwen 4 Max,Fable 5.1,J,3,Nuanced Characters,17
@@ -2111,6 +2089,28 @@ Qwen 4 Max,GPT-6 Astra,N,19,Well-earned Lightness or Darkness,18
 Qwen 4 Max,GPT-6 Astra,N,20,Sentences Flow Naturally,18
 Qwen 4 Max,GPT-6 Astra,N,21,Overall Reader Engagement,17
 Qwen 4 Max,GPT-6 Astra,N,22,Overall Impression,17
+Qwen 4 Max,GLM 5.3,C,1,Adherence to Instructions,18
+Qwen 4 Max,GLM 5.3,C,2,Believable Character Actions,18
+Qwen 4 Max,GLM 5.3,C,3,Nuanced Characters,17
+Qwen 4 Max,GLM 5.3,C,4,Consistent Voice/Tone of Writing,18
+Qwen 4 Max,GLM 5.3,C,5,Imagery and Descriptive Quality,18
+Qwen 4 Max,GLM 5.3,C,6,Elegant Prose,17
+Qwen 4 Max,GLM 5.3,C,7,Emotionally Engaging,17
+Qwen 4 Max,GLM 5.3,C,8,Emotionally Complex,17
+Qwen 4 Max,GLM 5.3,C,9,Coherent,18
+Qwen 4 Max,GLM 5.3,C,10,Meandering,17
+Qwen 4 Max,GLM 5.3,C,11,Weak Dialogue,18
+Qwen 4 Max,GLM 5.3,C,12,Tell-Don't-Show,17
+Qwen 4 Max,GLM 5.3,C,13,Unsurprising or Uncreative,17
+Qwen 4 Max,GLM 5.3,C,14,Amateurish,18
+Qwen 4 Max,GLM 5.3,C,15,Purple Prose,17
+Qwen 4 Max,GLM 5.3,C,16,Overwrought,18
+Qwen 4 Max,GLM 5.3,C,17,Incongruent Ending Positivity,18
+Qwen 4 Max,GLM 5.3,C,18,Unearned Transformations,18
+Qwen 4 Max,GLM 5.3,C,19,Well-earned Lightness or Darkness,18
+Qwen 4 Max,GLM 5.3,C,20,Sentences Flow Naturally,17
+Qwen 4 Max,GLM 5.3,C,21,Overall Reader Engagement,17
+Qwen 4 Max,GLM 5.3,C,22,Overall Impression,17
 Qwen 4 Max,Kimi K3.1 Pro,I,1,Adherence to Instructions,19
 Qwen 4 Max,Kimi K3.1 Pro,I,2,Believable Character Actions,18
 Qwen 4 Max,Kimi K3.1 Pro,I,3,Nuanced Characters,18
@@ -2199,28 +2199,6 @@ Qwen 4 Max,GPT 5.6 Sol,Q,19,Well-earned Lightness or Darkness,17
 Qwen 4 Max,GPT 5.6 Sol,Q,20,Sentences Flow Naturally,17
 Qwen 4 Max,GPT 5.6 Sol,Q,21,Overall Reader Engagement,16
 Qwen 4 Max,GPT 5.6 Sol,Q,22,Overall Impression,16
-Qwen 4 Max,Gemini Argon,F,1,Adherence to Instructions,9
-Qwen 4 Max,Gemini Argon,F,2,Believable Character Actions,17
-Qwen 4 Max,Gemini Argon,F,3,Nuanced Characters,17
-Qwen 4 Max,Gemini Argon,F,4,Consistent Voice/Tone of Writing,18
-Qwen 4 Max,Gemini Argon,F,5,Imagery and Descriptive Quality,18
-Qwen 4 Max,Gemini Argon,F,6,Elegant Prose,17
-Qwen 4 Max,Gemini Argon,F,7,Emotionally Engaging,17
-Qwen 4 Max,Gemini Argon,F,8,Emotionally Complex,17
-Qwen 4 Max,Gemini Argon,F,9,Coherent,17
-Qwen 4 Max,Gemini Argon,F,10,Meandering,13
-Qwen 4 Max,Gemini Argon,F,11,Weak Dialogue,17
-Qwen 4 Max,Gemini Argon,F,12,Tell-Don't-Show,15
-Qwen 4 Max,Gemini Argon,F,13,Unsurprising or Uncreative,17
-Qwen 4 Max,Gemini Argon,F,14,Amateurish,17
-Qwen 4 Max,Gemini Argon,F,15,Purple Prose,16
-Qwen 4 Max,Gemini Argon,F,16,Overwrought,16
-Qwen 4 Max,Gemini Argon,F,17,Incongruent Ending Positivity,18
-Qwen 4 Max,Gemini Argon,F,18,Unearned Transformations,18
-Qwen 4 Max,Gemini Argon,F,19,Well-earned Lightness or Darkness,18
-Qwen 4 Max,Gemini Argon,F,20,Sentences Flow Naturally,17
-Qwen 4 Max,Gemini Argon,F,21,Overall Reader Engagement,16
-Qwen 4 Max,Gemini Argon,F,22,Overall Impression,16
 Qwen 4 Max,Opus 4.6 Max,M,1,Adherence to Instructions,17
 Qwen 4 Max,Opus 4.6 Max,M,2,Believable Character Actions,17
 Qwen 4 Max,Opus 4.6 Max,M,3,Nuanced Characters,16
@@ -2243,6 +2221,28 @@ Qwen 4 Max,Opus 4.6 Max,M,19,Well-earned Lightness or Darkness,16
 Qwen 4 Max,Opus 4.6 Max,M,20,Sentences Flow Naturally,17
 Qwen 4 Max,Opus 4.6 Max,M,21,Overall Reader Engagement,15
 Qwen 4 Max,Opus 4.6 Max,M,22,Overall Impression,16
+Qwen 4 Max,Gemini Argon,F,1,Adherence to Instructions,9
+Qwen 4 Max,Gemini Argon,F,2,Believable Character Actions,17
+Qwen 4 Max,Gemini Argon,F,3,Nuanced Characters,17
+Qwen 4 Max,Gemini Argon,F,4,Consistent Voice/Tone of Writing,18
+Qwen 4 Max,Gemini Argon,F,5,Imagery and Descriptive Quality,18
+Qwen 4 Max,Gemini Argon,F,6,Elegant Prose,17
+Qwen 4 Max,Gemini Argon,F,7,Emotionally Engaging,17
+Qwen 4 Max,Gemini Argon,F,8,Emotionally Complex,17
+Qwen 4 Max,Gemini Argon,F,9,Coherent,17
+Qwen 4 Max,Gemini Argon,F,10,Meandering,13
+Qwen 4 Max,Gemini Argon,F,11,Weak Dialogue,17
+Qwen 4 Max,Gemini Argon,F,12,Tell-Don't-Show,15
+Qwen 4 Max,Gemini Argon,F,13,Unsurprising or Uncreative,17
+Qwen 4 Max,Gemini Argon,F,14,Amateurish,17
+Qwen 4 Max,Gemini Argon,F,15,Purple Prose,16
+Qwen 4 Max,Gemini Argon,F,16,Overwrought,16
+Qwen 4 Max,Gemini Argon,F,17,Incongruent Ending Positivity,18
+Qwen 4 Max,Gemini Argon,F,18,Unearned Transformations,18
+Qwen 4 Max,Gemini Argon,F,19,Well-earned Lightness or Darkness,18
+Qwen 4 Max,Gemini Argon,F,20,Sentences Flow Naturally,17
+Qwen 4 Max,Gemini Argon,F,21,Overall Reader Engagement,16
+Qwen 4 Max,Gemini Argon,F,22,Overall Impression,16
 Qwen 4 Max,GPT 6 Sol,R,1,Adherence to Instructions,19
 Qwen 4 Max,GPT 6 Sol,R,2,Believable Character Actions,18
 Qwen 4 Max,GPT 6 Sol,R,3,Nuanced Characters,16
@@ -2353,28 +2353,6 @@ Qwen 4 Max,Meta Ember,U,19,Well-earned Lightness or Darkness,15
 Qwen 4 Max,Meta Ember,U,20,Sentences Flow Naturally,14
 Qwen 4 Max,Meta Ember,U,21,Overall Reader Engagement,14
 Qwen 4 Max,Meta Ember,U,22,Overall Impression,14
-Qwen 4 Max,Sonnet 4.5,B,1,Adherence to Instructions,15
-Qwen 4 Max,Sonnet 4.5,B,2,Believable Character Actions,15
-Qwen 4 Max,Sonnet 4.5,B,3,Nuanced Characters,14
-Qwen 4 Max,Sonnet 4.5,B,4,Consistent Voice/Tone of Writing,15
-Qwen 4 Max,Sonnet 4.5,B,5,Imagery and Descriptive Quality,14
-Qwen 4 Max,Sonnet 4.5,B,6,Elegant Prose,14
-Qwen 4 Max,Sonnet 4.5,B,7,Emotionally Engaging,15
-Qwen 4 Max,Sonnet 4.5,B,8,Emotionally Complex,13
-Qwen 4 Max,Sonnet 4.5,B,9,Coherent,15
-Qwen 4 Max,Sonnet 4.5,B,10,Meandering,15
-Qwen 4 Max,Sonnet 4.5,B,11,Weak Dialogue,15
-Qwen 4 Max,Sonnet 4.5,B,12,Tell-Don't-Show,12
-Qwen 4 Max,Sonnet 4.5,B,13,Unsurprising or Uncreative,12
-Qwen 4 Max,Sonnet 4.5,B,14,Amateurish,13
-Qwen 4 Max,Sonnet 4.5,B,15,Purple Prose,15
-Qwen 4 Max,Sonnet 4.5,B,16,Overwrought,14
-Qwen 4 Max,Sonnet 4.5,B,17,Incongruent Ending Positivity,15
-Qwen 4 Max,Sonnet 4.5,B,18,Unearned Transformations,16
-Qwen 4 Max,Sonnet 4.5,B,19,Well-earned Lightness or Darkness,14
-Qwen 4 Max,Sonnet 4.5,B,20,Sentences Flow Naturally,15
-Qwen 4 Max,Sonnet 4.5,B,21,Overall Reader Engagement,14
-Qwen 4 Max,Sonnet 4.5,B,22,Overall Impression,14
 Qwen 4 Max,Mistral Large 4,V,1,Adherence to Instructions,13
 Qwen 4 Max,Mistral Large 4,V,2,Believable Character Actions,12
 Qwen 4 Max,Mistral Large 4,V,3,Nuanced Characters,12
@@ -2397,6 +2375,28 @@ Qwen 4 Max,Mistral Large 4,V,19,Well-earned Lightness or Darkness,13
 Qwen 4 Max,Mistral Large 4,V,20,Sentences Flow Naturally,13
 Qwen 4 Max,Mistral Large 4,V,21,Overall Reader Engagement,12
 Qwen 4 Max,Mistral Large 4,V,22,Overall Impression,12
+Qwen 4 Max,Sonnet 4.5,B,1,Adherence to Instructions,15
+Qwen 4 Max,Sonnet 4.5,B,2,Believable Character Actions,15
+Qwen 4 Max,Sonnet 4.5,B,3,Nuanced Characters,14
+Qwen 4 Max,Sonnet 4.5,B,4,Consistent Voice/Tone of Writing,15
+Qwen 4 Max,Sonnet 4.5,B,5,Imagery and Descriptive Quality,14
+Qwen 4 Max,Sonnet 4.5,B,6,Elegant Prose,14
+Qwen 4 Max,Sonnet 4.5,B,7,Emotionally Engaging,15
+Qwen 4 Max,Sonnet 4.5,B,8,Emotionally Complex,13
+Qwen 4 Max,Sonnet 4.5,B,9,Coherent,15
+Qwen 4 Max,Sonnet 4.5,B,10,Meandering,15
+Qwen 4 Max,Sonnet 4.5,B,11,Weak Dialogue,15
+Qwen 4 Max,Sonnet 4.5,B,12,Tell-Don't-Show,12
+Qwen 4 Max,Sonnet 4.5,B,13,Unsurprising or Uncreative,12
+Qwen 4 Max,Sonnet 4.5,B,14,Amateurish,13
+Qwen 4 Max,Sonnet 4.5,B,15,Purple Prose,15
+Qwen 4 Max,Sonnet 4.5,B,16,Overwrought,14
+Qwen 4 Max,Sonnet 4.5,B,17,Incongruent Ending Positivity,15
+Qwen 4 Max,Sonnet 4.5,B,18,Unearned Transformations,16
+Qwen 4 Max,Sonnet 4.5,B,19,Well-earned Lightness or Darkness,14
+Qwen 4 Max,Sonnet 4.5,B,20,Sentences Flow Naturally,15
+Qwen 4 Max,Sonnet 4.5,B,21,Overall Reader Engagement,14
+Qwen 4 Max,Sonnet 4.5,B,22,Overall Impression,14
 Qwen 4 Max,Mistral Small 4,E,1,Adherence to Instructions,6
 Qwen 4 Max,Mistral Small 4,E,2,Believable Character Actions,8
 Qwen 4 Max,Mistral Small 4,E,3,Nuanced Characters,9

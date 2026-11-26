@@ -17,6 +17,7 @@ import csv
 import json
 import re
 import shutil
+import statistics as st
 import sys
 from decimal import Decimal, ROUND_HALF_EVEN
 from pathlib import Path
@@ -33,7 +34,7 @@ PROMPT_FILE = SRC / "judge_prompt_A-V.txt"
 STORY_DIR = "Stories"
 JUDGE_DIR = "LLM Judgement"
 JUDGE_URL = quote(JUDGE_DIR)  # URL-safe form for links: LLM%20Judgement
-AVERAGES_FILE = "average-scores.md"
+AVERAGES_FILE = "median-scores.md"
 
 JUDGES = [
     ("GEMINI HYDROGEN", "Gemini Hydrogen"),
@@ -359,23 +360,26 @@ def build():
     # Average and rank across every judge. The original four-judge averages in
     # judgments_scores_final.txt are verified above and kept in data/totals.csv.
     sums = {l: sum(tables[j["header"]][l]["total"] for j in judges) for l in avg_rows}
-    averages = {l: str((Decimal(sums[l]) / n_judges).quantize(Decimal("0.1"), rounding=ROUND_HALF_EVEN)) for l in sums}
-    final_ranks = competition_ranks(list(sums.items()))
+    medians = {l: st.median(tables[j["header"]][l]["total"] for j in judges) for l in avg_rows}
+    means = {l: str((Decimal(sums[l]) / n_judges).quantize(Decimal("0.1"), rounding=ROUND_HALF_EVEN)) for l in sums}
+    final_ranks = competition_ranks(list(medians.items()))
     avg_order = list(avg_rows)
     entries = []
-    for letter in sorted(avg_rows, key=lambda l: (final_ranks[l], avg_order.index(l))):
+    for letter in sorted(avg_rows, key=lambda l: (final_ranks[l], -float(means[l]), avg_order.index(l))):
         model = key[letter]
         rank = final_ranks[letter]
         stem = f"{rank:02d}-{slugify(model)}"
         totals = {j["header"]: tables[j["header"]][letter]["total"] for j in judges}
         entries.append({
             "letter": letter, "model": model, "slug": slugify(model), "rank": rank,
-            "average": averages[letter], "four_judge_average": avg_rows[letter]["average"],
+            "median": medians[letter], "average": means[letter], "four_judge_average": avg_rows[letter]["average"],
             "four_judge_rank": avg_rows[letter]["rank"], "totals": totals,
             "stem": stem, "txt": stem + ".txt",
             "story": stories[letter],
-            "trait_avgs": [Decimal(sum(tables[j["header"]][letter]["traits"][t] for j in judges)) / len(judges)
-                           for t in range(N_TRAITS)],
+            "trait_medians": [st.median(tables[j["header"]][letter]["traits"][t] for j in judges)
+                              for t in range(N_TRAITS)],
+            "trait_means": [Decimal(sum(tables[j["header"]][letter]["traits"][t] for j in judges)) / n_judges
+                            for t in range(N_TRAITS)],
             "spread": max(totals.values()) - min(totals.values()),
         })
     if len({e["slug"] for e in entries}) != len(entries):
@@ -446,7 +450,7 @@ def build():
                 + "> " + commentary[j["header"]][e["letter"]] + "\n\n"
                 + f"Other judges on this story: {siblings}\n\n"
                 + f"[Back to the story](../../{STORY_DIR}/{e['txt']}) · "
-                + f"[Average scores](../{AVERAGES_FILE}) · [Leaderboard](../../README.md)\n"
+                + f"[Median scores](../{AVERAGES_FILE}) · [Leaderboard](../../README.md)\n"
             )
             write(mdir / f"{j['slug']}.md", page)
 
@@ -454,15 +458,15 @@ def build():
     jnames = [j["name"] for j in judges]
     overall = [[e["rank"], f"[{e['model']}](../{STORY_DIR}/{e['txt']})", e["story"]["words"]]
                + [f"[{e['totals'][j['header']]}]({e['stem']}/{j['slug']}.md)" for j in judges]
-               + [f"**{e['average']}**", e["spread"]] for e in entries]
+               + [f"**{e['median']}**", e["spread"]] for e in entries]
     by_judge = [[e["rank"], f"[{e['model']}](../{STORY_DIR}/{e['txt']})"]
                 + [judge_ranks[j["header"]][e["letter"]] for j in judges]
                 for e in entries]
 
     def trait_summary(e):
-        ranked = sorted(range(N_TRAITS), key=lambda t: (-e["trait_avgs"][t], t))
-        weakest = sorted(range(N_TRAITS), key=lambda t: (e["trait_avgs"][t], t))
-        fmt = lambda t: f"{traits[t]['name']} ({float(e['trait_avgs'][t]):.2f})"
+        ranked = sorted(range(N_TRAITS), key=lambda t: (-e["trait_medians"][t], -float(e["trait_means"][t]), t))
+        weakest = sorted(range(N_TRAITS), key=lambda t: (e["trait_medians"][t], float(e["trait_means"][t]), t))
+        fmt = lambda t: f"{traits[t]['name']} ({e['trait_medians'][t]})"
         return ", ".join(fmt(t) for t in ranked[:3]), ", ".join(fmt(t) for t in weakest[:3])
     how = []
     for e in entries:
@@ -470,23 +474,23 @@ def build():
         how.append([e["rank"], f"[{e['model']}](../{STORY_DIR}/{e['txt']})", strong, weak])
 
     avg_md = (
-        "# Average scores\n\n"
+        "# Median scores\n\n"
         f"How each model scored, across the {n_judges} judges. Each judge scored all 22 stories on "
-        f"22 traits, each out of 20, so a total is out of {MAX_TOTAL}. The average is the mean of "
-        f"the {n_judges} judges' totals. Ranks use competition ranking, so ties share a rank. "
+        f"22 traits, each out of 20, so a total is out of {MAX_TOTAL}. The median is the middle value "
+        f"of the {n_judges} judges' scores. Ranks use competition ranking, so ties share a rank. "
         "The judge columns link to each judge's page for that model.\n\n"
         "## Overall\n\n"
         f"Judge spread is the highest minus the lowest of the {n_judges} totals: a large spread means the judges disagreed.\n\n"
-        + md_table(["Rank", "Model", "Words"] + jnames + ["Average", "Judge spread"], overall,
+        + md_table(["Rank", "Model", "Words"] + jnames + ["Median", "Judge spread"], overall,
                    ["--:", "---", "--:"] + ["--:"] * len(jnames) + ["--:", "--:"])
         + "\n\n## Ranking by judge\n\n"
         "Each judge's own rank for every model (1 = that judge's top story).\n\n"
         + md_table(["Overall rank", "Model"] + jnames, by_judge, ["--:", "---"] + ["--:"] * len(jnames))
         + "\n\n## How each model was scored\n\n"
-        f"Each model's three strongest and three weakest traits, using the average of the {n_judges} judges' "
-        "scores for each trait. Every trait is scored so that higher is better, including the negative "
-        "traits (for those, a high score means the flaw is absent).\n\n"
-        + md_table(["Overall rank", "Model", "Strongest traits (avg /20)", "Weakest traits (avg /20)"], how,
+        f"Each model's three strongest and three weakest traits, using the median of the {n_judges} judges' "
+        "scores for each trait. Ties are broken by the mean. Every trait is scored so that higher is better, "
+        "including the negative traits (for those, a high score means the flaw is absent).\n\n"
+        + md_table(["Overall rank", "Model", "Strongest traits (median /20)", "Weakest traits (median /20)"], how,
                    ["--:", "---", "---", "---"])
         + "\n\n[Back to the leaderboard](../README.md)\n"
     )
@@ -504,11 +508,11 @@ def build():
     with open(ROOT / "data" / "totals.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(["rank", "model", "letter", "words"] + jnames
-                   + ["average", "four_judge_average", "four_judge_rank"])
+                   + ["median", "average", "four_judge_average", "four_judge_rank"])
         for e in entries:
             w.writerow([e["rank"], e["model"], e["letter"], e["story"]["words"]]
                        + [e["totals"][j["header"]] for j in judges]
-                       + [e["average"], e["four_judge_average"], e["four_judge_rank"]])
+                       + [e["median"], e["average"], e["four_judge_average"], e["four_judge_rank"]])
     comm = {j["name"]: {e["model"]: commentary[j["header"]][e["letter"]] for e in entries} for j in judges}
     write(ROOT / "data" / "commentary.json", json.dumps(comm, ensure_ascii=False, indent=2) + "\n")
 
@@ -524,17 +528,17 @@ def build():
     if all(judge_ranks[j["header"]][leader["letter"]] == 1 for j in judges):
         top_line = f"{leader['model']} came first with all {n_word} judges."
     else:
-        top_line = f"{leader['model']} came first on average."
-    self_gap = Decimal(se["totals"][sj["header"]]) - Decimal(se["average"])
+        top_line = f"{leader['model']} came first on the median."
+    self_gap = se["totals"][sj["header"]] - se["median"]
     extra_note = " ".join(
         f"{n} was added as a fifth judge after the first four, using the same judge prompt; its full evaluation is in "
         f"[source/{ef.name}](source/{ef.name})." for _, n, _, ef in EXTRA_JUDGES)
-    spread = Decimal(within[0]["average"]) - Decimal(within[-1]["average"])
+    spread = within[0]["median"] - within[-1]["median"]
 
     board = [[e["rank"], f"[{e['model']}]({STORY_DIR}/{e['txt']})"]
              + [f"[{e['totals'][j['header']]}]({JUDGE_URL}/{e['stem']}/{j['slug']}.md)" for j in judges]
-             + [f"**{e['average']}**"] for e in entries]
-    leaderboard = md_table(["Rank", "Model"] + jnames + ["Average"], board,
+             + [f"**{e['median']}**"] for e in entries]
+    leaderboard = md_table(["Rank", "Model"] + jnames + ["Median"], board,
                            ["--:", "---"] + ["--:"] * (len(judges) + 1))
 
     def qtable(pairs, col):
@@ -576,7 +580,7 @@ The aim is to show what the models wrote, side by side, so you can judge for you
 
 - **Stories:** [Stories/](Stories/), one plain-text file per model.
 - **Judgments:** [LLM Judgement/](LLM%20Judgement/), one folder per model with one file per judge.
-- **Averages and explanations:** [LLM Judgement/average-scores.md](LLM%20Judgement/average-scores.md).
+- **Medians and explanations:** [LLM Judgement/median-scores.md]({JUDGE_URL}/{AVERAGES_FILE}).
 
 ## The brief
 
@@ -592,18 +596,18 @@ This is the prompt every model received, word for word. It is also in [brief.md]
 
 {garage_section}## Leaderboard
 
-Click a model to read its story, or a score to see that judge's trait scores and commentary. Ties share a rank. The average is the mean of the {n_word} judges' totals.
+Click a model to read its story, or a score to see that judge's trait scores and commentary. Ties share a rank. The median is the middle of the {n_word} judges' totals, so one extreme judge can't move a model far.
 
 {leaderboard}
 
-{top_line} The full breakdown, including how each judge ranked the models and where the judges disagreed, is in [average-scores.md]({JUDGE_URL}/{AVERAGES_FILE}).
+{top_line} The full breakdown, including how each judge ranked the models and where the judges disagreed, is in [median-scores.md]({JUDGE_URL}/{AVERAGES_FILE}).
 
 ## Limitations
 
 - **The judges are AI.** They followed the rubric, but they can't tell you whether a story moved a person. Their scores are one reference point.
 - **The judges disagreed, sometimes widely.** Meta Wonder got 412 from one judge and 326 from another; Sonnet 4.5 ranged from 251 to 355. No single score settles anything.
-- **{sj['name']} was both a judge and a contestant.** Judging blind, it gave its own story [{se['totals'][sj['header']]}]({JUDGE_URL}/{se['stem']}/{sj['slug']}.md), {self_gap} points above that story's {n_word}-judge average of {se['average']}. Fable 5.2 judged and Fable 5.1 competed, but those are different models.
-- **One story per model, one run each.** A second run could reorder the table. Ranks 3 to 5 are only {spread} points apart ({within[0]['model']} to {within[-1]['model']}), so read them as close to tied.
+- **{sj['name']} was both a judge and a contestant.** Judging blind, it gave its own story [{se['totals'][sj['header']]}]({JUDGE_URL}/{se['stem']}/{sj['slug']}.md), {self_gap} points above that story's {n_word}-judge median of {se['median']}. Fable 5.2 judged and Fable 5.1 competed, but those are different models.
+- **One story per model, one run each.** A second run could reorder the table. Ranks 3 to 5 are {spread} points apart ({within[0]['model']} to {within[-1]['model']}), so the order in the middle is less certain.
 - **One brief.** Literary realism with fixed details. Other genres or looser prompts might come out differently.
 
 Human readers are the missing piece. If you read some of the stories, I'd like to know which you'd rank highest, where you disagree with the judges, and what would make a comparison like this more useful. Open an issue on this repo to share.
@@ -665,9 +669,9 @@ The overruns weren't small, and several of the over-length stories still scored 
 - [The judge prompt](judge_prompt.md): the full prompt each judge received
 - [Stories/](Stories/): all 22 stories, one plain-text file per model, named by rank and model
 - [LLM Judgement/](LLM%20Judgement/): one folder per model, with one file per judge inside
-- [LLM Judgement/average-scores.md]({JUDGE_URL}/{AVERAGES_FILE}): averages, judge spread, rankings by judge, and each model's strongest and weakest traits
+- [LLM Judgement/median-scores.md]({JUDGE_URL}/{AVERAGES_FILE}): medians, judge spread, rankings by judge, and each model's strongest and weakest traits
 - Raw data:
-  - [data/totals.csv](data/totals.csv): one row per model, with word count, each judge's total, the average and the rank
+  - [data/totals.csv](data/totals.csv): one row per model, with word count, each judge's total, the median, the mean and the rank
   - [data/scores.csv](data/scores.csv): every trait score, one row per judge, story and trait
   - [data/commentary.json](data/commentary.json): each judge's commentary on each story
   - [source/](source/): the original files these pages were built from, unchanged
