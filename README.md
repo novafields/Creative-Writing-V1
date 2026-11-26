@@ -30,72 +30,40 @@ This is the prompt every model received, word for word. It is also in [brief.md]
 - **Four blind judges.** Each judge scored all 22 stories on 22 traits (dialogue, subtext, pacing, POV, brief adherence, cliché avoidance and so on). Each trait is out of 20, so a total is out of 440. Model names were removed. The traits are adapted from the rubric used in [EQ-Bench Creative Writing v3](https://eqbench.com/creative_writing.html). The full prompt and rubric are in [judge_prompt.md](judge_prompt.md) and [rubric.md](rubric.md).
 - **Checked.** Every judge's arithmetic was checked against its own trait scores, and every quote the judges used was checked against its story. Errors were sent back for correction. `scripts/build.py` repeats these checks on every build.
 
-## Dale's choice at the garage
+## What Dale does at the garage
 
-The whole brief builds to this scene. These three excerpts come from stories near the top, middle and lower middle of the leaderboard, copied word for word. Which model wrote which is hidden below, so you can rank them first.
+The brief sets up a choice at the garage that puts Dale's ride home at risk, but leaves the choice open. This is what each model decided, summarised from each story's ending.
 
-**Excerpt X**
+| Model | What Dale does | His ride home |
+|---|---|---|
+| [6.2 Sol](Stories/02-6-2-sol.txt) | Stays with them in the garage vestibule while Ana makes a call, then books himself a $38.60 cab | Missed |
+| [Astra 6.2](Stories/01-astra-6-2.txt) | Signs them in as visitors and sits with them in the office while Ana calls her sister | Missed |
+| [DeepSeek 4.1 Flash](Stories/10-deepseek-4-1-flash.txt) | Leaves the bus, walks them to a Tim Hortons, pays $40 for a cab to a shelter. Gets a three-day suspension | Missed |
+| [Fable 5.1](Stories/05-fable-5-1.txt) | Gives Ana $63, nearly all the money he has, for a cab | Makes it |
+| [Gemini Argon](Stories/13-gemini-argon.txt) | Sends them by taxi to a shelter he knows | Missed |
+| [Gemini Neon](Stories/14-gemini-neon.txt) | Pays for their cab with the cash from selling his repossessed Civic's winter tires | Missed |
+| [GLM 5.3](Stories/04-glm-5-3.txt) | Calls a cab, gives Ana his cash and his fare card | Missed |
+| [GPT 5.5](Stories/16-gpt-5-5.txt) | Drives the out-of-service bus downtown to a shelter | Missed |
+| [GPT 5.6 Sol](Stories/12-gpt-5-6-sol.txt) | Waits with them for an arranged cab, tells Carla "My car's here," then pays $51.60 for his own taxi | Missed |
+| [GPT 6 Sol](Stories/17-gpt-6-sol.txt) | Gets them into the garage office to call an intake line, then books himself a $41.60 taxi | Missed |
+| [GPT 6.1 Sol](Stories/07-gpt-6-1-sol.txt) | Waits with them in the staff vestibule until a housing van comes, lends Ana his power bank | Missed |
+| [GPT-6 Astra](Stories/08-gpt-6-astra.txt) | Pays $55 for one cab: family intake office first, then his place | Missed |
+| [Kimi K3.1 Pro](Stories/09-kimi-k3-1-pro.txt) | Pays for a cab and a motel room from a pay envelope marked CAR, then tells his daughter the truth | Missed |
+| [Luna 6](Stories/18-luna-6.txt) | Carries Theo into the garage's security office while help is arranged | Left open |
+| [Meta Ember](Stories/19-meta-ember.txt) | Lets them slip out through the maintenance gate without telling anyone | Missed |
+| [Meta Wonder](Stories/11-meta-wonder.txt) | Tells Carla the bus is empty, walks them out the pedestrian gate, pays $45 of his rent money for a cab | Missed |
+| [Mistral Large 4](Stories/21-mistral-large-4.txt) | Pays the cab fare from the money he was saving to get his car back | Missed |
+| [Mistral Small 4](Stories/22-mistral-small-4.txt) | Holds a $20 bill for Ana, then drives the bus back out to look for her | Doesn't go home |
+| [Opus 4.6 Max](Stories/14-opus-4-6-max.txt) | Waits with them and pays $30 for their cab | Left open |
+| [Opus 5.5](Stories/03-opus-5-5.txt) | Gives Ana the $60 he'd set aside for his daughter's driving test | Missed |
+| [Sonnet 4.5](Stories/20-sonnet-4-5.txt) | Has dispatch call a cab and pays for it himself | Left open |
+| [Sonnet 5.5](Stories/06-sonnet-5-5.txt) | Pays $50 for their cab, money meant for his daughter's birthday card | Missed |
 
-> There was a gap, then Carla said, “Visitors have to be signed in and sat with. I can't come down. I'm trying to get this relief in a cab at the moment.”
->
-> He could direct them to the gate. There was time to get them on the westbound with him; she'd have another forty minutes to sit and look at her phone. He pictured himself standing to pull the cord at his own corner, putting his gloves on while she watched.
->
-> “I'll sit,” he said, and unclipped his belt.
->
-> He took the duffel so she could carry the boy. At the steps Theo opened his eyes and said, quite distinctly, “Not here.”
->
-> “Just for a minute,” she said.
+Across the 22:
 
-**Excerpt Y**
-
-> The woman on the line asked questions he relayed to Ana. Adult and child, yes. Immediate medical attention, no. Safe to send a cab, Ana hesitated, then said yes. Name optional. Pickup could be the public road outside the garage, but the wait would be twenty to thirty minutes.
->
-> The employee bus left in fourteen.
->
-> Dale looked through the windshield at the garage doors. He could put Ana and Theo in the heated security vestibule, except passengers were not allowed past the fence. He could send them to the coffee shop by the loop, a twelve-minute walk over frozen sidewalks. He could call a regular cab, but he did not know where to send it.
->
-> Carla came back. “Four-seventeen, I need you moving.”
->
-> “I’ve got transport coming for them.”
->
-> “How long?”
->
-> “Twenty minutes.”
-
-**Excerpt Z**
-
-> The garage wasn't a place to stay. The drivers weren't supposed to bring passengers inside. Security would see them, and there would be questions. He could open the doors, point toward the pavement and get on with his shift.
->
-> He could also leave them standing beside the fence, with the boy half asleep and the woman holding a duffel bag she hadn't put down all night.
->
-> His radio crackled.
->
-> "Thirty-eight, you're sitting at the gate. Everything okay?"
->
-> Dale took the microphone.
->
-> "I've got two passengers still aboard."
->
-> A pause.
->
-> "Two passengers?"
->
-> "Mother and child. I'm trying to sort it out."
->
-> "You're clear to bring it in. Security's waiting."
->
-> "I need a few minutes."
->
-> "Dale, we need that bay."
-
-<details>
-<summary>Which models wrote these?</summary>
-
-- Excerpt X: [Astra 6.2](Stories/01-astra-6-2.txt), ranked 1 of 22 (average 412.8)
-- Excerpt Y: [GPT 5.6 Sol](Stories/12-gpt-5-6-sol.txt), ranked 12 of 22 (average 366.5)
-- Excerpt Z: [Luna 6](Stories/18-luna-6.txt), ranked 18 of 22 (average 324.2)
-
-</details>
+- Dale misses his ride in 17 stories and makes it in 1. 3 leave it open.
+- In 12 stories he pays for Ana's way out with his own money, usually money that already had a job: his daughter's driving test or birthday, his rent, the car, the tire money.
+- None of the 22 has Dale simply let them off and go home.
 
 ## Leaderboard
 

@@ -91,29 +91,32 @@ ENDINGS = [
 ]
 
 
-# Garage-scene excerpts for the README: (model, phrase in first paragraph,
-# phrase in last paragraph). The text is cut from the story file itself, so it
-# is always word for word.
+# What Dale does at the garage, summarised by hand from each story's ending:
+# (model, what he does, his ride home, pays for Ana's way out with his own money)
 GARAGE = [
-    ("Astra 6.2", "There was a gap, then Carla said", "Just for a minute"),
-    ("GPT 5.6 Sol", "The woman on the line asked questions", "Twenty minutes."),
-    ("Luna 6", "Security would see them, and there would be questions", "we need that bay"),
+    ("6.2 Sol", "Stays with them in the garage vestibule while Ana makes a call, then books himself a $38.60 cab", "Missed", False),
+    ("Astra 6.2", "Signs them in as visitors and sits with them in the office while Ana calls her sister", "Missed", False),
+    ("DeepSeek 4.1 Flash", "Leaves the bus, walks them to a Tim Hortons, pays $40 for a cab to a shelter. Gets a three-day suspension", "Missed", True),
+    ("Fable 5.1", "Gives Ana $63, nearly all the money he has, for a cab", "Makes it", True),
+    ("Gemini Argon", "Sends them by taxi to a shelter he knows", "Missed", False),
+    ("Gemini Neon", "Pays for their cab with the cash from selling his repossessed Civic's winter tires", "Missed", True),
+    ("GLM 5.3", "Calls a cab, gives Ana his cash and his fare card", "Missed", True),
+    ("GPT 5.5", "Drives the out-of-service bus downtown to a shelter", "Missed", False),
+    ("GPT 5.6 Sol", "Waits with them for an arranged cab, tells Carla \"My car's here,\" then pays $51.60 for his own taxi", "Missed", False),
+    ("GPT 6 Sol", "Gets them into the garage office to call an intake line, then books himself a $41.60 taxi", "Missed", False),
+    ("GPT 6.1 Sol", "Waits with them in the staff vestibule until a housing van comes, lends Ana his power bank", "Missed", False),
+    ("GPT-6 Astra", "Pays $55 for one cab: family intake office first, then his place", "Missed", True),
+    ("Kimi K3.1 Pro", "Pays for a cab and a motel room from a pay envelope marked CAR, then tells his daughter the truth", "Missed", True),
+    ("Luna 6", "Carries Theo into the garage's security office while help is arranged", "Left open", False),
+    ("Meta Ember", "Lets them slip out through the maintenance gate without telling anyone", "Missed", False),
+    ("Meta Wonder", "Tells Carla the bus is empty, walks them out the pedestrian gate, pays $45 of his rent money for a cab", "Missed", True),
+    ("Mistral Large 4", "Pays the cab fare from the money he was saving to get his car back", "Missed", True),
+    ("Mistral Small 4", "Holds a $20 bill for Ana, then drives the bus back out to look for her", "Doesn't go home", False),
+    ("Opus 4.6 Max", "Waits with them and pays $30 for their cab", "Left open", True),
+    ("Opus 5.5", "Gives Ana the $60 he'd set aside for his daughter's driving test", "Missed", True),
+    ("Sonnet 4.5", "Has dispatch call a cab and pays for it himself", "Left open", True),
+    ("Sonnet 5.5", "Pays $50 for their cab, money meant for his daughter's birthday card", "Missed", True),
 ]
-
-
-def excerpt(full, start, end):
-    """Whole paragraphs from the one containing `start` to the one containing `end`."""
-    if start not in full or end not in full:
-        raise DataError(f"excerpt phrase not found: {start!r} / {end!r}")
-    i = full.rfind("\n\n", 0, full.index(start))
-    i = 0 if i < 0 else i + 2
-    j = full.index(end, i) + len(end)
-    k = full.find("\n\n", j)
-    return full[i:] if k < 0 else full[i:k]
-
-
-def blockquote(text):
-    return "\n".join("> " + line if line else ">" for line in text.split("\n"))
 
 class DataError(Exception):
     pass
@@ -494,20 +497,21 @@ def build():
     under = sorted((e for e in entries if e["story"]["words"] < 1700), key=lambda e: e["story"]["words"])
     length_list = lambda es: ", ".join(f"{e['model']} ({e['story']['words']:,})" for e in es)
 
-    letters_xyz = "XYZ"
-    garage_parts, reveal = [], []
-    for tag, (model, start, end) in zip(letters_xyz, GARAGE):
-        e = by_model[model]
-        garage_parts.append(f"**Excerpt {tag}**\n\n" + blockquote(excerpt(e["story"]["full"], start, end)))
-        reveal.append(f"- Excerpt {tag}: [{model}]({STORY_DIR}/{e['txt']}), ranked {e['rank']} of 22 (average {e['average']})")
+    if sorted(g[0] for g in GARAGE) != sorted(by_model):
+        raise DataError("GARAGE table must list each of the 22 models exactly once")
+    rides = [g[2] for g in GARAGE]
+    garage_rows = [[f"[{m}]({STORY_DIR}/{by_model[m]['txt']})", what, ride] for m, what, ride, _ in GARAGE]
     garage_section = (
-        "## Dale's choice at the garage\n\n"
-        "The whole brief builds to this scene. These three excerpts come from stories near the top, middle "
-        "and lower middle of the leaderboard, copied word for word. Which model wrote which is hidden "
-        "below, so you can rank them first.\n\n"
-        + "\n\n".join(garage_parts)
-        + "\n\n<details>\n<summary>Which models wrote these?</summary>\n\n"
-        + "\n".join(reveal) + "\n\n</details>\n\n"
+        "## What Dale does at the garage\n\n"
+        "The brief sets up a choice at the garage that puts Dale's ride home at risk, but leaves the choice open. "
+        "This is what each model decided, summarised from each story's ending.\n\n"
+        + md_table(["Model", "What Dale does", "His ride home"], garage_rows, ["---", "---", "---"])
+        + "\n\nAcross the 22:\n\n"
+        f"- Dale misses his ride in {rides.count('Missed')} stories and makes it in {rides.count('Makes it')}. "
+        f"{rides.count('Left open')} leave it open.\n"
+        f"- In {sum(g[3] for g in GARAGE)} stories he pays for Ana's way out with his own money, usually money "
+        "that already had a job: his daughter's driving test or birthday, his rent, the car, the tire money.\n"
+        "- None of the 22 has Dale simply let them off and go home.\n\n"
     )
     brief_quote = "\n".join("> " + line if line else ">" for line in prompt["brief"].split("\n"))
     readme = f"""# One brief, 22 models: a blind short-fiction comparison
