@@ -575,7 +575,7 @@ def build():
     trait_names = [t["name"] for t in traits]
     trait_rows = [[e["rank"], f"[{e['model']}]({STORY_DIR}/{e['txt']})"]
                   + [int(x) for x in e["trait_medians"]] + [f"**{e['median']}**"] for e in entries]
-    trait_table = md_table(["Rank", "Model"] + trait_names + ["Median total"], trait_rows,
+    trait_table = md_table(["Rank", "Model"] + trait_names + ["Median total (/440)"], trait_rows,
                            ["--:", "---"] + ["--:"] * (N_TRAITS + 1))
     trait_section = (
         "## Scores by trait\n\n"
@@ -608,13 +608,11 @@ This is the prompt every model received, word for word. It is also in [brief.md]
 
 {garage_section}## Leaderboard
 
-Click a model to read its story, or a score to see that judge's trait scores and commentary. Ties share a rank. The median is the middle of the {n_word} judges' totals, so one extreme judge can't move a model far.
+Click a model to read its story. Each category is the median of the {n_word} judges' scores, out of 20. Higher is better in every column, including the flaw categories from Meandering to Unearned Transformations. The total is the median of the {n_word} judges' totals, out of 440, so one extreme judge can't move a model far. Ties share a rank.
 
-{leaderboard}
+{trait_table}
 
-{top_line} The full breakdown, including how each judge ranked the models and where the judges disagreed, is in [median-scores.md]({JUDGE_URL}/{AVERAGES_FILE}).
-
-{trait_section}
+{top_line} The full breakdown, including how each judge ranked the models and where the judges disagreed, is in [median-scores.md]({JUDGE_URL}/{AVERAGES_FILE}), with each judge's total linked to its full judgment.
 
 ## Limitations
 
