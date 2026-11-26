@@ -42,6 +42,6 @@ Each trait is out of 20. For negative traits, 20 means the flaw is absent. See t
 
 > It covers the required beats in order. It is mostly summary that announces its own plot, with illogical details such as recovering a repossessed car for thirty-one dollars and heavy telling ("He knew it the way you know a door has closed").
 
-Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md)
+Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md) · [Qwen 4 Max](qwen-4-max.md)
 
 [Back to the story](../../Stories/21-mistral-large-4.txt) · [Average scores](../average-scores.md) · [Leaderboard](../../README.md)

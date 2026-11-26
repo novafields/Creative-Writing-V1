@@ -42,6 +42,6 @@ Each trait is out of 20. For negative traits, 20 means the flaw is absent. See t
 
 > Its strength is precise, oblique detail that carries all the feeling, down to the passing bus "glowing like a shop somebody had forgotten to close". Its weakness is that a few elliptical beats, such as the repeated loops past the hospital, ask the reader to work to follow the geography.
 
-Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md)
+Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md) · [Qwen 4 Max](qwen-4-max.md)
 
 [Back to the story](../../Stories/01-astra-6-2.txt) · [Average scores](../average-scores.md) · [Leaderboard](../../README.md)

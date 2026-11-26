@@ -42,6 +42,6 @@ Each trait is out of 20. For negative traits, 20 means the flaw is absent. See t
 
 > The premise is recognisable and the sentences are readable. It is far under length, set at 2:17 a.m., missing several required elements, and ends on an illogical turn ("The twenty in his pocket burned").
 
-Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md)
+Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md) · [Qwen 4 Max](qwen-4-max.md)
 
 [Back to the story](../../Stories/22-mistral-small-4.txt) · [Average scores](../average-scores.md) · [Leaderboard](../../README.md)

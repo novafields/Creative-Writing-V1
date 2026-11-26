@@ -42,6 +42,6 @@ Each trait is out of 20. For negative traits, 20 means the flaw is absent. See t
 
 > Its biggest strength is tactile atmospheric detail, such as the cold air lifting "the smell of lentil soup up toward the ceiling." Its biggest weakness is omitting Ana and Theo's names, making the heater rattle rather than tick, leaving a glaring typo ("You're good to Website?"), and opting for a passive exit at the maintenance gate.
 
-Other judges on this story: [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md) · [Fable 5.2](fable-5-2.md)
+Other judges on this story: [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md) · [Fable 5.2](fable-5-2.md) · [Qwen 4 Max](qwen-4-max.md)
 
 [Back to the story](../../Stories/19-meta-ember.txt) · [Average scores](../average-scores.md) · [Leaderboard](../../README.md)

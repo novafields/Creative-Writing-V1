@@ -42,6 +42,6 @@ Each trait is out of 20. For negative traits, 20 means the flaw is absent. See t
 
 > Its biggest strength is the sharp, unsentimental closing image of a taxi meter ticking upward ("$4.75 appeared, held for a moment, then climbed") after Dale gives up his employee bus for Ana's ride. Its biggest weakness is slipping into occasional explanatory telling ("Procedures liked clean categories") and omitting Theo's age.
 
-Other judges on this story: [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md) · [Fable 5.2](fable-5-2.md)
+Other judges on this story: [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md) · [Fable 5.2](fable-5-2.md) · [Qwen 4 Max](qwen-4-max.md)
 
 [Back to the story](../../Stories/12-gpt-5-6-sol.txt) · [Average scores](../average-scores.md) · [Leaderboard](../../README.md)

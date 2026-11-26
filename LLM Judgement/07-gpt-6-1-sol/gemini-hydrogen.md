@@ -42,6 +42,6 @@ Each trait is out of 20. For negative traits, 20 means the flaw is absent. See t
 
 > Its biggest strength is crisp, restrained dialogue and small, observant gestures like Dale lending Ana his power bank and Theo pressing the door button ("Not this week"). Its biggest weakness is an overly sparse middle section that omits the February 19 date and Theo's age.
 
-Other judges on this story: [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md) · [Fable 5.2](fable-5-2.md)
+Other judges on this story: [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md) · [Fable 5.2](fable-5-2.md) · [Qwen 4 Max](qwen-4-max.md)
 
 [Back to the story](../../Stories/07-gpt-6-1-sol.txt) · [Average scores](../average-scores.md) · [Leaderboard](../../README.md)

@@ -42,6 +42,6 @@ Each trait is out of 20. For negative traits, 20 means the flaw is absent. See t
 
 > Its biggest strength is establishing the basic hospital-to-garage setup quickly, while its biggest weakness is falling about 584 words short of the minimum and collapsing into implausible melodrama ("The twenty in his pocket burned") as Dale drives his city bus out of the garage to hunt for an unknown address.
 
-Other judges on this story: [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md) · [Fable 5.2](fable-5-2.md)
+Other judges on this story: [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md) · [Fable 5.2](fable-5-2.md) · [Qwen 4 Max](qwen-4-max.md)
 
 [Back to the story](../../Stories/22-mistral-small-4.txt) · [Average scores](../average-scores.md) · [Leaderboard](../../README.md)

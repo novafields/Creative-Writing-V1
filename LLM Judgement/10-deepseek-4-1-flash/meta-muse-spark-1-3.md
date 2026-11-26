@@ -42,6 +42,6 @@ Each trait is out of 20. For negative traits, 20 means the flaw is absent. See t
 
 > Biggest strength is vivid supporting colour from Pete's flooded basement and Bulldogs story. Biggest weakness is a sudden jump to the garage and a heavy three-day suspension ending that shifts focus from Ana to punishment.
 
-Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Fable 5.2](fable-5-2.md)
+Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Fable 5.2](fable-5-2.md) · [Qwen 4 Max](qwen-4-max.md)
 
 [Back to the story](../../Stories/10-deepseek-4-1-flash.txt) · [Average scores](../average-scores.md) · [Leaderboard](../../README.md)

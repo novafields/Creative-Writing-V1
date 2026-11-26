@@ -42,6 +42,6 @@ Each trait is out of 20. For negative traits, 20 means the flaw is absent. See t
 
 > Its biggest strength is immersive transit authenticity and devastatingly human closure, culminating in Dale walking the wrong way first because "a chance was easier to stand in front of than the whole walk was." Its biggest weakness is running about 1,244 words over the 2,300-word ceiling with slightly leisurely middle transitions.
 
-Other judges on this story: [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md) · [Fable 5.2](fable-5-2.md)
+Other judges on this story: [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md) · [Fable 5.2](fable-5-2.md) · [Qwen 4 Max](qwen-4-max.md)
 
 [Back to the story](../../Stories/11-meta-wonder.txt) · [Average scores](../average-scores.md) · [Leaderboard](../../README.md)

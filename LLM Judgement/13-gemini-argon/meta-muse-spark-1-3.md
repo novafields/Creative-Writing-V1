@@ -42,6 +42,6 @@ Each trait is out of 20. For negative traits, 20 means the flaw is absent. See t
 
 > Biggest strength is dense sensory and procedural credibility, especially the "No SIM" lock screen revealing Ana's story without exposition. Biggest weakness is major overlength and accumulation of detail that slows the final choice.
 
-Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Fable 5.2](fable-5-2.md)
+Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Fable 5.2](fable-5-2.md) · [Qwen 4 Max](qwen-4-max.md)
 
 [Back to the story](../../Stories/13-gemini-argon.txt) · [Average scores](../average-scores.md) · [Leaderboard](../../README.md)

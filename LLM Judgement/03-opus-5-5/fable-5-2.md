@@ -42,6 +42,6 @@ Each trait is out of 20. For negative traits, 20 means the flaw is absent. See t
 
 > The parallel-parking advice returns as the closing text to his daughter, a fully earned and moving payoff ("Middle of the back window"). The daughter is seventeen rather than adult, and a couple of lines tip into stated feeling.
 
-Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md)
+Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md) · [Qwen 4 Max](qwen-4-max.md)
 
 [Back to the story](../../Stories/03-opus-5-5.txt) · [Average scores](../average-scores.md) · [Leaderboard](../../README.md)

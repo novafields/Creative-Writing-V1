@@ -42,6 +42,6 @@ Each trait is out of 20. For negative traits, 20 means the flaw is absent. See t
 
 > The lentil-soup exchange and the beeping fare reader give it quiet humanity. Sloppy sentence-making ("kept both hands high on the wheel way through the intersections," "You're good to Website?") undercuts the polish.
 
-Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md) · [Fable 5.2](fable-5-2.md)
+Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md) · [Fable 5.2](fable-5-2.md) · [Qwen 4 Max](qwen-4-max.md)
 
 [Back to the story](../../Stories/19-meta-ember.txt) · [Average scores](../average-scores.md) · [Leaderboard](../../README.md)

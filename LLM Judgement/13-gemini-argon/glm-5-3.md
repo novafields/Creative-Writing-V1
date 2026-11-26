@@ -42,6 +42,6 @@ Each trait is out of 20. For negative traits, 20 means the flaw is absent. See t
 
 > The "No SIM" discovery and the ID question ("Martha's") show real investigative empathy and superb texture. At 3,638 words it's over half again the limit, padded with route bookkeeping.
 
-Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md) · [Fable 5.2](fable-5-2.md)
+Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md) · [Fable 5.2](fable-5-2.md) · [Qwen 4 Max](qwen-4-max.md)
 
 [Back to the story](../../Stories/13-gemini-argon.txt) · [Average scores](../average-scores.md) · [Leaderboard](../../README.md)

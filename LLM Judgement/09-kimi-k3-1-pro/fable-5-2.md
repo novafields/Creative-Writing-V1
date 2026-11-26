@@ -42,6 +42,6 @@ Each trait is out of 20. For negative traits, 20 means the flaw is absent. See t
 
 > Theo's dialogue is charming and the pencilled "CAR" envelope makes the cost concrete. Dale's sudden confession and his daughter's instant "Stay there" resolve his secret more neatly than the brief allows.
 
-Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md)
+Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md) · [Qwen 4 Max](qwen-4-max.md)
 
 [Back to the story](../../Stories/09-kimi-k3-1-pro.txt) · [Average scores](../average-scores.md) · [Leaderboard](../../README.md)

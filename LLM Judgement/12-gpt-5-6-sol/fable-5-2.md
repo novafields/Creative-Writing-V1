@@ -42,6 +42,6 @@ Each trait is out of 20. For negative traits, 20 means the flaw is absent. See t
 
 > It is tidy and well paced, with a good running joke ("Only mittens") and a quietly effective taxi-meter ending. It is conventional in shape, with some labelled characterisation and an on-the-nose "Is Dad coming?".
 
-Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md)
+Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md) · [Qwen 4 Max](qwen-4-max.md)
 
 [Back to the story](../../Stories/12-gpt-5-6-sol.txt) · [Average scores](../average-scores.md) · [Leaderboard](../../README.md)

@@ -42,6 +42,6 @@ Each trait is out of 20. For negative traits, 20 means the flaw is absent. See t
 
 > Biggest strength is a simple, direct premise and an attempt at a haunting final image, "The twenty in his pocket burned." Biggest weakness is severe underlength, repeated prior meetings that contradict the brief, wrong shift timing, and an implausible ending in which Dale drives off to search for Ana.
 
-Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Fable 5.2](fable-5-2.md)
+Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Fable 5.2](fable-5-2.md) · [Qwen 4 Max](qwen-4-max.md)
 
 [Back to the story](../../Stories/22-mistral-small-4.txt) · [Average scores](../average-scores.md) · [Leaderboard](../../README.md)

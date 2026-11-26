@@ -42,6 +42,6 @@ Each trait is out of 20. For negative traits, 20 means the flaw is absent. See t
 
 > Its biggest strength is its stark, unsentimental ending where Dale's kindness triggers a real workplace suspension ("Three days," she said. "Pending review."). Its biggest weakness is omitting his eleven years of driving.
 
-Other judges on this story: [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md) · [Fable 5.2](fable-5-2.md)
+Other judges on this story: [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md) · [Fable 5.2](fable-5-2.md) · [Qwen 4 Max](qwen-4-max.md)
 
 [Back to the story](../../Stories/10-deepseek-4-1-flash.txt) · [Average scores](../average-scores.md) · [Leaderboard](../../README.md)

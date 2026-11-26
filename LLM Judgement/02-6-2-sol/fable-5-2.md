@@ -42,6 +42,6 @@ Each trait is out of 20. For negative traits, 20 means the flaw is absent. See t
 
 > It combines wry, exact observation with natural dialogue ("Exactly one boot"), and the ending on a coin under a vending machine is superbly judged. The emotional temperature stays so cool that some readers may want slightly more of Dale's stake.
 
-Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md)
+Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md) · [Qwen 4 Max](qwen-4-max.md)
 
 [Back to the story](../../Stories/02-6-2-sol.txt) · [Average scores](../average-scores.md) · [Leaderboard](../../README.md)

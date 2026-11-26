@@ -42,6 +42,6 @@ Each trait is out of 20. For negative traits, 20 means the flaw is absent. See t
 
 > Its biggest strength is a clean, readable transit cadence in its opening stops, while its biggest weakness is heavy-handed telling alongside jarring timeline contradictions ("The clock on the dashboard said nine forty-two" after midnight) and missing brief details like Dale's surname, eleven years of service, and Theo's age.
 
-Other judges on this story: [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md) · [Fable 5.2](fable-5-2.md)
+Other judges on this story: [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md) · [Fable 5.2](fable-5-2.md) · [Qwen 4 Max](qwen-4-max.md)
 
 [Back to the story](../../Stories/20-sonnet-4-5.txt) · [Average scores](../average-scores.md) · [Leaderboard](../../README.md)

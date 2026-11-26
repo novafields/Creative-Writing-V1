@@ -18,7 +18,7 @@ import json
 import re
 import shutil
 import sys
-from decimal import Decimal
+from decimal import Decimal, ROUND_HALF_EVEN
 from pathlib import Path
 from urllib.parse import quote
 
@@ -40,6 +40,11 @@ JUDGES = [
     ("GLM 5.3", "GLM 5.3"),
     ("META MUSE SPARK 1.3", "Meta Muse Spark 1.3"),
     ("FABLE 5.2", "Fable 5.2"),
+]
+# Judges added after the original four. Each has its own unchanged source files:
+# (header, display name, scores CSV, full evaluation with per-story notes)
+EXTRA_JUDGES = [
+    ("QWEN 4 MAX", "Qwen 4 Max", SRC / "qwen-4-max_scores.csv", SRC / "qwen-4-max_evaluation.md"),
 ]
 SELF_JUDGE = ("GLM 5.3", "GLM 5.3")  # (judge display name, contestant model name)
 
@@ -309,6 +314,32 @@ def md_table(header, rows, align=None):
     return "\n".join(out)
 
 
+def parse_extra_judges(tables, commentary):
+    errors = []
+    for header, name, scores_file, eval_file in EXTRA_JUDGES:
+        tables[header], commentary[header] = {}, {}
+        with open(scores_file, newline="", encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                letter = row["Story"].strip()
+                traits = [int(row[f"T{i}"]) for i in range(1, N_TRAITS + 1)]
+                total = int(row["Total"])
+                if any(not 0 <= t <= 20 for t in traits):
+                    errors.append(f"{name} {letter}: a trait score is outside 0-20")
+                if sum(traits) != total:
+                    errors.append(f"{name} {letter}: traits sum to {sum(traits)}, stated total {total}")
+                tables[header][letter] = {"traits": traits, "total": total}
+        for line in read(eval_file).splitlines():
+            m = re.match(r"^- \*\*([A-V]):\*\* (.*)$", line)
+            if m:
+                commentary[header][m.group(1)] = m.group(2)
+        if sorted(tables[header]) != [chr(c) for c in range(ord("A"), ord("W"))]:
+            errors.append(f"{name}: scores don't cover exactly stories A-V")
+        if sorted(commentary[header]) != sorted(tables[header]):
+            errors.append(f"{name}: notes don't cover exactly one line per story")
+    if errors:
+        raise DataError("\n".join(errors))
+
+
 def build():
     key = parse_key()
     rev = {m: L for L, m in key.items()}
@@ -316,22 +347,31 @@ def build():
     tables, avg_rows, commentary = parse_scores()
     prompt = parse_prompt()
     verify(key, stories, tables, avg_rows, commentary)
+    parse_extra_judges(tables, commentary)
     for label, pairs in [("heater", HEATER), ("repossession", REPOSSESSION),
                          ("openings", OPENINGS), ("endings", ENDINGS)]:
         check_quotes(label, pairs, rev, stories)
 
     traits = prompt["traits"]
-    judges = [{"header": h, "name": n, "slug": slugify(n)} for h, n in JUDGES]
+    judges = ([{"header": h, "name": n, "slug": slugify(n)} for h, n in JUDGES]
+              + [{"header": h, "name": n, "slug": slugify(n)} for h, n, _, _ in EXTRA_JUDGES])
+    n_judges = len(judges)
+    # Average and rank across every judge. The original four-judge averages in
+    # judgments_scores_final.txt are verified above and kept in data/totals.csv.
+    sums = {l: sum(tables[j["header"]][l]["total"] for j in judges) for l in avg_rows}
+    averages = {l: str((Decimal(sums[l]) / n_judges).quantize(Decimal("0.1"), rounding=ROUND_HALF_EVEN)) for l in sums}
+    final_ranks = competition_ranks(list(sums.items()))
     avg_order = list(avg_rows)
     entries = []
-    for letter in sorted(avg_rows, key=lambda l: (avg_rows[l]["rank"], avg_order.index(l))):
+    for letter in sorted(avg_rows, key=lambda l: (final_ranks[l], avg_order.index(l))):
         model = key[letter]
-        rank = avg_rows[letter]["rank"]
+        rank = final_ranks[letter]
         stem = f"{rank:02d}-{slugify(model)}"
         totals = {j["header"]: tables[j["header"]][letter]["total"] for j in judges}
         entries.append({
             "letter": letter, "model": model, "slug": slugify(model), "rank": rank,
-            "average": avg_rows[letter]["average"], "totals": totals,
+            "average": averages[letter], "four_judge_average": avg_rows[letter]["average"],
+            "four_judge_rank": avg_rows[letter]["rank"], "totals": totals,
             "stem": stem, "txt": stem + ".txt",
             "story": stories[letter],
             "trait_avgs": [Decimal(sum(tables[j["header"]][letter]["traits"][t] for j in judges)) / len(judges)
@@ -431,19 +471,19 @@ def build():
 
     avg_md = (
         "# Average scores\n\n"
-        f"How each model scored, across the four judges. Each judge scored all 22 stories on "
+        f"How each model scored, across the {n_judges} judges. Each judge scored all 22 stories on "
         f"22 traits, each out of 20, so a total is out of {MAX_TOTAL}. The average is the mean of "
-        "the four judges' totals. Ranks use competition ranking, so ties share a rank. "
+        f"the {n_judges} judges' totals. Ranks use competition ranking, so ties share a rank. "
         "The judge columns link to each judge's page for that model.\n\n"
         "## Overall\n\n"
-        "Judge spread is the highest minus the lowest of the four totals: a large spread means the judges disagreed.\n\n"
+        f"Judge spread is the highest minus the lowest of the {n_judges} totals: a large spread means the judges disagreed.\n\n"
         + md_table(["Rank", "Model", "Words"] + jnames + ["Average", "Judge spread"], overall,
                    ["--:", "---", "--:"] + ["--:"] * len(jnames) + ["--:", "--:"])
         + "\n\n## Ranking by judge\n\n"
         "Each judge's own rank for every model (1 = that judge's top story).\n\n"
         + md_table(["Overall rank", "Model"] + jnames, by_judge, ["--:", "---"] + ["--:"] * len(jnames))
         + "\n\n## How each model was scored\n\n"
-        "Each model's three strongest and three weakest traits, using the average of the four judges' "
+        f"Each model's three strongest and three weakest traits, using the average of the {n_judges} judges' "
         "scores for each trait. Every trait is scored so that higher is better, including the negative "
         "traits (for those, a high score means the flaw is absent).\n\n"
         + md_table(["Overall rank", "Model", "Strongest traits (avg /20)", "Weakest traits (avg /20)"], how,
@@ -463,10 +503,12 @@ def build():
                                 tables[j["header"]][e["letter"]]["traits"][t["n"] - 1]])
     with open(ROOT / "data" / "totals.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
-        w.writerow(["rank", "model", "letter", "words"] + jnames + ["average"])
+        w.writerow(["rank", "model", "letter", "words"] + jnames
+                   + ["average", "four_judge_average", "four_judge_rank"])
         for e in entries:
             w.writerow([e["rank"], e["model"], e["letter"], e["story"]["words"]]
-                       + [e["totals"][j["header"]] for j in judges] + [e["average"]])
+                       + [e["totals"][j["header"]] for j in judges]
+                       + [e["average"], e["four_judge_average"], e["four_judge_rank"]])
     comm = {j["name"]: {e["model"]: commentary[j["header"]][e["letter"]] for e in entries} for j in judges}
     write(ROOT / "data" / "commentary.json", json.dumps(comm, ensure_ascii=False, indent=2) + "\n")
 
@@ -475,6 +517,18 @@ def build():
     sj = next(j for j in judges if j["name"] == self_judge_name)
     se = by_model[self_model]
     within = [e for e in entries if 3 <= e["rank"] <= 5]
+    words = {4: "four", 5: "five", 6: "six"}
+    n_word = words.get(n_judges, str(n_judges))
+    n_word_cap = n_word.capitalize()
+    leader = entries[0]
+    if all(judge_ranks[j["header"]][leader["letter"]] == 1 for j in judges):
+        top_line = f"{leader['model']} came first with all {n_word} judges."
+    else:
+        top_line = f"{leader['model']} came first on average."
+    self_gap = Decimal(se["totals"][sj["header"]]) - Decimal(se["average"])
+    extra_note = " ".join(
+        f"{n} was added as a fifth judge after the first four, using the same judge prompt; its full evaluation is in "
+        f"[source/{ef.name}](source/{ef.name})." for _, n, _, ef in EXTRA_JUDGES)
     spread = Decimal(within[0]["average"]) - Decimal(within[-1]["average"])
 
     board = [[e["rank"], f"[{e['model']}]({STORY_DIR}/{e['txt']})"]
@@ -516,7 +570,7 @@ def build():
     brief_quote = "\n".join("> " + line if line else ">" for line in prompt["brief"].split("\n"))
     readme = f"""# One brief, 22 models: a blind short-fiction comparison
 
-I gave 22 AI models the same literary short-story brief and then had four AI judges score the stories blind, with model names removed. Each model got one shot and no edits. The brief is a Hamilton, Ontario bus driver on the last three hours of a February night shift, with a few fixed details every story had to include: a ticking heater, a repossessed car that he hasn't told anyone about, a dispatcher's routine schedule changes, a mother and son who board at the hospital, and a choice at the garage that puts his ride home at risk.
+I gave 22 AI models the same literary short-story brief and then had {n_word} AI judges score the stories blind, with model names removed. Each model got one shot and no edits. The brief is a Hamilton, Ontario bus driver on the last three hours of a February night shift, with a few fixed details every story had to include: a ticking heater, a repossessed car that he hasn't told anyone about, a dispatcher's routine schedule changes, a mother and son who board at the hospital, and a choice at the garage that puts his ride home at risk.
 
 The aim is to show what the models wrote, side by side, so you can judge for yourself. Read the stories first if you like, then compare your view with the judges'.
 
@@ -533,23 +587,23 @@ This is the prompt every model received, word for word. It is also in [brief.md]
 ## Method
 
 - **One brief, one shot.** Every model got the same brief, word for word, with no edits. It is reproduced below.
-- **Four blind judges.** Each judge scored all 22 stories on 22 traits (dialogue, subtext, pacing, POV, brief adherence, cliché avoidance and so on). Each trait is out of 20, so a total is out of 440. Model names were removed. The traits are adapted from the rubric used in [EQ-Bench Creative Writing v3](https://eqbench.com/creative_writing.html). The full prompt and rubric are in [judge_prompt.md](judge_prompt.md) and [rubric.md](rubric.md).
+- **{n_word_cap} blind judges.** Each judge scored all 22 stories on 22 traits (dialogue, subtext, pacing, POV, brief adherence, cliché avoidance and so on). Each trait is out of 20, so a total is out of 440. Model names were removed. The traits are adapted from the rubric used in [EQ-Bench Creative Writing v3](https://eqbench.com/creative_writing.html). The full prompt and rubric are in [judge_prompt.md](judge_prompt.md) and [rubric.md](rubric.md). {extra_note}
 - **Checked.** Every judge's arithmetic was checked against its own trait scores, and every quote the judges used was checked against its story. Errors were sent back for correction. `scripts/build.py` repeats these checks on every build.
 
 {garage_section}## Leaderboard
 
-Click a model to read its story, or a score to see that judge's trait scores and commentary. Ties share a rank. The average is the mean of the four judges' totals.
+Click a model to read its story, or a score to see that judge's trait scores and commentary. Ties share a rank. The average is the mean of the {n_word} judges' totals.
 
 {leaderboard}
 
-Astra 6.2 came first with all four judges. The full breakdown, including how each judge ranked the models and where the judges disagreed, is in [average-scores.md]({JUDGE_URL}/{AVERAGES_FILE}).
+{top_line} The full breakdown, including how each judge ranked the models and where the judges disagreed, is in [average-scores.md]({JUDGE_URL}/{AVERAGES_FILE}).
 
 ## Limitations
 
 - **The judges are AI.** They followed the rubric, but they can't tell you whether a story moved a person. Their scores are one reference point.
 - **The judges disagreed, sometimes widely.** Meta Wonder got 412 from one judge and 326 from another; Sonnet 4.5 ranged from 251 to 355. No single score settles anything.
-- **{sj['name']} was both a judge and a contestant.** Judging blind, it gave its own story [{se['totals'][sj['header']]}]({JUDGE_URL}/{se['stem']}/{sj['slug']}.md), about 11 points above that story's four-judge average of {se['average']}. Fable 5.2 judged and Fable 5.1 competed, but those are different models.
-- **One story per model, one run each.** A second run could reorder the table. Ranks 3 to 5 are within about a point ({within[0]['model']} to {within[-1]['model']}: {spread} points apart), so read them as tied.
+- **{sj['name']} was both a judge and a contestant.** Judging blind, it gave its own story [{se['totals'][sj['header']]}]({JUDGE_URL}/{se['stem']}/{sj['slug']}.md), {self_gap} points above that story's {n_word}-judge average of {se['average']}. Fable 5.2 judged and Fable 5.1 competed, but those are different models.
+- **One story per model, one run each.** A second run could reorder the table. Ranks 3 to 5 are only {spread} points apart ({within[0]['model']} to {within[-1]['model']}), so read them as close to tied.
 - **One brief.** Literary realism with fixed details. Other genres or looser prompts might come out differently.
 
 Human readers are the missing piece. If you read some of the stories, I'd like to know which you'd rank highest, where you disagree with the judges, and what would make a comparison like this more useful. Open an issue on this repo to share.

@@ -42,6 +42,6 @@ Each trait is out of 20. For negative traits, 20 means the flaw is absent. See t
 
 > Biggest strength is economy and control, with the power bank and housing call making help feel practical rather than heroic. Biggest weakness is a slightly familiar structure and an ending that stops before Ana's outcome gains much pressure.
 
-Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Fable 5.2](fable-5-2.md)
+Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Fable 5.2](fable-5-2.md) · [Qwen 4 Max](qwen-4-max.md)
 
 [Back to the story](../../Stories/07-gpt-6-1-sol.txt) · [Average scores](../average-scores.md) · [Leaderboard](../../README.md)

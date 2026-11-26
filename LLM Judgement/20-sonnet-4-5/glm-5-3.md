@@ -42,6 +42,6 @@ Each trait is out of 20. For negative traits, 20 means the flaw is absent. See t
 
 > The sacrifice is grounded in real arithmetic, "the shame of being forty-seven and riding the bus to work" lands hard. Leans on stock gestures: tears, a tightened chest, a laugh "carried on the wind like smoke."
 
-Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md) · [Fable 5.2](fable-5-2.md)
+Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md) · [Fable 5.2](fable-5-2.md) · [Qwen 4 Max](qwen-4-max.md)
 
 [Back to the story](../../Stories/20-sonnet-4-5.txt) · [Average scores](../average-scores.md) · [Leaderboard](../../README.md)

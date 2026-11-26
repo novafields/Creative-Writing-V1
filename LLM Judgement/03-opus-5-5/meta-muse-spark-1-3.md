@@ -42,6 +42,6 @@ Each trait is out of 20. For negative traits, 20 means the flaw is absent. See t
 
 > Biggest strength is the parallel-parking exchange, where Ana briefly becomes capable and specific rather than only imperilled. Biggest weakness is a contrived extra-shift decision and a daughter thread that conveniently supplies the closing message.
 
-Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Fable 5.2](fable-5-2.md)
+Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Fable 5.2](fable-5-2.md) · [Qwen 4 Max](qwen-4-max.md)
 
 [Back to the story](../../Stories/03-opus-5-5.txt) · [Average scores](../average-scores.md) · [Leaderboard](../../README.md)

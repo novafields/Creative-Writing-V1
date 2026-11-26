@@ -42,6 +42,6 @@ Each trait is out of 20. For negative traits, 20 means the flaw is absent. See t
 
 > The loose boot sole is a decent recurring detail and the ending is unforced. The opening is heavy exposition, there is a stray text glitch ("You're good to Website?"), and letting them out a side gate into the freezing night is an unconvincing choice.
 
-Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md)
+Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md) · [Qwen 4 Max](qwen-4-max.md)
 
 [Back to the story](../../Stories/19-meta-ember.txt) · [Average scores](../average-scores.md) · [Leaderboard](../../README.md)

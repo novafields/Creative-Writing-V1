@@ -42,6 +42,6 @@ Each trait is out of 20. For negative traits, 20 means the flaw is absent. See t
 
 > Biggest strength is a complete, high-stakes choice in which Dale spends the car envelope and finally tells his daughter the truth. Biggest weakness is that that confession and her instant reply create an unearned transformation and a too-warm ending.
 
-Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Fable 5.2](fable-5-2.md)
+Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Fable 5.2](fable-5-2.md) · [Qwen 4 Max](qwen-4-max.md)
 
 [Back to the story](../../Stories/09-kimi-k3-1-pro.txt) · [Average scores](../average-scores.md) · [Leaderboard](../../README.md)

@@ -42,6 +42,6 @@ Each trait is out of 20. For negative traits, 20 means the flaw is absent. See t
 
 > The cab-and-cash exchange is clear and readable. The story explains feelings outright ("the shame of being forty-seven"), has Dale admit he never heard her mention a sister, and ends at 9:42 p.m., which breaks the three-hour timeline.
 
-Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md)
+Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md) · [Qwen 4 Max](qwen-4-max.md)
 
 [Back to the story](../../Stories/20-sonnet-4-5.txt) · [Average scores](../average-scores.md) · [Leaderboard](../../README.md)

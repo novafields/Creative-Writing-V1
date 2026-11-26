@@ -42,6 +42,6 @@ Each trait is out of 20. For negative traits, 20 means the flaw is absent. See t
 
 > Its biggest strength is sharp observational texture, such as the inverted window reflection showing "No SIM." Its biggest weakness is exceeding the 2,300-word ceiling while slipping into American miles and Fahrenheit in Ontario and giving Dale's daughter a high-school workbook.
 
-Other judges on this story: [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md) · [Fable 5.2](fable-5-2.md)
+Other judges on this story: [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md) · [Fable 5.2](fable-5-2.md) · [Qwen 4 Max](qwen-4-max.md)
 
 [Back to the story](../../Stories/13-gemini-argon.txt) · [Average scores](../average-scores.md) · [Leaderboard](../../README.md)

@@ -42,6 +42,6 @@ Each trait is out of 20. For negative traits, 20 means the flaw is absent. See t
 
 > Biggest strength is a readable, conventional build and a clear attempt at generosity. Biggest weakness is incoherence in time, route, and motive, with Dale claiming "You said you were going to your sister's" when the narration confirms he hadn't heard her say that, and the ending undoing the missed-bus stakes.
 
-Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Fable 5.2](fable-5-2.md)
+Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Fable 5.2](fable-5-2.md) · [Qwen 4 Max](qwen-4-max.md)
 
 [Back to the story](../../Stories/20-sonnet-4-5.txt) · [Average scores](../average-scores.md) · [Leaderboard](../../README.md)

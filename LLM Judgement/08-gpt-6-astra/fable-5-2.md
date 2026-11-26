@@ -42,6 +42,6 @@ Each trait is out of 20. For negative traits, 20 means the flaw is absent. See t
 
 > It shows tactful restraint through small objects such as the mitten on a string and the baking dish he still needs to buy, and the banter is light. The ending on the seat-belt click is abrupt and leaves Dale's own situation slightly unclear.
 
-Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md)
+Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Meta Muse Spark 1.3](meta-muse-spark-1-3.md) · [Qwen 4 Max](qwen-4-max.md)
 
 [Back to the story](../../Stories/08-gpt-6-astra.txt) · [Average scores](../average-scores.md) · [Leaderboard](../../README.md)

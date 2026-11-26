@@ -42,6 +42,6 @@ Each trait is out of 20. For negative traits, 20 means the flaw is absent. See t
 
 > Biggest strength is understated character work, especially Ana's strawberry-embroidered duffel and Dale's refusal to invent her story. Biggest weakness is an abrupt seat-belt ending, "Got it," that cuts off the cab journey and Dale's missed connection.
 
-Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Fable 5.2](fable-5-2.md)
+Other judges on this story: [Gemini Hydrogen](gemini-hydrogen.md) · [GLM 5.3](glm-5-3.md) · [Fable 5.2](fable-5-2.md) · [Qwen 4 Max](qwen-4-max.md)
 
 [Back to the story](../../Stories/08-gpt-6-astra.txt) · [Average scores](../average-scores.md) · [Leaderboard](../../README.md)
