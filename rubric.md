@@ -1,6 +1,6 @@
 # The rubric
 
-Copied exactly from the [judge prompt](judge_prompt.md):
+The traits are adapted from the rubric used in [EQ-Bench Creative Writing v3](https://eqbench.com/creative_writing.html). The text below is copied exactly from the [judge prompt](judge_prompt.md):
 
 Each trait is scored out of 20, and 20 is always best.
 

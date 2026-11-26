@@ -332,7 +332,8 @@ def build():
                   for t in traits]
     write(ROOT / "rubric.md",
           "# The rubric\n\n"
-          "Copied exactly from the [judge prompt](judge_prompt.md):\n\n"
+          "The traits are adapted from the rubric used in [EQ-Bench Creative Writing v3](https://eqbench.com/creative_writing.html). "
+          "The text below is copied exactly from the [judge prompt](judge_prompt.md):\n\n"
           + prompt["scale"] + "\n\n" + prompt["neg_note"].replace("*", "\\*", 1) + "\n\n"
           + "\n".join(f"{t['n']}. {t['raw'].replace('*', chr(92) + '*')}" for t in traits)
           + "\n\n## At a glance\n\n"
