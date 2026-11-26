@@ -3,13 +3,13 @@
 
 Usage:  python3 scripts/build.py
 
-The script checks the source data before it writes anything. It stops with
-an error if any judge's 22 trait scores don't add up to the stated total, or
-if the stated averages or ranks don't match the per-judge totals. Story text,
-scores and commentary are copied through unchanged.
+Checks the source data before writing anything. Stops with an error if any
+judge's 22 trait scores don't add up to the stated total, or if the stated
+averages or ranks don't match the per-judge totals. Story text, scores and
+commentary are copied through unchanged.
 
-Generated (and replaced on every run): README.md, brief.md, rubric.md,
-judge_prompt.md, stories/, judgments/, data/.
+Generated (replaced on every run): README.md, brief.md, rubric.md,
+judge_prompt.md, Stories/, LLM Judgement/, data/.
 """
 
 import csv
@@ -17,8 +17,9 @@ import json
 import re
 import shutil
 import sys
-from decimal import Decimal, ROUND_HALF_UP
+from decimal import Decimal
 from pathlib import Path
+from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "source"
@@ -28,29 +29,34 @@ KEY_FILE = SRC / "story_key.txt"
 SCORES_FILE = SRC / "judgments_scores_final.txt"
 PROMPT_FILE = SRC / "judge_prompt_A-V.txt"
 
-# Judge headers as they appear in judgments_scores_final.txt, in column order,
-# mapped to display names.
+STORY_DIR = "Stories"
+JUDGE_DIR = "LLM Judgement"
+JUDGE_URL = quote(JUDGE_DIR)  # URL-safe form for links: LLM%20Judgement
+
+# Judge headers as they appear in judgments_scores_final.txt, with display names.
 JUDGES = [
     ("GEMINI HYDROGEN", "Gemini Hydrogen"),
     ("GLM 5.3", "GLM 5.3"),
     ("META MUSE SPARK 1.3", "Meta Muse Spark 1.3"),
     ("FABLE 5.2", "Fable 5.2"),
 ]
-# The contestant that also judged (for the README caveat).
 SELF_JUDGE = ("GLM 5.3", "GLM 5.3")  # (judge display name, contestant model name)
 
 N_TRAITS = 22
 MAX_TOTAL = 20 * N_TRAITS
 
+
 class DataError(Exception):
     pass
+
 
 def slugify(name):
     """Lowercase, hyphens, no dots: 'GPT-6 Astra' -> 'gpt-6-astra'."""
     return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
 
+
 def competition_ranks(values):
-    """values: list of (key, sortable). Higher is better. Ties share a rank (1, 2, 2, 4)."""
+    """values: list of (key, score). Higher is better. Ties share a rank (1, 2, 2, 4)."""
     ordered = sorted(values, key=lambda kv: -kv[1])
     ranks, prev, prev_rank = {}, None, 0
     for i, (k, v) in enumerate(ordered, start=1):
@@ -59,10 +65,12 @@ def competition_ranks(values):
         ranks[k] = prev_rank
     return ranks
 
-# --------------------------------------------------------------------------- parsing
 
 def read(path):
     return path.read_text(encoding="utf-8")
+
+
+# --------------------------------------------------------------------------- parsing
 
 def parse_key():
     key = {}
@@ -74,6 +82,7 @@ def parse_key():
         raise DataError(f"story_key.txt: expected 22 entries, found {len(key)}")
     return key
 
+
 def parse_stories():
     text = read(STORIES_FILE)
     parts = re.split(r"^=+\nSTORY ([A-Z])\n=+\n", text, flags=re.M)
@@ -82,52 +91,49 @@ def parse_stories():
     stories = {}
     for i in range(1, len(parts), 2):
         letter, body = parts[i], parts[i + 1].strip("\n")
-        lines = body.split("\n")
-        title = lines[0].strip()
-        rest = "\n".join(lines[1:]).strip("\n")
-        stories[letter] = {"full": body, "title": title, "body": rest,
-                           "words": len(body.split())}
+        title = body.split("\n", 1)[0].strip()
+        stories[letter] = {"full": body, "title": title, "words": len(body.split())}
     if len(stories) != 22:
         raise DataError(f"stories file: expected 22 stories, found {len(stories)}")
     return stories
+
 
 def parse_scores():
     lines = read(SCORES_FILE).splitlines()
     headers = [h for h, _ in JUDGES]
     tables, avg_rows, commentary = {}, {}, {}
-    i, section = 0, "scores"
-    current = None
-    while i < len(lines):
-        line = lines[i].strip()
-        if line == "AVERAGE OF THE FOUR JUDGES":
+    section, current = "scores", None
+    for line in lines:
+        stripped = line.strip()
+        if stripped == "AVERAGE OF THE FOUR JUDGES":
             section, current = "avg", None
-        elif line == "JUDGES' COMMENTARY":
+        elif stripped == "JUDGES' COMMENTARY":
             section, current = "comm", None
-        elif line in headers:
-            current = line
+        elif stripped in headers:
+            current = stripped
             if section == "scores":
                 tables[current] = {}
             elif section == "comm":
                 commentary[current] = {}
-        elif section == "scores" and current and re.match(r"^[A-V],", line):
-            cells = line.split(",")
-            letter, nums = cells[0], [int(c) for c in cells[1:]]
+        elif section == "scores" and current and re.match(r"^[A-V],", stripped):
+            cells = stripped.split(",")
+            nums = [int(c) for c in cells[1:]]
             if len(nums) != N_TRAITS + 1:
-                raise DataError(f"{current} {letter}: expected {N_TRAITS} traits + total, got {len(nums)} numbers")
-            tables[current][letter] = {"traits": nums[:N_TRAITS], "total": nums[N_TRAITS]}
-        elif section == "avg" and re.match(r"^\d+,[A-V],", line):
-            cells = line.split(",")
+                raise DataError(f"{current} {cells[0]}: expected {N_TRAITS} traits + total, got {len(nums)} numbers")
+            tables[current][cells[0]] = {"traits": nums[:N_TRAITS], "total": nums[N_TRAITS]}
+        elif section == "avg" and re.match(r"^\d+,[A-V],", stripped):
+            cells = stripped.split(",")
             avg_rows[cells[1]] = {"rank": int(cells[0]),
                                   "totals": [int(c) for c in cells[2:6]],
                                   "average": cells[6]}
         elif section == "comm" and current:
-            m = re.match(r"^([A-V]): (.*)$", lines[i])
+            m = re.match(r"^([A-V]): (.*)$", line)
             if m:
                 if m.group(1) in commentary[current]:
                     raise DataError(f"{current}: duplicate commentary for {m.group(1)}")
                 commentary[current][m.group(1)] = m.group(2)
-        i += 1
     return tables, avg_rows, commentary
+
 
 def parse_prompt():
     text = read(PROMPT_FILE)
@@ -144,14 +150,14 @@ def parse_prompt():
             raw = m.group(2)
             negative = raw.endswith("*")
             name = re.sub(r"\s*\(.*\)$", "", raw.rstrip("*")).strip()
-            traits.append({"n": int(m.group(1)), "raw": raw, "name": name,
-                           "negative": negative})
+            traits.append({"n": int(m.group(1)), "raw": raw, "name": name, "negative": negative})
     if [t["n"] for t in traits] != list(range(1, N_TRAITS + 1)):
         raise DataError("judge prompt: traits are not numbered 1-22")
     scale = re.search(r"Each trait is scored out of 20[^\n]*", text).group(0)
-    neg_note = re.search(r"^For negative traits \(marked \*\).*$", text, re.M).group(0)
+    neg_note = re.search(r"For negative traits \(marked \*\)[^\n]*", text).group(0)
     return {"text": text, "brief": brief.group(1).strip("\n"), "traits": traits,
-            "traits_block": traits_block.group(1), "scale": scale, "neg_note": neg_note}
+            "scale": scale, "neg_note": neg_note}
+
 
 # --------------------------------------------------------------------------- checks
 
@@ -186,9 +192,8 @@ def verify(key, stories, tables, avg_rows, commentary):
         if row["totals"] != judge_totals:
             errors.append(f"average table {letter}: totals {row['totals']} != judge tables {judge_totals}")
         sums[letter] = sum(judge_totals)
-        # The source rounds exact .x5 averages half-to-even (284.25 -> 284.2,
-        # 412.75 -> 412.8). Accept any stated value within rounding distance of
-        # the exact mean; the stated value is what gets published.
+        # The source rounds exact .x5 averages half-to-even (284.25 -> 284.2).
+        # Accept any stated value within 0.05 of the exact mean; the stated value is published.
         exact = Decimal(sums[letter]) / 4
         if abs(Decimal(row["average"]) - exact) > Decimal("0.05"):
             errors.append(f"average table {letter}: stated {row['average']}, exact mean {exact}")
@@ -199,17 +204,20 @@ def verify(key, stories, tables, avg_rows, commentary):
     if errors:
         raise DataError("\n".join(errors))
 
+
 # --------------------------------------------------------------------------- writing
 
 def write(path, content):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(content, encoding="utf-8")
 
+
 def md_table(header, rows, align=None):
     align = align or ["---"] * len(header)
     out = ["| " + " | ".join(header) + " |", "|" + "|".join(align) + "|"]
     out += ["| " + " | ".join(str(c) for c in r) + " |" for r in rows]
     return "\n".join(out)
+
 
 def build():
     key = parse_key()
@@ -221,29 +229,25 @@ def build():
     traits = prompt["traits"]
     judges = [{"header": h, "name": n, "slug": slugify(n)} for h, n in JUDGES]
 
-    # Entries in leaderboard order: rank, then source order of the average table.
-    avg_order = list(avg_rows)  # dicts keep file order
+    avg_order = list(avg_rows)
     entries = []
     for letter in sorted(avg_rows, key=lambda l: (avg_rows[l]["rank"], avg_order.index(l))):
         model = key[letter]
         rank = avg_rows[letter]["rank"]
-        slug = slugify(model)
+        stem = f"{rank:02d}-{slugify(model)}"
         entries.append({
-            "letter": letter, "model": model, "slug": slug, "rank": rank,
+            "letter": letter, "model": model, "slug": slugify(model), "rank": rank,
             "average": avg_rows[letter]["average"],
             "totals": {j["header"]: tables[j["header"]][letter]["total"] for j in judges},
-            "file": f"{rank:02d}-{slug}.md",
+            "stem": stem, "txt": stem + ".txt", "file": stem + ".md",
             "story": stories[letter],
         })
-    slugs = [e["slug"] for e in entries]
-    if len(set(slugs)) != len(slugs):
+    if len({e["slug"] for e in entries}) != len(entries):
         raise DataError("two models produce the same slug")
-    by_letter = {e["letter"]: e for e in entries}
 
-    for d in ("stories", "judgments", "data"):
-        shutil.rmtree(ROOT / d, ignore_errors=True)
-
-    neg_label = "Negative (20 = flaw absent)"
+    for d in (ROOT / STORY_DIR, ROOT / JUDGE_DIR, ROOT / "data" / "stories",
+              ROOT / "stories", ROOT / "judgments"):  # last two: old layout
+        shutil.rmtree(d, ignore_errors=True)
 
     # ---- brief / rubric / judge prompt
     write(ROOT / "brief.md",
@@ -252,7 +256,8 @@ def build():
           "from the [judge prompt](judge_prompt.md).\n\n"
           + prompt["brief"] + "\n\n[Back to the leaderboard](README.md)\n")
 
-    trait_rows = [[t["n"], t["name"], neg_label if t["negative"] else "Positive"] for t in traits]
+    trait_rows = [[t["n"], t["name"], "Negative (20 = flaw absent)" if t["negative"] else "Positive"]
+                  for t in traits]
     write(ROOT / "rubric.md",
           "# The rubric\n\n"
           "Copied exactly from the [judge prompt](judge_prompt.md):\n\n"
@@ -271,55 +276,25 @@ def build():
           "````text\n" + prompt["text"].rstrip("\n") + "\n````\n\n"
           "[Back to the leaderboard](README.md)\n")
 
-    # ---- story pages
-    for idx, e in enumerate(entries):
-        s = e["story"]
-        prev_e = entries[idx - 1] if idx > 0 else None
-        next_e = entries[idx + 1] if idx + 1 < len(entries) else None
-        score_rows = [[f"[{j['name']}](../judgments/{j['slug']}/{e['file']})",
-                       e["totals"][j["header"]]] for j in judges]
-        score_rows.append(["**Average**", f"**{e['average']}**"])
-        nav = []
-        if prev_e:
-            nav.append(f"← Previous: [#{prev_e['rank']} {prev_e['model']}]({prev_e['file']})")
-        nav.append("[Leaderboard](../README.md)")
-        if next_e:
-            nav.append(f"Next: [#{next_e['rank']} {next_e['model']}]({next_e['file']}) →")
-        page = (
-            f"# {e['model']}\n\n"
-            + md_table(["", ""], [
-                ["Blind letter", e["letter"]],
-                ["Final rank", f"{e['rank']} of 22"],
-                ["Average score", f"{e['average']} / {MAX_TOTAL}"],
-                ["Word count", f"{s['words']:,} (whitespace split, title included)"],
-              ])
-            + "\n\n## Scores\n\n"
-            + md_table(["Judge", f"Total / {MAX_TOTAL}"], score_rows, ["---", "--:"])
-            + "\n\n" + " · ".join(nav) + "\n\n---\n\n"
-            + f"## {s['title']}\n\n" + s["body"] + "\n\n---\n\n"
-            + "## Judgments\n\n"
-            + "\n".join(f"- [{j['name']}](../judgments/{j['slug']}/{e['file']}): "
-                        f"{e['totals'][j['header']]} / {MAX_TOTAL}" for j in judges)
-            + f"\n\nPlain text: [data/stories/{e['slug']}.txt](../data/stories/{e['slug']}.txt)\n\n"
-            + " · ".join(nav) + "\n"
-        )
-        write(ROOT / "stories" / e["file"], page)
-        write(ROOT / "data" / "stories" / f"{e['slug']}.txt", s["full"] + "\n")
+    # ---- stories: one plain-text file each
+    for e in entries:
+        write(ROOT / STORY_DIR / e["txt"], e["story"]["full"] + "\n")
 
-    # ---- judgment pages and per-judge rankings
+    # ---- judgments: one file per judge per story, in per-judge folders
     for j in judges:
         jt = tables[j["header"]]
         jranks = competition_ranks([(l, jt[l]["total"]) for l in jt])
+        jdir = ROOT / JUDGE_DIR / j["slug"]
         for e in entries:
             row = jt[e["letter"]]
             trows = [[t["n"], t["name"], "Negative" if t["negative"] else "", row["traits"][t["n"] - 1]]
                      for t in traits]
-            trows.append(["", f"**Total**", "", f"**{row['total']} / {MAX_TOTAL}**"])
+            trows.append(["", "**Total**", "", f"**{row['total']} / {MAX_TOTAL}**"])
             page = (
                 f"# {j['name']} on {e['model']}\n\n"
                 + md_table(["", ""], [
                     ["Judge", f"[{j['name']}](README.md)"],
-                    ["Model", f"[{e['model']}](../../stories/{e['file']})"],
+                    ["Model", f"[{e['model']}](../../{STORY_DIR}/{e['txt']})"],
                     ["Blind letter", e["letter"]],
                     ["Total", f"{row['total']} / {MAX_TOTAL}"],
                     ["Rank with this judge", f"{jranks[e['letter']]} of 22"],
@@ -330,15 +305,15 @@ def build():
                 + md_table(["#", "Trait", "Type", "Score"], trows, ["--:", "---", "---", "--:"])
                 + "\n\n## Commentary\n\n"
                 + "> " + commentary[j["header"]][e["letter"]] + "\n\n"
-                + f"[Back to the story](../../stories/{e['file']}) · "
+                + f"[Back to the story](../../{STORY_DIR}/{e['txt']}) · "
                 + f"[All {j['name']} rankings](README.md) · [Leaderboard](../../README.md)\n"
             )
-            write(ROOT / "judgments" / j["slug"] / e["file"], page)
+            write(jdir / e["file"], page)
 
         order = sorted(entries, key=lambda e: (jranks[e["letter"]], -jt[e["letter"]]["total"], entries.index(e)))
-        rows = [[jranks[e["letter"]], f"[{e['model']}](../../stories/{e['file']})", e["letter"],
+        rows = [[jranks[e["letter"]], f"[{e['model']}](../../{STORY_DIR}/{e['txt']})", e["letter"],
                  f"[{jt[e['letter']]['total']}]({e['file']})", e["rank"]] for e in order]
-        write(ROOT / "judgments" / j["slug"] / "README.md",
+        write(jdir / "README.md",
               f"# {j['name']}: full ranking\n\n"
               f"All 22 stories ranked by {j['name']}'s total (out of {MAX_TOTAL}). "
               "Ties share a rank. Click a total to see the trait scores and commentary.\n\n"
@@ -357,9 +332,9 @@ def build():
                                 tables[j["header"]][e["letter"]]["traits"][t["n"] - 1]])
     with open(ROOT / "data" / "totals.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
-        w.writerow(["rank", "model", "letter"] + [j["name"] for j in judges] + ["average"])
+        w.writerow(["rank", "model", "letter", "words"] + [j["name"] for j in judges] + ["average"])
         for e in entries:
-            w.writerow([e["rank"], e["model"], e["letter"]]
+            w.writerow([e["rank"], e["model"], e["letter"], e["story"]["words"]]
                        + [e["totals"][j["header"]] for j in judges] + [e["average"]])
     comm = {j["name"]: {e["model"]: commentary[j["header"]][e["letter"]] for e in entries} for j in judges}
     write(ROOT / "data" / "commentary.json", json.dumps(comm, ensure_ascii=False, indent=2) + "\n")
@@ -371,28 +346,29 @@ def build():
     within = [e for e in entries if 3 <= e["rank"] <= 5]
     spread = Decimal(within[0]["average"]) - Decimal(within[-1]["average"])
 
-    board = [[e["rank"], f"[{e['model']}](stories/{e['file']})"]
-             + [f"[{e['totals'][j['header']]}](judgments/{j['slug']}/{e['file']})" for j in judges]
+    board = [[e["rank"], f"[{e['model']}]({STORY_DIR}/{e['txt']})"]
+             + [f"[{e['totals'][j['header']]}]({JUDGE_URL}/{j['slug']}/{e['file']})" for j in judges]
              + [f"**{e['average']}**"] for e in entries]
     readme = README_TEMPLATE.format(
         leaderboard=md_table(["Rank", "Model"] + [j["name"] for j in judges] + ["Average"], board,
                              ["--:", "---"] + ["--:"] * (len(judges) + 1)),
-        judge_links=" · ".join(f"[{j['name']}](judgments/{j['slug']}/README.md)" for j in judges),
+        judge_links=" · ".join(f"[{j['name']}]({JUDGE_URL}/{j['slug']}/README.md)" for j in judges),
         self_judge=self_judge_name, self_total=se["totals"][sj["header"]], self_avg=se["average"],
-        self_file=se["file"], self_slug=sj["slug"],
+        self_link=f"{JUDGE_URL}/{sj['slug']}/{se['file']}",
         r3=within[0]["model"], r5=within[-1]["model"], spread=spread,
         in_range=sum(1 for e in entries if 1700 <= e["story"]["words"] <= 2300),
         over=sum(1 for e in entries if e["story"]["words"] > 2300),
         under=sum(1 for e in entries if e["story"]["words"] < 1700),
     )
     write(ROOT / "README.md", readme)
-    print(f"Built {len(entries)} story pages and {len(entries) * len(judges)} judgment pages. All checks passed.")
+    print(f"Built {len(entries)} stories and {len(entries) * len(judges)} judgments. All checks passed.")
+
 
 README_TEMPLATE = """# One brief, 22 models: a blind short-fiction comparison
 
 22 AI models were each given the same literary short-story brief: a Hamilton, Ontario bus driver on the last three hours of a February night shift, with a few fixed details every story had to include. Each model wrote one story in a single shot, with no edits. The stories were labelled A to V with model names removed. Four AI judges scored every story blind on 22 craft traits, each out of 20, for a total out of 440. The leaderboard ranks models by the average of the four judges' totals.
 
-Every story and every judge's verdict has its own page, so you can read the stories and make your own call before looking at the scores.
+Every story is its own plain-text file, and every judge's verdict on every story is its own file, so you can read the stories and make your own call before looking at the scores.
 
 ## Leaderboard
 
@@ -405,7 +381,7 @@ Full rankings by judge: {judge_links}
 ## Caveats
 
 - **One story per model, one run each.** This is a snapshot, not a benchmark. A second run could reorder the table.
-- **{self_judge} was both a judge and a contestant.** Judging blind, it gave its own story [{self_total}](judgments/{self_slug}/{self_file}), against that story's four-judge average of {self_avg}. Fable 5.2 judged and Fable 5.1 competed, but those are different models.
+- **{self_judge} was both a judge and a contestant.** Judging blind, it gave its own story [{self_total}]({self_link}), against that story's four-judge average of {self_avg}. Fable 5.2 judged and Fable 5.1 competed, but those are different models.
 - **The judges sometimes disagreed widely.** Meta Wonder got 412 from one judge and 326 from another; Sonnet 4.5 ranged from 251 to 355.
 - **Ranks 3 to 5 are within about a point** ({r3} to {r5}: {spread} points apart). Read them as tied.
 
@@ -413,18 +389,19 @@ Full rankings by judge: {judge_links}
 
 - **Length.** {in_range} of 22 stories landed inside the 1,700–2,300-word target; {over} ran over (all by 1,000+ words) and {under} came in under. The rubric's first trait penalises missing the target, so several well-written stories lost ground here.
 - **Convergence.** Without being asked, models reached for the same choices: titles built on "Last" (*The Last Stop* three times), a Honda Civic as the repossessed car, Theo talking about dinosaurs, Tim Hortons, and Dale ending the night on foot.
-- **The fixed details.** Because every story had to include a ticking heater, the repossession and a choice at the garage, you can compare how each model handled the same moment. Some give the heater a mechanical cause; one mentions the heater but never has it tick.
+- **The fixed details.** Because every story had to include a ticking heater, the repossession and a choice at the garage, you can compare how each model handled the same moment. Some give the heater a mechanical cause; one has it click like a metronome and then fall silent.
 
 ## The materials
 
 - [The brief](brief.md): the prompt every model received
 - [The rubric](rubric.md): the 22 traits, including which are negative traits
 - [The judge prompt](judge_prompt.md): the full prompt each judge received
+- [Stories/](Stories/): all 22 stories, one plain-text file each, named by rank and model
+- [LLM Judgement/](LLM%20Judgement/): all 88 judgments, one file per judge per story, with a full ranking per judge
 - Raw data:
-  - [data/totals.csv](data/totals.csv): one row per model, with each judge's total, the average and the rank
+  - [data/totals.csv](data/totals.csv): one row per model, with word count, each judge's total, the average and the rank
   - [data/scores.csv](data/scores.csv): every trait score, one row per judge, story and trait
   - [data/commentary.json](data/commentary.json): each judge's commentary on each story
-  - [data/stories/](data/stories/): plain-text copies of all 22 stories
   - [source/](source/): the original files these pages were built from, unchanged
 
 ## Rebuilding
@@ -438,6 +415,7 @@ python3 scripts/check_links.py
 
 The build stops with an error if any judge's trait scores don't sum to the stated total, or if the averages or ranks don't match the judges' totals.
 """
+
 
 if __name__ == "__main__":
     try:
