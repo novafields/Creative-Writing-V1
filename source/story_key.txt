@@ -1,0 +1,24 @@
+STORY KEY (do not share with judges)
+
+A  Astra 6.2
+B  Sonnet 4.5
+C  GLM 5.3
+D  Opus 5.5
+E  Mistral Small 4
+F  Gemini Argon
+G  Luna 6
+H  6.2 Sol
+I  Kimi K3.1 Pro
+J  Fable 5.1
+K  Gemini Neon
+L  GPT 6.1 Sol
+M  Opus 4.6 Max
+N  GPT-6 Astra
+O  Meta Wonder
+P  GPT 5.5
+Q  GPT 5.6 Sol
+R  GPT 6 Sol
+S  Sonnet 5.5
+T  DeepSeek 4.1 Flash
+U  Meta Ember
+V  Mistral Large 4
