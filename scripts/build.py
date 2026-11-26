@@ -469,6 +469,7 @@ def build():
     under = sorted((e for e in entries if e["story"]["words"] < 1700), key=lambda e: e["story"]["words"])
     length_list = lambda es: ", ".join(f"{e['model']} ({e['story']['words']:,})" for e in es)
 
+    brief_quote = "\n".join("> " + line if line else ">" for line in prompt["brief"].split("\n"))
     readme = f"""# One brief, 22 models: a blind short-fiction comparison
 
 I gave 22 AI models the same literary short-story brief and then had four AI judges score the stories blind, with model names removed. Each model got one shot and no edits. The brief is a Hamilton, Ontario bus driver on the last three hours of a February night shift, with a few fixed details every story had to include: a ticking heater, a repossessed car that he hasn't told anyone about, a dispatcher's routine schedule changes, a mother and son who board at the hospital, and a choice at the garage that puts his ride home at risk.
@@ -479,9 +480,15 @@ The aim is to show what the models wrote, side by side, so you can judge for you
 - **Judgments:** [LLM Judgement/](LLM%20Judgement/), one folder per model with one file per judge.
 - **Averages and explanations:** [LLM Judgement/average-scores.md](LLM%20Judgement/average-scores.md).
 
+## The brief
+
+This is the prompt every model received, word for word. It is also in [brief.md](brief.md) and at the top of the [judge prompt](judge_prompt.md).
+
+{brief_quote}
+
 ## Method
 
-- **One brief, one shot.** Every model got the same prompt word for word, with no edits. The brief is in [brief.md](brief.md).
+- **One brief, one shot.** Every model got the same brief, word for word, with no edits. It is reproduced below.
 - **Four blind judges.** Each judge scored all 22 stories on 22 traits (dialogue, subtext, pacing, POV, brief adherence, cliché avoidance and so on). Each trait is out of 20, so a total is out of 440. Model names were removed. The full prompt and rubric are in [judge_prompt.md](judge_prompt.md) and [rubric.md](rubric.md).
 - **Checked.** Every judge's arithmetic was checked against its own trait scores, and every quote the judges used was checked against its story. Errors were sent back for correction. `scripts/build.py` repeats these checks on every build.
 
